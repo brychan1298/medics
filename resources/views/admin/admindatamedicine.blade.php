@@ -32,14 +32,18 @@
 
 	<div class="row">				
 				<div class="col-sm-12">
-					<center>
-					<span >
-						<input type="text" name="" placeholder="Search" style="border:1px solid grey;border-radius: 15px 0px 0px 15px; padding-right: 550px; padding-top: 10px;padding-bottom: 9px;padding-left: 10px;">
-					</span>
-					<span style="background-color: #6672EC;padding: 12px;border-radius: 0px 15px 15px 0px; margin-left: -5px;">
-						<img src="gambar/searchicon.png" style="width: 30px;">
-					</span>
-				</center>
+					<form action="/medicine" method="GET">
+						<center>
+							<span >
+								<input type="text" name="cari" value="{{ old('cari') }}" placeholder="Search" style="border:1px solid grey;border-radius: 15px 0px 0px 15px; padding-right: 550px; padding-top: 10px;padding-bottom: 9px;padding-left: 10px;">
+							</span>
+							<span>
+								<button type="submit" style="background-color: #6672EC;padding: 12px;border-radius: 0px 15px 15px 0px; margin-left: -5px;">
+									<img src="gambar/searchicon.png" style="width: 30px;">
+								</button>
+							</span>
+						</center>	
+					</form>
 				</div>
 			</div>
 	<!-- form -->
@@ -66,43 +70,9 @@
 								<a href="/medicine/edit/{{ $aa->id }}" style="background-color: #4385FF; color: white;border:0px;border-radius: 20px;padding: 18px 40px;" >EDIT OBAT</a>
 							</center>
 						</div>
-					
-				</div>
+					</div>
 				@endforeach
-				<div class="col-sm-12 mt-5">
-					<center>
-							<div>
-								<span>								
-									<button  style="border:none;border-radius: 50%;padding: 5px 7px;transform: rotate(180deg);">
-										<img src="gambar/HEMHEM.png" style="width: 20px;">
-									</button>
-								</span>								
-								<span>
-									<button  style="background-color:rgb(67,133,255);border:none;border-radius: 50%;padding: 5px 12px;">
-										1
-									</button>
-								</span>
-								<span>
-									<button  style="border:none;border-radius: 50%;padding: 5px 12px;">
-										2
-									</button>
-								</span>
-								<span>
-									<button  style="border:none;border-radius: 50%;padding: 5px 12px;">
-										3
-									</button>
-								</span>
-								<span>
-									<button  style="border:none;border-radius: 50%;padding: 5px 7px;">
-										<img src="gambar/HEMHEM.png" style="width: 20px;">
-									</button>
-								</span>
-								
-							</div>					
-					</center>					
 				</div>
-				</div>
-
 			</div>
 		</div>
 	</div>

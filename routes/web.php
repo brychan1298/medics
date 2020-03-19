@@ -68,6 +68,8 @@ Route::post('/medicine/submit','AmedicineController@store');
 Route::get('/medicine/edit/{id}','AmedicineController@edit');
 Route::post('/medicine/update','AmedicineController@update');
 
+// search
+Route::get('/medicine','AmedicineController@cari');
 
 
 //Admin Hospital

@@ -23,6 +23,14 @@ class AmedicineController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function cari(Request $request)
+    {
+        $cari = $request->cari;
+        $amedicine = Amedicine::where('nama','like',"%".$cari."%")->paginate();
+        return view('admin.admindatamedicine',compact('amedicine'));
+
+    }
+
     public function create()
     {
         //
