@@ -37,9 +37,9 @@ Route::get('/Aqueue', function () {
 //     return view('admin.admindatahospital');
 // });
 
-Route::get('/Acheck', function () {
-    return view('admin.checkpayment');
-});
+// Route::get('/Acheck', function () {
+//     return view('admin.checkpayment');
+// });
 
 Route::get('/Acustomer', function () {
     return view('admin.customer');
@@ -83,3 +83,8 @@ Route::get('/hospitalSearch','AhospitalController@cari');
 	Route::get('/hospital/edit/{id}','AhospitalController@edit');
 	Route::get('/hospital/delete/{id}','AhospitalController@destroy');
 	Route::post('/hospital/update','AhospitalController@update');
+
+
+
+//ADMIN CHECK PAYMENT
+	Route::resource('/Acheck','AcheckController');

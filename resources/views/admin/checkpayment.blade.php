@@ -44,11 +44,19 @@
 					<tr>
 						<th>Name</th>
 						<th>Date</th>						
-						<th>total</th>						
+						<th>Total</th>						
 						<th>Proof</th>						
 						<th>Check</th>				
 					</tr>
-
+					@foreach($transaksi as $aa)
+					<tr>
+						<td>{{ $aa->tbprofile->nama }}</td>
+						<td>{{ $aa->tanggal }}</td>
+						<td>{{ $aa->total }}</td>
+						<td><img src="../../img/{{$aa->img}}" style="width: 30px;"></td>
+						<td><a href="" class="btn btn-primary">PROSES</a></td>
+					</tr>
+					@endforeach
 				</table>
 			</div>
 		</div>
