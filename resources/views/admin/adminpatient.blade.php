@@ -39,7 +39,7 @@
 					</div>
 					<div class="container mb-4">
 					<div class="row">
-							<div class="col-sm-6">Birth of Date<br><input type="date" name="" style="width: 100%; height: 45px; border-radius: 15px; border:1px solid #707070; padding-left:10px;"></div>
+							<div class="col-sm-6">Disease<br><input type="text" name="" style="width: 100%; height: 45px; border-radius: 15px; border:1px solid #707070; padding-left:10px;"></div>
 							<div class="col-sm-6">Doctor<br><input type="text" name="" style="width: 100%; height: 45px; border-radius: 15px; border:1px solid #707070; padding-left:10px;"></div>
 						</div>
 					</div>
@@ -51,7 +51,7 @@
 					</div>
 					<div class="container mb-5">
 					<div class="row">
-							<div class="col-sm-6">Date of Treatment<br><input type="date" name="" style="width: 100%; height: 45px; border-radius: 15px; border:1px solid #707070; padding-left:10px;"></div>
+							<div class="col-sm-6">Date of Appointment<br><input type="date" name="" style="width: 100%; height: 45px; border-radius: 15px; border:1px solid #707070; padding-left:10px;"></div>
 							<div class="col-sm-6"><button style="background-color: #4385FF; color: white;border:0px;border-radius: 20px;padding: 18px 50px; margin-left: 370px;">SIMPAN</button></div>
 						</div>
 					</div>
