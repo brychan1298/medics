@@ -32,7 +32,7 @@
 
 	<div class="row">				
 				<div class="col-sm-12">
-					<form action="/medicine" method="GET">
+					<form action="/medicineSearch" method="GET">
 						<center>
 							<span >
 								<input type="text" name="cari" value="{{ old('cari') }}" placeholder="Search" style="border:1px solid grey;border-radius: 15px 0px 0px 15px; padding-right: 550px; padding-top: 10px;padding-bottom: 9px;padding-left: 10px;">
@@ -72,6 +72,9 @@
 						</div>
 					</div>
 				@endforeach
+				</div>
+				<div class="mt-5 pagination justify-content-center">
+					{{$amedicine->links()}}
 				</div>
 			</div>
 		</div>

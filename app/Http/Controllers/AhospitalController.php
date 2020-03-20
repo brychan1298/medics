@@ -14,10 +14,17 @@ class AhospitalController extends Controller
      */
     public function index()
     {
-        $ahospital = Ahospital::all();
+        $ahospital = Ahospital::paginate(5);
         return view('admin.admindatahospital',compact('ahospital'));
     }
 
+    public function cari(Request $request)
+    {
+        $cari = $request->cari;
+        $ahospital = ahospital::where('nama','like',"%".$cari."%")->paginate(5);
+        return view('admin.admindatahospital',compact('ahospital'));
+
+    }
     /**
      * Show the form for creating a new resource.
      *

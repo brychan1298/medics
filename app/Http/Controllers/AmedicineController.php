@@ -14,7 +14,7 @@ class AmedicineController extends Controller
      */
     public function index()
     {
-        $amedicine = Amedicine::all();
+        $amedicine = Amedicine::paginate(3);
         return view('admin.admindatamedicine',compact('amedicine'));
     }
 
@@ -26,7 +26,7 @@ class AmedicineController extends Controller
     public function cari(Request $request)
     {
         $cari = $request->cari;
-        $amedicine = Amedicine::where('nama','like',"%".$cari."%")->paginate();
+        $amedicine = Amedicine::where('nama','like',"%".$cari."%")->paginate(3);
         return view('admin.admindatamedicine',compact('amedicine'));
 
     }

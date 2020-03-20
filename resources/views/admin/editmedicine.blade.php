@@ -37,7 +37,7 @@
 							<div class="col-sm-4">Medicine Name<br><input type="text" name="nama" style="width: 100%; height: 45px; border-radius: 15px; border:1px solid #707070; padding-left:10px;" value="{{$medicine->nama}}"></div>
 							<div class="col-sm-4">Kategori<br><input type="text" name="kategori" value="{{$medicine->kategori}}" style="width: 100%; height: 45px; border-radius: 15px; border:1px solid #707070; padding-left:10px;"></div>
 							<div class="col-sm-4">
-								<input type="file" id="myFile" name="img" accept="image/*"><br><img src="../../gambar/addphoto.png" id="myImg" style="margin-right:20px;width: 240px;height: 240px;position: absolute;">
+								<input type="file" id="myFile" name="img" accept="image/*"><br><img src="../../gambar/{{$medicine->img}}" id="myImg" style="margin-right:20px;width: 240px;height: 240px;position: absolute;">
 							</div>
 						</div>
 					</div>

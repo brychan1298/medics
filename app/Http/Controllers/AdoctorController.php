@@ -14,10 +14,17 @@ class AdoctorController extends Controller
      */
     public function index()
     {
-        $adoctor = Adoctor::all();
+        $adoctor = Adoctor::paginate(5);
         return view('admin.admindatadoctor',compact('adoctor'));
     }
 
+    public function cari(Request $request)
+    {
+        $cari = $request->cari;
+        $adoctor = Adoctor::where('nama','like',"%".$cari."%")->paginate(5);
+        return view('admin.admindatadoctor',compact('adoctor'));
+
+    }
     /**
      * Show the form for creating a new resource.
      *
