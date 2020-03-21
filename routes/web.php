@@ -21,9 +21,9 @@ Route::get('/shopee', function () {
     return view('shop');
 });
 
-Route::get('/Aqueue', function () {
-    return view('admin.adminpatient');
-});
+// Route::get('/Aqueue', function () {
+//     return view('admin.adminpatient');
+// });
 
 // Route::get('/Adoctor', function () {
 //      return view('admin.admindatadoctor');
@@ -83,3 +83,4 @@ Route::get('/hospitalSearch','AhospitalController@cari');
 	Route::get('/hospital/edit/{id}','AhospitalController@edit');
 	Route::get('/hospital/delete/{id}','AhospitalController@destroy');
 	Route::post('/hospital/update','AhospitalController@update');
+
