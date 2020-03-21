@@ -15,6 +15,7 @@
 <body data-spy="scroll" data-target="menu">
 
 	<!-- judul -->
+
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-12">
@@ -63,6 +64,7 @@
 						<th>Kabupaten</th>						
 						<th colspan="2" style="text-align: center;">Action</th>						
 					</tr>
+					
 					@foreach($ahospital as $aa)
 						<tr>
 							<td>{{$aa->nama}}</td>

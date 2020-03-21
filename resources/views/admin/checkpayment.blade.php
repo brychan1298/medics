@@ -52,8 +52,21 @@
 					<tr>
 						<td>{{ $aa->tbprofile->nama }}</td>
 						<td>{{ $aa->tanggal }}</td>
-						<td>{{ $aa->total }}</td>
-						<td><img src="../../img/{{$aa->img}}" style="width: 30px;"></td>
+						<td>Rp {{ $aa->total }},00</td>
+						<td><img src="../../img/{{$aa->img}}" style="width: 40px;" type="button" data-toggle="modal" data-target="#myModal">
+							<div class="modal fade" id="myModal">
+					    		<div class="modal-dialog">					    					      
+					      			<div class="modal-content">
+					      				<div class="modal-header">					      					
+								          <button type="button" class="close" data-dismiss="modal">&times;</button>
+								        </div>
+					        			<div class="modal-body">
+					          				<p><img src="../../img/{{$aa->img}}"></p>
+					        			</div>
+					      			</div>					      
+					    		</div>
+					  		</div>
+						</td>
 						<td><a href="" class="btn btn-primary">PROSES</a></td>
 					</tr>
 					@endforeach
