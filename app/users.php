@@ -4,15 +4,14 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class profile extends Model
+class users extends Model
 {
-    protected $table = "tbprofile";    
+    protected $table = "tbuser";    
     protected $primaryKey = "id_user";
     public $timestamps = false;
-
-    public $incrementing = false;
+    protected $hidden =['password'];
 
     public function aqueue(){
-        return $this ->belongsTo(Aqueue::class,'id_user');
+        return $this->hasOne(Aqueue::class , 'id_user');
     }
 }

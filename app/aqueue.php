@@ -8,10 +8,15 @@ class aqueue extends Model
 {
     protected $table = 'tbcheckup';
     protected $primaryKey = 'id';
-    protected $fillable = ['nama','disease','alamat','nohp'];
+    protected $fillable = ['appointment','disease','dokter','nohp','spesialist','date','nama','email'];
     public $timestamps = false;
 
-     public function profile(){
-        return $this->hasOne(Profile::class , 'id_user');
+    public function users()
+    {
+        return $this->belongsTo(Users::class , 'id_user');
+
+    }public function ahospital()
+    {
+        return $this->belongsTo(Users::class , 'id');
     }
 }

@@ -10,4 +10,8 @@ class ahospital extends Model
     protected $primaryKey = 'id';
     protected $fillable = ['nama','img','provinsi','kota','alamat','nohp'];
     public $timestamps = false;
+
+    public function aqueue(){
+        return $this->hasOne(Aqueue::class , 'id_hospital');
+    }
 }

@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\profile;
+use App\acheck;
+use App\acheckdetil;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
-class ProfileController extends Controller
+class AcheckController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +17,12 @@ class ProfileController extends Controller
      */
     public function index()
     {
-        //
+        $transaksi = Acheck::with('tbprofile')->get();
+        // $transaksi = DB::table('tbtransaksi')
+        // ->join('tbprofile','tbtransaksi.id_user','=','tbprofile.id_user')
+        // ->select('tbprofile.nama','tbtransaksi.tanggal','tbtransaksi.img','tbtransaksi.total');
+        // ->get();
+        return view('admin.checkpayment',compact('transaksi'));
     }
 
     /**
@@ -42,10 +49,10 @@ class ProfileController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\profile  $profile
+     * @param  \App\acheck  $acheck
      * @return \Illuminate\Http\Response
      */
-    public function show(profile $profile)
+    public function show(acheck $acheck)
     {
         //
     }
@@ -53,10 +60,10 @@ class ProfileController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\profile  $profile
+     * @param  \App\acheck  $acheck
      * @return \Illuminate\Http\Response
      */
-    public function edit(profile $profile)
+    public function edit(acheck $acheck)
     {
         //
     }
@@ -65,10 +72,10 @@ class ProfileController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\profile  $profile
+     * @param  \App\acheck  $acheck
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, profile $profile)
+    public function update(Request $request, acheck $acheck)
     {
         //
     }
@@ -76,10 +83,10 @@ class ProfileController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\profile  $profile
+     * @param  \App\acheck  $acheck
      * @return \Illuminate\Http\Response
      */
-    public function destroy(profile $profile)
+    public function destroy(acheck $acheck)
     {
         //
     }

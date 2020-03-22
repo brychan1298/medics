@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Aqueue;
-use App\Profile;
+use App\Users;
+use App\Ahospital;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -19,7 +20,8 @@ class AqueueController extends Controller
     public function index()
     {
         $nama = DB::table('tbdokter')->get();
-        return view('admin.adminpatient',compact('nama'));
+        $users = Users::with('Aqueue')->get();
+        return view('admin.adminpatient',compact('nama','users'));
     }
 
     /**
@@ -38,15 +40,33 @@ class AqueueController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, Users $users, Ahospital $ahospital)
     {
         $validasi = $request->validate([
+            'nama'=>'required',
+            'email'=>'required',
             'appointment'=>'required',
             'disease'=>'required',
             'nohp'=>'required',
+            'date'=>'required',
             'dokter'=>'required',
             'spesialist'=>'required'
         ]);
+
+        $aqueue = new Aqueue;
+        $aqueue->id_user = $users->id_user;
+        $aqueue->id_hospital = $ahospital->id;
+        $aqueue ->appointment = $request->appointment;
+        $aqueue ->nama = $request->nama;
+        $aqueue ->email = $request->email;
+        $aqueue ->date = $request->date;
+        $aqueue ->disease = $request->disease;
+        $aqueue ->nohp = $request->nohp;
+        $aqueue ->dokter = $request->dokter;
+        $aqueue ->spesialist = $request->spesialist;
+        $aqueue ->save();
+
+        return redirect('/Aqueue');
     }
 
     /**
