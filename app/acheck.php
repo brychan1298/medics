@@ -13,4 +13,9 @@ class acheck extends Model
     {
     	return $this->hasOne(Acheckdetil::class,'id_user');
     }
+
+    public function tbtransaksidetil()
+    {
+    	return $this->belongsTo(Acustomer::class,'id_transaksi');
+    }
 }

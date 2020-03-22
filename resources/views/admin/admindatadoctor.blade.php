@@ -35,7 +35,7 @@
 				<div class="col-sm-12">
 					<form action="/doctorSearch" method="GET">
 						<center>
-							<span >
+							<span>
 								<input type="text" name="cari" value="{{ old('cari') }}" placeholder="Search" style="border:1px solid grey;border-radius: 15px 0px 0px 15px; padding-right: 550px; padding-top: 10px;padding-bottom: 9px;padding-left: 10px;">
 							</span>
 							<span>

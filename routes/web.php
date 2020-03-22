@@ -41,9 +41,9 @@ Route::get('/shopee', function () {
 //     return view('admin.checkpayment');
 // });
 
-Route::get('/Acustomer', function () {
-    return view('admin.customer');
-});
+// Route::get('/Acustomer', function () {
+//     return view('admin.customer');
+// });
 
 Route::get('/Apatient', function () {
     return view('admin.ourpatient');
@@ -93,4 +93,14 @@ Route::get('/hospitalSearch','AhospitalController@cari');
 
 //submit
     Route::post('/Aqueuesubmit', 'AqueueController@store');
+//ADMIN CHECK PAYMENT
+	Route::resource('/Acheck','AcheckController');
 
+
+//ADMIN CUSTOMER
+	Route::resource('/Acustomer','AcustomerController');
+	Route::get('/admindetailcustomer',function(){
+		return view('admin.detailcustomer');
+	});
+	Route::get('/customer/detil/{id}','AcustomerController@edit');
+	Route::get('/showcustomer','AcustomerController@show');
