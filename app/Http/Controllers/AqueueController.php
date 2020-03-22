@@ -20,7 +20,7 @@ class AqueueController extends Controller
     public function index()
     {
         $nama = DB::table('tbdokter')->get();
-        $users = Users::with('Aqueue')->get();
+        $aqueue = Aqueue::all();
         return view('admin.adminpatient',compact('nama','users'));
     }
 
@@ -54,8 +54,8 @@ class AqueueController extends Controller
         ]);
 
         $aqueue = new Aqueue;
-        $aqueue->id_user = $users->id_user;
-        $aqueue->id_hospital = $ahospital->id;
+        // $aqueue->id_user = $users->id_user;
+        $aqueue->id_hospital = 1;
         $aqueue ->appointment = $request->appointment;
         $aqueue ->nama = $request->nama;
         $aqueue ->email = $request->email;

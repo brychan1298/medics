@@ -12,6 +12,6 @@ class ahospital extends Model
     public $timestamps = false;
 
     public function aqueue(){
-        return $this->hasOne(Aqueue::class , 'id_hospital');
+        return $this->hasOne(Aqueue::class , 'id');
     }
 }

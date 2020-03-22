@@ -11,11 +11,13 @@ class aqueue extends Model
     protected $fillable = ['appointment','disease','dokter','nohp','spesialist','date','nama','email'];
     public $timestamps = false;
 
-    public function users()
-    {
-        return $this->belongsTo(Users::class , 'id_user');
+    // public function users()
+    // {
+    //     return $this->belongsTo(Users::class , 'id_user');
 
-    }public function ahospital()
+    // }
+
+    public function ahospital()
     {
         return $this->belongsTo(Users::class , 'id');
     }
