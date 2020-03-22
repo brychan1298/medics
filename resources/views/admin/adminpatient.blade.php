@@ -36,7 +36,7 @@
 						<div class="container mb-4">
 							<div class="row">
 								<div class="col-sm-4">Patient Name<br><input type="text" name="nama" style="width: 100%; height: 45px; border-radius: 15px; border:1px solid #707070; padding-left:10px;"></div>
-								<div class="col-sm-4">Email<br><input type="email" name="email" style="width: 100%; height: 45px; border-radius: 15px; border:1px solid #707070; padding-left:10px;"></div>
+								<div class="col-sm-4">Date<br><input type="date" name="date" style="width: 100%; height: 45px; border-radius: 15px; border:1px solid #707070; padding-left:10px;"></div>
 								<div class="col-sm-4">no HP<br><input type="tel" name="nohp" style="width: 100%; height: 45px; border-radius: 15px; border:1px solid #707070; padding-left:10px;"></div>
 							</div>
 						</div>
@@ -64,7 +64,7 @@
 								@endforeach									
 									</select>
 								</div>
-								<div class="col-sm-4">Date<br><input type="date" name="date" style="width: 100%; height: 45px; border-radius: 15px; border:1px solid #707070; padding-left:10px;"></div>
+								<div class="col-sm-4"></div>
 								<div class="col-sm-4"><button style="background-color: #4385FF; color: white;border:0px;border-radius: 20px;padding: 18px 50px; margin-left: 170px;">SIMPAN</button></div>
 							</div>
 						</div>

@@ -44,7 +44,6 @@ class AqueueController extends Controller
     {
         $validasi = $request->validate([
             'nama'=>'required',
-            'email'=>'required',
             'appointment'=>'required',
             'disease'=>'required',
             'nohp'=>'required',
@@ -58,7 +57,6 @@ class AqueueController extends Controller
         $aqueue->id_hospital = 1;
         $aqueue ->appointment = $request->appointment;
         $aqueue ->nama = $request->nama;
-        $aqueue ->email = $request->email;
         $aqueue ->date = $request->date;
         $aqueue ->disease = $request->disease;
         $aqueue ->nohp = $request->nohp;
