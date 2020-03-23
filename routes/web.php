@@ -17,7 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/shopee', function () {
+Route::get('/shop', function () {
     return view('shop');
 });
 
@@ -97,7 +97,10 @@ Route::get('/hospitalSearch','AhospitalController@cari');
 //ADMIN CHECK PAYMENT
 	Route::resource('/Acheck','AcheckController');
 
-	Route::get('/Acheckproses/{id_transaksi}','AcheckController@update');
+	Route::get('/cekproses/update/{id}','AcheckController@update');
+	Route::get('/Acheckproses',function(){
+		return view('admin.detailcustomer');
+	});
 
 
 //ADMIN CUSTOMER
@@ -107,3 +110,143 @@ Route::get('/hospitalSearch','AhospitalController@cari');
 	});
 	Route::get('/customer/detil/{id}','AcustomerController@edit');
 	Route::get('/showcustomer','AcustomerController@show');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// USER USER USER USER USER USER USER USER
+// USER USER USER USER USER USER USER USER
+// USER USER USER USER USER USER USER USER
+// USER USER USER USER USER USER USER USER
+
+Route::get('/home', function () {
+    return view('shop');
+});
+
+Route::get('/aboutus', function () {
+    return view('aboutus');
+});
+
+Route::get('/shop', function () {
+    return view('shop');
+});
+
+Route::get('/doctor', function () {
+    return view('consult');
+});
+
+Route::get('/hospital', function () {
+    return view('hospital');
+});
+
+Route::get('/login', function () {
+    return view('login');
+});
+
+Route::get('/shop', function () {
+    return view('shop');
+});
+
+Route::get('/doctorqueue', function () {
+    return view('doctor');
+});
+
+Route::get('/hospitalback', function () {
+    return view('hospital');
+});
+
+
+
+
+

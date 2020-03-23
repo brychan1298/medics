@@ -76,16 +76,14 @@ class AcheckController extends Controller
      * @param  \App\acheck  $acheck
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, acheck $acheck, $id_transaksi)
+    public function update(Request $request, acheck $acheck, $id)
     {
-        $validasi=$request->validate(['status'=>'required']);
-        // $Acheck = new Acheck;
-        // $Acheck->status = "PROSES";
-        $Acheck = Acheck::find($id_transaksi);
-        $Acheck->status="PROSES";
+        //$this->validate($request,['status'=>'required']);
+        $stat="PROSES";
+        $Acheck = Acheck::find($id);
+        $Acheck->status=$request->id;
         $Acheck->save();
-        // return redirect('/Acheck');
-        return $id_transaksi;
+        return $id;            
     }
 
     /**

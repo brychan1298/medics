@@ -67,7 +67,7 @@
 					    		</div>
 					  		</div>
 						</td>
-							<td><a href="/Acheckproses/{{$aa->id_transaksi}}" class="btn btn-primary">PROSES</a></td>
+						<td><a href="/cekproses/update/{{ $aa->id_transaksi }}" style="background-color: #4385FF; color: white;border:0px;border-radius: 20px;padding: 10px 30px;" >PROSES</a></td>
 					</tr>
 					@endforeach
 				</table>
