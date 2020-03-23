@@ -25,6 +25,7 @@ class AcheckController extends Controller
         return view('admin.checkpayment',compact('transaksi'));
     }
 
+
     /**
      * Show the form for creating a new resource.
      *
@@ -75,9 +76,16 @@ class AcheckController extends Controller
      * @param  \App\acheck  $acheck
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, acheck $acheck)
+    public function update(Request $request, acheck $acheck, $id_transaksi)
     {
-        //
+        $validasi=$request->validate(['status'=>'required']);
+        // $Acheck = new Acheck;
+        // $Acheck->status = "PROSES";
+        $Acheck = Acheck::find($id_transaksi);
+        $Acheck->status="PROSES";
+        $Acheck->save();
+        // return redirect('/Acheck');
+        return $id_transaksi;
     }
 
     /**

@@ -93,8 +93,11 @@ Route::get('/hospitalSearch','AhospitalController@cari');
 
 //submit
     Route::post('/Aqueuesubmit', 'AqueueController@store');
+
 //ADMIN CHECK PAYMENT
 	Route::resource('/Acheck','AcheckController');
+
+	Route::get('/Acheckproses/{id_transaksi}','AcheckController@update');
 
 
 //ADMIN CUSTOMER
