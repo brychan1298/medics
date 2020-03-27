@@ -11,6 +11,6 @@ class acheckdetil extends Model
 
     public function tbtransaksi()
     {
-    	return $this->belongsTo(Acheck::class,'id_user');
+    	return $this->hasOne(Acheck::class,'id_user');
     }
 }

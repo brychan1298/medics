@@ -30,22 +30,33 @@
 			</div> -->
 			<div class="col-sm-12">									
 				<table  class="table-border table col-lg-12" style="border-bottom: 0px solid #707070;margin: 5px;">
-					<tr>
-						<th colspan="3"></th>
-						<th colspan="2"></th>						
+					<tr style="font-size: 25px;">
+						<th colspan="3" style="padding-left: 70px;">{{$acustomer->tbprofile->nama}}</th>
+						<th colspan="2" style="float: right;"><span id="dates">{{$acustomer->tanggal}}</span></th>
 					</tr>
-					@foreach($acustomer as $ac)
+					@foreach($acustomers as $ac)
 					<tr>
-						<td><img src=""></td>
-						<td>{{$ac->tanggal}}</td>
-						<td>{{$ac->tbtransaksidetil->jumlah}}</td>
-						<td>{{$ac->total}}</td>
+						<td style="padding-top: -50px;"><img src="../../gambar/{{$ac->tbproduk->img}}" style="width: 70px;"></td>	
+						<td class="pt-5">{{$ac->tbproduk->nama}}</td>
+						<td class="pt-5">Rp.{{$ac->tbproduk->harga}},00</td>
+						<td class="pt-5">{{$ac->jumlah}}</td>
+						<td class="pt-5">Rp.{{($ac->jumlah)*($ac->tbproduk->harga)}},00</td>
 					</tr>
 					@endforeach
+					<tr style="font-size: 22px;">
+						<td colspan="5" style="text-align: right;padding-right: 112px;font-weight: bold;">SUBTOTAL : Rp.{{$acustomer->total}},00</td>
+					</tr>
 				</table>
 			</div>
 		</div>
 	</div>
 </body>
 </html>
+<script>
+$(document).ready(function () {
+  $('.dates').datetimepicker({
+    format: 'MMMM/DD/YYYY',
+    locale: 'Id'
+  });
+</script>
 @endsection

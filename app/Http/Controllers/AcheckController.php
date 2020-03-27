@@ -79,9 +79,9 @@ class AcheckController extends Controller
     public function update(Request $request, acheck $acheck, $id)
     {
         //$this->validate($request,['status'=>'required']);
-        $stat="PROSES";
+        //$stat="PROSES";
         $Acheck = Acheck::find($id);
-        $Acheck->status=$request->id;
+        $Acheck->status="PROSES";
         $Acheck->save();
         return $id;            
     }

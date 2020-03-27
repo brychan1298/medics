@@ -11,6 +11,11 @@ class acustomer extends Model
 
     public function tbtransaksi()
     {
-    	return $this->hasOne(Acheck::class,'id_transaksi');
+    	return $this->belongsTo(Acheck::class,'id_transaksi');
+    }
+
+    public function tbproduk()
+    {
+    	return $this->belongsTo(Aproduk::class,'id_produk');
     }
 }

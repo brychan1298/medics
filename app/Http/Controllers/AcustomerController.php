@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\acustomer;
 use App\acheck;
+use App\aproduk;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
@@ -66,8 +67,9 @@ class AcustomerController extends Controller
      */
     public function edit(acustomer $acustomer,$id)
     {
-        $acustomer = Acheck::where('id_transaksi','=',$id)->get();
-        return view('admin.detailcustomer',compact('acustomer'));
+        $acustomers = Acustomer::where('id_transaksi',$id)->get();
+        $acustomer = Acheck::findorFail($id);      
+        return view('admin.detailcustomer',compact('acustomer','acustomers'));
     }
 
     /**

@@ -31,6 +31,7 @@
 				<div>
 					<form action="/doctor/update" method="post">
 					{{ csrf_field() }}
+
 					<input type="hidden" name="id" value="{{ $doctor->id }}">
 					<div class="container mb-4">
 						<div class="row">
