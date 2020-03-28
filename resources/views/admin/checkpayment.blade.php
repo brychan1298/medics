@@ -75,10 +75,10 @@
 							<td style="padding-top:40px;padding-bottom: 20px;">
 								<center>
 									@if($aa->status=="BELUM PROSES")
-										<a href="/cekproses/update/{{ $aa->id_transaksi }}" value="{{$aa->id_transaksi}}" onclick="hitam()" style="background-color: #4385FF; color: white;border:0px;border-radius: 20px;padding: 10px 30px;">PROSES
+										<a href="/cekproses/update/{{ $aa->id_transaksi }}" value="{{$aa->id_transaksi}}" style="background-color: #4385FF; color: white;border:0px;border-radius: 20px;padding: 10px 30px;">PROSES
 										</a>
 									@else
-										<a href="/cekproses/update/{{ $aa->id_transaksi }}" id="disables" value="{{$aa->id_transaksi}}" onclick="hitam()" style="background-color: #4385FF; color: white;border:0px;border-radius: 20px;padding: 10px 30px;opacity: 40%;">PROSES
+										<a href="/cekproses/update/{{ $aa->id_transaksi }}" id="disables" value="{{$aa->id_transaksi}}" style="background-color: #4385FF; color: white;border:0px;border-radius: 20px;padding: 10px 30px;opacity: 40%;">PROSES
 										</a>
 									@endif
 									
@@ -91,16 +91,5 @@
 		</div>
 	</div>
 </body>
-
-<script type="text/javascript">
-	function hitam()
-	{
-		// var disables = parseInt(document.getElementById('disables').value);
-		 // for(var i=0;i<=disables;i++){
-		 		document.getElementById("disables").disabled = true;
-		 	// }
-	}
-</script>
-
 </html>
 @endsection
