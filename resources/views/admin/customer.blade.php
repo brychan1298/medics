@@ -25,10 +25,10 @@
 		    <div>
 		    	<form action="/showcustomer" method="GET">
 			    	<span>
-			    		<input type="date" name="tanggal" id="dates">
+			    		<input type="date" name="tanggal" id="dates" class="form-control " style="">
 			    	</span>
 			    	<span>
-			    		<button type="submit" class="btn btn-primary">SHOW</button>
+			    		<button type="submit" class="btn btn-primary" style="float: left; position: absolute;margin: 0px; margin-top: -38px;margin-left: 192px;">SHOW</button>
 			    	</span>		    	
 		    	</form>
 		    </div>
@@ -54,22 +54,22 @@
 				<center> <div style="margin-bottom: 40px;font-size: 50px;margin-top: 40px;">	NEW DOCTORS </div></center>
 			</div> --> 
 			<div class="col-sm-12">									
-				<table  class="table-border table col-lg-12" style="border-bottom: 1px solid #707070;margin: 5px;">
+				<table  class="table-border col-lg-12" style="border-bottom: 1px solid #707070;margin: 5px;">
 					
-					<tr>
-						<th>Name</th>
-						<th>Date</th>						
-						<th>Item</th>						
-						<th>Total</th>						
-						<th>Action</th>				
+					<tr style="border-bottom: 1px solid grey;text-align: center;">
+						<th style="padding-bottom: 25px;padding-top: 25px;">Name</th>
+						<th style="padding-bottom: 25px;padding-top: 25px;">Date</th>						
+						<th style="padding-bottom: 25px;padding-top: 25px;">Item</th>						
+						<th style="padding-bottom: 25px;padding-top: 25px;">Total</th>						
+						<th style="padding-bottom: 25px;padding-top: 25px;">Action</th>				
 					</tr>
 					@foreach($acustomer as $ac)
-					<tr>
-						<td>{{$ac->tbprofile->nama}}</td>
-						<td>{{$ac->tanggal}}</td>
-						<td>{{$ac->tbtransaksidetil->jumlah}}</td>
-						<td>{{$ac->total}}</td>
-						<td><a href="/customer/detil/{{$ac->id_transaksi}}" class="btn btn-primary">DETAILS</a></td>
+					<tr style="border-bottom: 1px solid grey;text-align: center;">
+						<td style="padding-bottom: 25px;padding-top: 25px;">{{$ac->tbprofile->nama}}</td>
+						<td style="padding-bottom: 25px;padding-top: 25px;">{{$ac->tanggal}}</td>
+						<td style="padding-bottom: 25px;padding-top: 25px;">{{$ac->tbtransaksidetil->jumlah}}</td>
+						<td style="padding-bottom: 25px;padding-top: 25px;">{{$ac->total}}</td>
+						<td style="padding-bottom: 25px;padding-top: 25px;"><a href="/customer/detil/{{$ac->id_transaksi}}" class="btn btn-primary">DETAILS</a></td>
 					</tr>
 					@endforeach
 				</table>

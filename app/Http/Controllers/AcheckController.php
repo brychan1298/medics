@@ -83,7 +83,8 @@ class AcheckController extends Controller
         $Acheck = Acheck::find($id);
         $Acheck->status="PROSES";
         $Acheck->save();
-        return $id;            
+
+        return redirect("/Acheck")->with('disableButton', true);            
     }
 
     /**

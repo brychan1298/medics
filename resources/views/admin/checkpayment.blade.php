@@ -40,34 +40,40 @@
 				<center> <div style="margin-bottom: 40px;font-size: 50px;margin-top: 40px;">	NEW DOCTORS </div></center>
 			</div> -->
 			<div class="col-sm-12">									
-				<table  class="table-border table col-lg-12" style="border-bottom: 1px solid #707070;margin: 5px;">
-					<tr>
-						<th>Name</th>
-						<th>Date</th>						
-						<th>Total</th>						
-						<th>Proof</th>						
-						<th>Check</th>				
+				<table  class="table-border col-lg-12" style="border-bottom: 1px solid #707070;margin: 5px;">
+					<tr style="border-bottom: 1px solid grey;text-align: center;">
+						<th style="padding-top: 40px;padding-bottom: 20px;">Name</th>
+						<th style="padding-top: 40px;padding-bottom: 20px;">Date</th>						
+						<th style="padding-top: 40px;padding-bottom: 20px;">Total</th>						
+						<th style="padding-top: 40px;padding-bottom: 20px;">Proof</th>						
+						<th  style="padding-top: 40px;padding-bottom: 20px;text-align: center;">Check</th>				
 					</tr>
 					@foreach($transaksi as $aa)
-					<tr>
-						<td>{{ $aa->tbprofile->nama }}</td>
-						<td>{{ $aa->tanggal }}</td>
-						<td>Rp {{ $aa->total }},00</td>
-						<td><img src="../../img/{{$aa->img}}" style="width: 40px;" type="button" data-toggle="modal" data-target="#myModal">
+					<tr style="border-bottom: 1px solid grey;text-align: center;">
+						<td style="padding-top: 40px;padding-bottom: 20px;">{{ $aa->tbprofile->nama }}</td>
+						<td style="padding-top: 40px;padding-bottom: 20px;">{{ $aa->tanggal }}</td>
+						<td style="padding-top: 40px;padding-bottom: 20px;">Rp {{ $aa->total }},00</td>
+						<td style="padding-top: 20px;padding-bottom: 20px;"><img src="../../img/{{$aa->img}}" style="width: 60px;" type="button" data-toggle="modal" data-target="#myModal">
 							<div class="modal fade" id="myModal">
 					    		<div class="modal-dialog">					    					      
 					      			<div class="modal-content">
-					      				<div class="modal-header">					      					
+					      				<div class="modal-header">					      		
+					      					<h1 style="padding-left:160px;padding-top: 10px;">DETAIL</h1>
 								          <button type="button" class="close" data-dismiss="modal">&times;</button>
 								        </div>
-					        			<div class="modal-body">
+					        			<div class="modal-body" style="text-align: center;">
 					          				<p><img src="../../img/{{$aa->img}}"></p>
 					        			</div>
 					      			</div>					      
 					    		</div>
 					  		</div>
 						</td>
-						<td><a href="/cekproses/update/{{ $aa->id_transaksi }}" style="background-color: #4385FF; color: white;border:0px;border-radius: 20px;padding: 10px 30px;" >PROSES</a></td>
+							<td style="padding-top:40px;padding-bottom: 20px;">
+								<center>
+									<a href="/cekproses/update/{{ $aa->id_transaksi }}" id="disables" value="{{$aa->id_transaksi}}" onclick="hitam()" style="background-color: #4385FF; color: white;border:0px;border-radius: 20px;padding: 10px 30px;" >PROSES
+									</a>
+								</center>
+							</td>
 					</tr>
 					@endforeach
 				</table>
@@ -75,5 +81,16 @@
 		</div>
 	</div>
 </body>
+
+<script type="text/javascript">
+	function hitam()
+	{
+		// var disables = parseInt(document.getElementById('disables').value);
+		 // for(var i=0;i<=disables;i++){
+		 		document.getElementById("disables").disabled = true;
+		 	// }
+	}
+</script>
+
 </html>
 @endsection

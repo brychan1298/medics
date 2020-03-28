@@ -27,13 +27,13 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-12">
-				<a href="/tambahhospital" class="btn btn-primary" >Add Hospital</a>
+				<a href="/tambahhospital" class="btn btn-primary" style=" color: white;border:0px;border-radius: 15px;padding: 10px 30px;font-weight: semibold">Add Hospital</a>
 			</div>
 		</div>
 	</div>
 
 	<div class="row">				
-				<div class="col-sm-12">
+				<div class="col-sm-12" style="padding-top: 20px;">
 					<form action="/hospitalSearch" method="GET">
 						<center>
 							<span >
@@ -55,25 +55,25 @@
 				<center> <div style="margin-bottom: 40px;font-size: 50px;margin-top: 40px;">	NEW DOCTORS </div></center>
 			</div> -->
 			<div class="col-sm-12">									
-				<table  class="table-border table col-lg-12" style="border-bottom: 1px solid #707070;margin: 5px;">
-					<tr>
-						<th>Name</th>
-						<th>Provinsi</th>						
-						<th>No HP</th>						
-						<th>Alamat</th>						
-						<th>Kabupaten</th>						
-						<th colspan="2" style="text-align: center;">Action</th>						
+				<table  class="table-border col-lg-12" style="border-bottom: 1px solid #707070;margin: 5px;">
+					<tr style="border-bottom: 1px solid grey;text-align: center;">
+						<th style="padding-bottom: 25px;padding-top: 25px;">Name</th>
+						<th style="padding-bottom: 25px;padding-top: 25px;">Provinsi</th>						
+						<th style="padding-bottom: 25px;padding-top: 25px;">No HP</th>						
+						<th style="padding-bottom: 25px;padding-top: 25px;">Alamat</th>						
+						<th style="padding-bottom: 25px;padding-top: 25px;">Kabupaten</th>						
+						<th style="padding-bottom: 25px;padding-top: 25px;" colspan="2" style="text-align: center;">Action</th>						
 					</tr>
 					
 					@foreach($ahospital as $aa)
-						<tr>
-							<td>{{$aa->nama}}</td>
-							<td>{{$aa->provinsi}}</td>
-							<td>{{$aa->nohp}}</td>
-							<td>{{$aa->alamat}}</td>
-							<td>{{$aa->kota}}</td>
-							<td><a href="/hospital/edit/{{ $aa->id }}" style="background-color: #4385FF; color: white;border:0px;border-radius: 20px;padding: 10px 30px;" >EDIT</a></td>
-							<td><a href="/hospital/delete/{{ $aa->id }}" style="background-color: #4385FF; color: white;border:0px;border-radius: 20px;padding: 10px 30px;" >DELETE</a></td>
+						<tr style="border-bottom: 1px solid grey;text-align: center;">
+							<td style="padding-bottom: 25px;padding-top: 25px;">{{$aa->nama}}</td>
+							<td style="padding-bottom: 25px;padding-top: 25px;">{{$aa->provinsi}}</td>
+							<td style="padding-bottom: 25px;padding-top: 25px;">{{$aa->nohp}}</td>
+							<td style="padding-bottom: 25px;padding-top: 25px;">{{$aa->alamat}}</td>
+							<td style="padding-bottom: 25px;padding-top: 25px;">{{$aa->kota}}</td>
+							<td style="padding-bottom: 25px;padding-top: 25px;"><a href="/hospital/edit/{{ $aa->id }}" style="background-color: #4385FF; color: white;border:0px;border-radius: 20px;padding: 10px 30px;" >EDIT</a></td>
+							<td style="padding-bottom: 25px;padding-top: 25px;"><a href="/hospital/delete/{{ $aa->id }}" style="background-color: #4385FF; color: white;border:0px;border-radius: 20px;padding: 10px 30px;" >DELETE</a></td>
 						</tr>
 					@endforeach
 				</table>

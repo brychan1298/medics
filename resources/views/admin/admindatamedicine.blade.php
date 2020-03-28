@@ -25,13 +25,13 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-12">
-				<a href="/tambahmedicine" class="btn btn-primary" >Add Medicine</a>
+				<a href="/tambahmedicine" class="btn btn-primary" style=" color: white;border:0px;border-radius: 15px;padding: 10px 30px;font-weight: semibold" >Add Medicine</a>
 			</div>
 		</div>
 	</div>
 
 	<div class="row">				
-				<div class="col-sm-12">
+				<div class="col-sm-12" style="padding-top: 20px;">
 					<form action="/medicineSearch" method="GET">
 						<center>
 							<span >
@@ -67,7 +67,9 @@
 								<div style="color: black;font-size: 18px;">Rp{{$aa->harga}},00</div>
 								<div style="color: #707070;font-size: 14px;">sisa stock {{$aa->jumlah_stok}}</div>
 								<p style="color: black;font-size: 15px;margin-bottom: 30px;">{{$aa->kegunaan}}</p>
-								<a href="/medicine/edit/{{ $aa->id }}" style="background-color: #4385FF; color: white;border:0px;border-radius: 20px;padding: 18px 40px;" >EDIT OBAT</a>
+								<div style="padding-bottom:20px;">
+									<a href="/medicine/edit/{{ $aa->id }}" style="background-color: #4385FF; color: white;border:0px;border-radius: 25px;padding: 18px 35px;" >EDIT OBAT</a>
+								</div>
 							</center>
 						</div>
 					</div>

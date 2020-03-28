@@ -26,13 +26,13 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-12">
-				<a href="/tambahdokter" class="btn btn-primary" >Add Doctor</a>
+				<a href="/tambahdokter" class="btn btn-primary" style=" color: white;border:0px;border-radius: 15px;padding: 10px 30px;font-weight: semibold">Add Doctor</a>
 			</div>
 		</div>
 	</div>
 
 	<div class="row">				
-				<div class="col-sm-12">
+				<div class="col-sm-12" style="padding-top: 20px;">
 					<form action="/doctorSearch" method="GET">
 						<center>
 							<span>
@@ -54,29 +54,29 @@
 				<center> <div style="margin-bottom: 40px;font-size: 50px;margin-top: 40px;">	NEW DOCTORS </div></center>
 			</div> -->
 			<div class="col-sm-12">									
-				<table  class="table-border table col-lg-12" style="border-bottom: 1px solid #707070;margin: 5px;">
-					<tr>
-						<th>Name</th>
-						<th>Phone Number</th>						
-						<th>Email</th>						
-						<th>Specialist</th>						
-						<th>Address</th>						
-						<th>Country</th>						
-						<th>Date</th>
-						<th colspan="2">Action</th>
+				<table  class="table-border col-lg-12" style="border-bottom: 1px solid #707070;margin: 5px;">
+					<tr  style="border-bottom: 1px solid grey;text-align: center;">
+						<th style="padding-bottom: 25px;padding-top: 25px;">Name</th>
+						<th style="padding-bottom: 25px;padding-top: 25px;">Phone Number</th>						
+						<th style="padding-bottom: 25px;padding-top: 25px;">Email</th>						
+						<th style="padding-bottom: 25px;padding-top: 25px;">Specialist</th>						
+						<th style="padding-bottom: 25px;padding-top: 25px;">Address</th>						
+						<th style="padding-bottom: 25px;padding-top: 25px;">Country</th>						
+						<th style="padding-bottom: 25px;padding-top: 25px;" style="text-align: center;">Date</th>
+						<th style="padding-bottom: 25px;padding-top: 25px;" colspan="2" style="text-align: center;">Action</th>
 											
 					</tr>
 					@foreach($adoctor as $aa)
-						<tr>
-							<td>{{ $aa->nama}}</td>
-							<td>{{ $aa->nohp}}</td>
-							<td>{{ $aa->email}}</td>
-							<td>{{ $aa->spesialisasi}}</td>
-							<td>{{ $aa->alamat}}</td>
-							<td>{{ $aa->kota}}</td>
-							<td>{{ $aa->tgl_mulai_kerja}}</td>
-							<td><a href="/doctor/edit/{{ $aa->id }}" style="background-color: #4385FF; color: white;border:0px;border-radius: 20px;padding: 10px 30px;" >EDIT</a></td>
-							<td><a href="/doctor/delete/{{ $aa->id }}" style="background-color: #4385FF; color: white;border:0px;border-radius: 20px;padding: 10px 30px;" >DELETE</a></td>
+						<tr  style="border-bottom: 1px solid grey;text-align: center;">
+							<td style="padding-bottom: 25px;padding-top: 25px;">{{ $aa->nama}}</td>
+							<td style="padding-bottom: 25px;padding-top: 25px;">{{ $aa->nohp}}</td>
+							<td style="padding-bottom: 25px;padding-top: 25px;">{{ $aa->email}}</td>
+							<td style="padding-bottom: 25px;padding-top: 25px;">{{ $aa->spesialisasi}}</td>
+							<td style="padding-bottom: 25px;padding-top: 25px;">{{ $aa->alamat}}</td>
+							<td style="padding-bottom: 25px;padding-top: 25px;">{{ $aa->kota}}</td>
+							<td style="padding-bottom: 25px;padding-top: 25px;">{{ $aa->tgl_mulai_kerja}}</td>
+							<td style="padding-bottom: 25px;padding-top: 25px;"><a href="/doctor/edit/{{ $aa->id }}" style="background-color: #4385FF; color: white;border:0px;border-radius: 20px;padding: 10px 30px;" >EDIT</a></td>
+							<td style="padding-bottom: 25px;padding-top: 25px;"><a href="/doctor/delete/{{ $aa->id }}" style="background-color: #4385FF; color: white;border:0px;border-radius: 20px;padding: 10px 30px;" >DELETE</a></td>
 						</tr>
 					@endforeach
 				</table>

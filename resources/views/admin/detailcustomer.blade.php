@@ -29,22 +29,22 @@
 				<center> <div style="margin-bottom: 40px;font-size: 50px;margin-top: 40px;">	NEW DOCTORS </div></center>
 			</div> -->
 			<div class="col-sm-12">									
-				<table  class="table-border table col-lg-12" style="border-bottom: 0px solid #707070;margin: 5px;">
-					<tr style="font-size: 25px;">
-						<th colspan="3" style="padding-left: 70px;">{{$acustomer->tbprofile->nama}}</th>
-						<th colspan="2" style="float: right;"><span id="dates">{{$acustomer->tanggal}}</span></th>
+				<table  class="table-border col-lg-12" style="border-bottom: 0px solid #707070;margin: 5px;">
+					<tr style="border-bottom: 1px solid lightgrey">
+						<td colspan="2" style="padding-left: 40px;font-size: 22px;font-weight: bold; font-family: Trebuchet MS; padding-top: 20px;padding-bottom: 20px;">{{$acustomer->tbprofile->nama}}</td>
+						<td colspan="3" style="text-align: right;padding-top: 20px;padding-bottom: 20px; font-family: Trebuchet MS;font-size: 20px;font-weight: thin;"><span id="dates" style="padding-right: 30px;text-align: right;">{{$acustomer->tanggal}}</span></td>
 					</tr>
 					@foreach($acustomers as $ac)
-					<tr>
-						<td style="padding-top: -50px;"><img src="../../gambar/{{$ac->tbproduk->img}}" style="width: 70px;"></td>	
-						<td class="pt-5">{{$ac->tbproduk->nama}}</td>
-						<td class="pt-5">Rp.{{$ac->tbproduk->harga}},00</td>
-						<td class="pt-5">{{$ac->jumlah}}</td>
-						<td class="pt-5">Rp.{{($ac->jumlah)*($ac->tbproduk->harga)}},00</td>
+					<tr style="padding: 0px;">
+						<td style="padding-top: 20px;padding-left: 10px;padding-bottom: 20px;"><img src="../../gambar/{{$ac->tbproduk->img}}" style="width: 80px;"></td>	
+						<td class="">{{$ac->tbproduk->nama}}</td>
+						<td class="">Rp.{{$ac->tbproduk->harga}},00</td>
+						<td class="">{{$ac->jumlah}}Item</td>
+						<td class="" style="text-align: right;padding-right: 30px;">Rp.{{($ac->jumlah)*($ac->tbproduk->harga)}},00</td>
 					</tr>
 					@endforeach
 					<tr style="font-size: 22px;">
-						<td colspan="5" style="text-align: right;padding-right: 112px;font-weight: bold;">SUBTOTAL : Rp.{{$acustomer->total}},00</td>
+						<td colspan="5" style="text-align: right;padding-right: 30px;font-size: 18px;font-weight: semibold;padding-top: 20px;border-top: 1px solid lightgrey;">Subtotal : Rp.{{$acustomer->total}},00</td>
 					</tr>
 				</table>
 			</div>
