@@ -9,7 +9,11 @@
 	<style type="text/css">
 		.bar1{
 			padding-right: 10px;
-		}
+		}	
+	    #disables {
+	        pointer-events: none;
+	        cursor: default;
+	    }
 	</style>
 </head>
 <body data-spy="scroll" data-target="menu">
@@ -70,8 +74,14 @@
 						</td>
 							<td style="padding-top:40px;padding-bottom: 20px;">
 								<center>
-									<a href="/cekproses/update/{{ $aa->id_transaksi }}" id="disables" value="{{$aa->id_transaksi}}" onclick="hitam()" style="background-color: #4385FF; color: white;border:0px;border-radius: 20px;padding: 10px 30px;" >PROSES
-									</a>
+									@if($aa->status=="BELUM PROSES")
+										<a href="/cekproses/update/{{ $aa->id_transaksi }}" value="{{$aa->id_transaksi}}" onclick="hitam()" style="background-color: #4385FF; color: white;border:0px;border-radius: 20px;padding: 10px 30px;">PROSES
+										</a>
+									@else
+										<a href="/cekproses/update/{{ $aa->id_transaksi }}" id="disables" value="{{$aa->id_transaksi}}" onclick="hitam()" style="background-color: #4385FF; color: white;border:0px;border-radius: 20px;padding: 10px 30px;opacity: 40%;">PROSES
+										</a>
+									@endif
+									
 								</center>
 							</td>
 					</tr>
