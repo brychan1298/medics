@@ -37,7 +37,7 @@
 				<div class="col-sm-12">
 					<center>
 						<div style="font-size: 20px;color: black;">
-							<a href="/hospitalback">Hospital</a> | <a href="" style="text-decoration: underline;">Doctor</a>
+							<a href="/hospital">Hospital</a> | <a href="" style="text-decoration: underline;">Doctor</a>
 						</div>
 					</center>
 				</div>

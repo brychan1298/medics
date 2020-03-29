@@ -21,7 +21,7 @@ class AqueueController extends Controller
     {
         $nama = DB::table('tbdokter')->get();
         $aqueue = Aqueue::all();
-        return view('admin.adminpatient',compact('nama','users'));
+        return view('admin.adminpatient',compact('nama','aqueue'));
     }
 
     /**

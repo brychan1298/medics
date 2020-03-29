@@ -5,6 +5,9 @@
 <head>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 	<title></title>
 	<style type="text/css">	
 		.bar1{
@@ -33,7 +36,7 @@
 		<center><div style="font-size: 30px;">OUR FOUNDERS</div></center>
 		<center><img src="gambar/pembatas.png" style="width: 160px;"></center>
 	</div>
-	<div class="container mb-5">
+	<div class="container mb-5 d-none d-lg-block">
 		<div class="row">
 			<div class="col-sm-4">
 				<img src="gambar/banks.jpg" class="w-100">
@@ -49,6 +52,48 @@
 			</div>
 		</div>
 	</div>
+
+	<div id="demo" class="carousel slide d-block d-lg-none" data-ride="carousel">
+
+	  <!-- Indicators -->
+	  <ul class="carousel-indicators">
+	    <li data-target="#demo" data-slide-to="0" class="active"></li>
+	    <li data-target="#demo" data-slide-to="1"></li>
+	    <li data-target="#demo" data-slide-to="2"></li>
+	  </ul>
+
+	  <!-- The slideshow -->
+	  <div class="carousel-inner">
+	    <div class="carousel-item active">
+	      <div class="col-sm-4">
+				<img src="gambar/banks.jpg" class="w-100">
+				<center><div style="font-size: 20px;border: 1px solid;border-radius: 0px 0px 15px 15px;">Steve Marlins</div></center>
+			</div>
+	    </div>
+	    <div class="carousel-item">
+	      <div class="col-sm-4">
+				<img src="gambar/flume.jpg" class="w-100">
+				<center><div style="font-size: 20px;border: 1px solid;border-radius: 0px 0px 15px 15px;">Steve Marlins</div></center>
+			</div>
+	    </div>
+	    <div class="carousel-item">
+	      <div class="col-sm-4">
+				<img src="gambar/chet_faker_2.jpg" class="w-100">
+				<center><div style="font-size: 20px;border: 1px solid;border-radius: 0px 0px 15px 15px;">Steve Marlins</div></center>
+			</div>
+	    </div>
+	  </div>
+
+	  <!-- Left and right controls -->
+	  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+	    <span class="carousel-control-prev-icon"></span>
+	  </a>
+	  <a class="carousel-control-next" href="#demo" data-slide="next">
+	    <span class="carousel-control-next-icon"></span>
+	  </a>
+
+	</div>
+
 
 	<div class="container mt-5">
 		<div class="row">

@@ -13,34 +13,34 @@
 	</style>	
 </head>
 <body data-spy="scroll" data-target="menu">
-	<nav class="navbar navbar-expand-md fixed-top" style="background-color: rgb(67,133,255);">
-		<h1><img src="gambar/yayaya.png" style="width: 100px;"></h1>
+	<nav style="background-color: rgb(67,133,255);" class="navbar navbar-dark navbar-expand-md fixed-top">
+		<h1><img src="../../img/apasi.png" style="width: 120px;"></h1>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu">
 			<span class="navbar-toggler-icon"></span>
 		</button>
 		<div class="collapse navbar-collapse" id="menu">
-			<ul class="navbar-nav ml-auto mr-5">				
+			<ul class="navbar-nav ml-auto">
 				<li class="nav-item bar1">
-					<a href="/home" class="nav-link text-white">Home</a>
-				</li>				
+					<a href="/home" class="nav-link text-white">Home</a>					
+				</li>
 				<li class="nav-item bar1">
-					<a href="/aboutus" class="nav-link text-white">About Us</a>
-				</li>				
+					<a href="/aboutus" class="nav-link text-white">About Us</a>					
+				</li>
 				<li class="nav-item bar1">
-					<a href="/shop" class="nav-link text-white">Shop</a>
-				</li>				
+					<a href="/shop" class="nav-link text-white">Shop</a>					
+				</li>
 				<li class="nav-item bar1">
-					<a href="/doctor" class="nav-link text-white">Doctors</a>
-				</li>				
+					<a href="/doctor" class="nav-link text-white">Doctors</a>					
+				</li>
 				<li class="nav-item bar1">
-					<a href="/hospital" class="nav-link text-white">Hospital</a>
-				</li>				
+					<a href="/hospital" class="nav-link text-white">Hospital</a>					
+				</li>
 				<li class="nav-item bar1">
-					<a href="/login" class="nav-link text-white">Login</a>
+					<a href="/login" class="nav-link text-white">Login</a>					
 				</li>
 				<li class="nav-item bar1">
 					<a href="#" class="nav-link text-white"><img src="gambar/ADDT.png" style="width: 30px;"></a>
-				</li>			
+				</li>		
 			</ul>
 		</div>
 	</nav>
@@ -49,7 +49,7 @@
 		@yield('konten')
 	</div>	
 
-	<div class="row d-none d-lg-block" style="background-color: rgb(67,133,255); padding-top: 20px;padding-bottom: 20px;margin-top: 100px;">
+	<div class="row d-none d-lg-block" style="background-color: rgb(67,133,255); padding-top: 20px;padding-bottom: 20px;margin-top: 250px;">
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-4">
@@ -68,6 +68,7 @@
 				</div>
 				<div class="col-sm-4">
 					<div class="jj8">Social Media</div>
+					
 				</div>
 			</div>
 		</div>				
