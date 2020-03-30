@@ -56,84 +56,27 @@
 
 	<div class="container mt-5">
 		<div class="row">
-			<div class="col-sm-6">
-				<div style="border: 1px solid grey;border-radius: 15px; padding: 10px;">
-					<div style="margin: 10px;">	
-						<span><img src="gambar/doctor2.jpg" style="width: 80px;border-radius: 50%;padding-right: 12px;"></span>
-						<span>
-							<div style="float: right;">
-								<button style="background-color: blue;color: white; font-size: 12px;border: 0px; font-weight: bold;padding: 5px 25px 5px 25px;margin-top: 35px;margin-bottom: 10px;">							
-									CHAT
-								</button>
-							</div>						
-							<div style="float: right;margin-right: 210px;">
-								<div style="color: blue;font-size:16px;font-weight:bold;">Susan Susanti</div>
-								<div style="color: grey;"> Surgery Specialist</div>
-								<div style="color: blue;">FREE</div>
-							</div>						
-						</span>					
-					</div>
-				</div>
-			</div>
-			<div class="col-sm-6">
-				<div style="border: 1px solid grey;border-radius: 15px;padding: 10px;">
-					<div style="margin: 10px;">
-						<span><img src="gambar/doctor1.jpg" style="width: 80px;border-radius: 50%;padding-right: 12px;"></span>
-						<span>
-							<div style="float: right;">
-								<button style="background-color: blue;color: white; font-size: 12px;border: 0px; font-weight: bold;padding: 5px 25px 5px 25px;margin-top: 35px;margin-bottom: 10px;">							
+			@foreach($doctor as $d)
+				<div class="col-sm-6">
+					<div style="border: 1px solid grey;border-radius: 15px; padding: 10px;">
+						<div style="margin: 10px;">	
+							<span><img src="../../gambar/{{$d->gambar}}" style="width: 80px;border-radius: 50%;padding-right: 12px;"></span>
+							<span>
+								<div style="float: right;">
+									<button style="background-color: blue;color: white; font-size: 12px;border: 0px; font-weight: bold;padding: 5px 25px 5px 25px;margin-top: 35px;margin-bottom: 10px;">							
 										CHAT
 									</button>
-							</div>						
-							<div style="float: right;margin-right: 210px;">
-								<div style="color: blue;font-size:16px;font-weight:bold;">John Tucker</div>
-								<div style="color: grey;"> Surgery Specialist</div>
-								<div style="color: blue;">FREE</div>
-							</div>						
-						</span>					
+								</div>						
+								<div style="float: right;margin-right: 210px;">
+									<div style="color: blue;font-size:16px;font-weight:bold;">{{$d->name}}</div>
+									<div style="color: grey;">{{$d->spesialisasi}}</div>
+									<div style="color: blue;">FREE</div>
+								</div>						
+							</span>					
+						</div>
 					</div>
 				</div>
-			</div>
-
-			<div class="col-sm-6 mt-3">
-				<div style="border: 1px solid grey;border-radius: 15px;padding: 10px;">
-					<div style="margin: 10px;">
-						<span><img src="gambar/doctor2.jpg" style="width: 80px;border-radius: 50%;padding-right: 12px;"></span>
-						<span>
-							<div style="float: right;">
-								<button style="background-color: blue;color: white; font-size: 12px;border: 0px; font-weight: bold;padding: 5px 25px 5px 25px;margin-top: 35px;margin-bottom: 10px;">							
-										CHAT
-									</button>
-							</div>						
-							<div style="float: right;margin-right: 210px;">
-								<div style="color: blue;font-size:16px;font-weight:bold;">Dina Amana</div>
-								<div style="color: grey;"> Surgery Specialist</div>
-								<div style="color: blue;">FREE</div>
-							</div>						
-						</span>					
-					</div>
-				</div>
-			</div>
-
-			<div class="col-sm-6 mt-3">
-				<div style="border: 1px solid grey;border-radius: 15px;padding: 10px;">
-					<div style="margin: 10px;">
-						<span><img src="gambar/doctor1.jpg" style="width: 80px;border-radius: 50%;padding-right: 12px;"></span>
-						<span>
-							<div style="float: right;">
-								<button style="background-color: blue;color: white; font-size: 12px;border: 0px; font-weight: bold;padding: 5px 25px 5px 25px;margin-top: 35px;margin-bottom: 10px;">							
-										CHAT
-									</button>
-							</div>						
-							<div style="float: right;margin-right: 210px;">
-								<div style="color: blue;font-size:16px;font-weight:bold;">George Borh</div>
-								<div style="color: grey;"> Surgery Specialist</div>
-								<div style="color: blue;">FREE</div>
-							</div>						
-						</span>					
-					</div>
-				</div>
-			</div>
+			@endforeach
 		</div>
 	</div>
 

@@ -211,20 +211,20 @@ Route::get('/hospitalSearch','AhospitalController@cari');
 // USER USER USER USER USER USER USER USER
 
 Route::get('/home', function () {
-    return view('shop');
+    return view('home');
 });
 
 Route::get('/aboutus', function () {
     return view('aboutus');
 });
 
-Route::get('/shop', function () {
-    return view('shop');
-});
+// Route::get('/shop', function () {
+//     return view('shop');
+// });
 
-Route::get('/doctor', function () {
-    return view('consult');
-});
+// Route::get('/doctor', function () {
+//     return view('consult');
+// });
 
 Route::get('/hospital', function () {
     return view('hospital');
@@ -234,9 +234,9 @@ Route::get('/login', function () {
     return view('login');
 });
 
-Route::get('/shop', function () {
-    return view('shop');
-});
+// Route::get('/shop', function () {
+//     return view('shop');
+// });
 
 Route::get('/doctorqueue', function () {
     return view('doctor');
@@ -247,6 +247,12 @@ Route::get('/hospitalback', function () {
 });
 
 
+// USER SHOP
+Route::resource('/shop','ShopController');
+Route::get('/shopSearch','ShopController@cari');
+
+//USER CONSULT
+Route::resource('/doctor','DoctorController');
 
 
 

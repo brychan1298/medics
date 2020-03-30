@@ -10,6 +10,10 @@
 		.bar1{
 			padding-right: 15px;
 		}
+		body{
+			overflow-x: hidden;
+			width: 100%;
+		}
 	</style>	
 </head>
 <body data-spy="scroll" data-target="menu">

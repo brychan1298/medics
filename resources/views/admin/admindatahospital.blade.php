@@ -33,21 +33,21 @@
 	</div>
 
 	<div class="row">				
-				<div class="col-sm-12" style="padding-top: 20px;">
-					<form action="/hospitalSearch" method="GET">
-						<center>
-							<span >
-								<input type="text" name="cari" value="{{ old('cari') }}" placeholder="Search" style="border:1px solid grey;border-radius: 15px 0px 0px 15px; padding-right: 550px; padding-top: 10px;padding-bottom: 9px;padding-left: 10px;">
-							</span>
-							<span>
-								<button type="submit" style="background-color: #6672EC;padding: 12px;border-radius: 0px 15px 15px 0px; margin-left: -5px;">
-									<img src="gambar/searchicon.png" style="width: 30px;">
-								</button>
-							</span>
-						</center>	
-					</form>
-				</div>
-			</div>
+		<div class="col-sm-12" style="padding-top: 20px;">
+			<form action="/hospitalSearch" method="GET">
+				<center>
+					<span >
+						<input type="text" name="cari" value="{{ old('cari') }}" placeholder="Search" style="border:1px solid grey;border-radius: 15px 0px 0px 15px; padding-right: 550px; padding-top: 10px;padding-bottom: 9px;padding-left: 10px;">
+					</span>
+					<span>
+						<button type="submit" style="background-color: #6672EC;padding: 12px;border-radius: 0px 15px 15px 0px; margin-left: -5px;">
+								<img src="gambar/searchicon.png" style="width: 30px;">
+						</button>
+					</span>
+				</center>	
+			</form>
+		</div>
+	</div>
 	<!-- form -->
 	<div class="container" style="margin-top: 30px;border:1px solid; margin-bottom: 100px;border-radius: 30px; height: 300px">
 		<div class="row" style="margin-top:0px;">
