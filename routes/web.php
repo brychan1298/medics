@@ -262,3 +262,8 @@ Route::get('/hospitalback', function () {
 
 	Route::get('/doctorqueue','DoctorController@index2');
 	Route::get('/UdocSearch','DoctorController@cari2');
+
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
