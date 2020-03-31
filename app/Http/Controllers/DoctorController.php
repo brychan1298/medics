@@ -19,6 +19,26 @@ class DoctorController extends Controller
         return view('consult',compact('doctor'));
     }
 
+    public function index2()
+    {
+        $doctor2=Doctor::paginate(6);
+        return view('doctor',compact('doctor2'));
+    }
+
+    public function cari(Request $request)
+    {
+        $cari = $request->cari;
+        $doctor = Doctor::where('nama','like',"%".$cari."%")->paginate(4);
+        return view('consult',compact('doctor'));
+    }
+
+    public function cari2(Request $request)
+    {
+        $cari = $request->cari;
+        $doctor2 = Doctor::where('nama','like',"%".$cari."%")->paginate(4);
+        return view('doctor',compact('doctor2'));
+    }
+
     /**
      * Show the form for creating a new resource.
      *

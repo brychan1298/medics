@@ -15,7 +15,15 @@ class HospitalController extends Controller
      */
     public function index()
     {
-        //
+        $hospitals = Hospital::paginate(6);
+        return view('hospital',compact('hospitals'));
+    }
+
+    public function cari(Request $request)
+    {
+        $cari = $request->cari;
+        $hospitals = Hospital::where('nama','like',"%".$cari."%")->paginate(6);
+        return view('hospital',compact('hospitals'));
     }
 
     /**
