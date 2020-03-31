@@ -55,20 +55,37 @@
 					</span>
 				</div>
 				<div class="col-sm-12 mt-5">
-					<center>
-					<span >
-						<input class="mw-100" alt="Max-width 100%" type="text" name="" placeholder="Search" style="border:1px solid grey;border-radius: 15px 0px 0px 15px; width: 75%; padding-top: 10px;padding-bottom: 9px;padding-left: 10px;">
-					</span>
-					<span style="background-color: #6672EC;padding: 12px;border-radius: 0px 15px 15px 0px; margin-left: -5px;">
-						<img src="gambar/searchicon.png" style="width: 30px;">
-					</span>
-				</center>
+					<form action="/UdocSearch" method="GET">
+						<center>
+							<span >
+								<input type="text" name="cari" value="{{ old('cari') }}" placeholder="Search" style="border:1px solid grey;border-radius: 15px 0px 0px 15px; padding-right: 550px; padding-top: 10px;padding-bottom: 9px;padding-left: 10px;">
+							</span>
+							<span>
+								<button type="submit" style="background-color: #6672EC;padding: 12px;border-radius: 0px 10px 10px 0px; margin-left: -5px;border:none;">
+									<img src="gambar/searchicon.png" style="width: 30px;">
+								</button>
+							</span>
+						</center>	
+					</form>
 				</div>
 			</div>
 
 
 			<div class="row">
+				@foreach($doctor2 as $d)
 				<div class="col-sm-4 col-6 mt-5">
+					<a href="">
+						<div style="border:1px solid #707070;border-radius: 15px;padding: 50px 10px;">
+							<center>								
+								<img src="../../gambar/{{$d->gambar}}" class="w-50" style="border-radius: 50%;">
+								<div style="color: black;">{{$d->nama}}</div>
+								<div style="color: black;">{{$d->spesialisasi}} Spesialist</div>
+							</center>
+						</div>
+					</a>
+				</div>
+				@endforeach
+				<!--<div class="col-sm-4 col-6 mt-5">
 					<a href="">
 						<div style="border:1px solid #707070;border-radius: 15px;padding: 50px 10px;">
 							<center>								
@@ -138,45 +155,11 @@
 							</center>
 						</div>
 					</a>
-				</div>
+				</div>-->
 			</div>
-
-
-
-
-
-			<div class="row mt-5 mb-5">
-				<div class="col-sm-12">
-					<center>
-							<div>
-								<span>								
-									<button  style="border:none;border-radius: 50%;padding: 5px 7px;transform: rotate(180deg);">
-										<img src="gambar/hemhem.png" style="width: 20px;">
-									</button>
-								</span>								
-								<span>
-									<button  style="background-color:rgb(67,133,255);border:none;border-radius: 50%;padding: 5px 12px;">
-										1
-									</button>
-								</span>
-								<span>
-									<button  style="border:none;border-radius: 50%;padding: 5px 12px;">
-										2
-									</button>
-								</span>
-								<span>
-									<button  style="border:none;border-radius: 50%;padding: 5px 12px;">
-										3
-									</button>
-								</span>
-								<span>
-									<button  style="border:none;border-radius: 50%;padding: 5px 7px;">
-										<img src="gambar/hemhem.png" style="width: 20px;">
-									</button>
-								</span>
-							</div>					
-					</center>					
-				</div>
+			<div class="mt-5 pagination justify-content-center">
+				{{$doctor2->links()}}
+			</div>	
 			</div>
 		</div>
 	</div>

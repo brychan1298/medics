@@ -226,9 +226,9 @@ Route::get('/aboutus', function () {
 //     return view('consult');
 // });
 
-Route::get('/hospital', function () {
-    return view('hospital');
-});
+// Route::get('/hospital', function () {
+//     return view('hospital');
+// });
 
 Route::get('/login', function () {
     return view('login');
@@ -248,11 +248,17 @@ Route::get('/hospitalback', function () {
 
 
 // USER SHOP
-Route::resource('/shop','ShopController');
-Route::get('/shopSearch','ShopController@cari');
+	Route::resource('/shop','ShopController');
+	Route::get('/shopSearch','ShopController@cari');
 
 //USER CONSULT
-Route::resource('/doctor','DoctorController');
+	Route::resource('/doctor','DoctorController');
+	Route::get('/consultSearch','DoctorController@cari');
 
 
+//USE HOSPITAL
+	Route::resource('/hospital','HospitalController');
+	Route::get('/UhosSearch','HospitalController@cari');
 
+	Route::get('/doctorqueue','DoctorController@index2');
+	Route::get('/UdocSearch','DoctorController@cari2');
