@@ -1,11 +1,23 @@
-@extends('layouts.app')
-
-@section('content')
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><link href="css/sb-admin.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body class="page-top">
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Register') }}</div>
+        <div class="col-6">
+            <img src="gambar/undraw_medicine_b1ol.png" class="" style="margin-left:0px;width: 600px;height: 450px;margin-top: 80px;margin-right: -50px;">
+        </div>
+        <div class="col-6">
+            
+                <!--<div class="card-header">{{ __('Register') }}</div>-->
+                <h2 style="margin-left: 180px; margin-top: 120px;">REGISTER</h2>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
@@ -69,9 +81,9 @@
                             </div>
                         </div>
                     </form>
-                </div>
-            </div>
+                </div>            
         </div>
     </div>
 </div>
-@endsection
+</body>
+</html>
