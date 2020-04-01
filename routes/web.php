@@ -13,10 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Route::get('/shop', function () {
     return view('shop');
 });
@@ -210,8 +206,8 @@ Route::get('/hospitalSearch','AhospitalController@cari');
 // USER USER USER USER USER USER USER USER
 // USER USER USER USER USER USER USER USER
 
-Route::get('/home', function () {
-    return view('home');
+Route::get('/', function () {
+    return view('homepage');
 });
 
 Route::get('/aboutus', function () {
@@ -263,7 +259,9 @@ Route::get('/hospitalback', function () {
 	Route::get('/doctorqueue','DoctorController@index2');
 	Route::get('/UdocSearch','DoctorController@cari2');
 
+//Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/logout', 'Auth\LoginController@logout');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');

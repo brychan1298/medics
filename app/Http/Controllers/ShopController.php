@@ -19,12 +19,8 @@ class ShopController extends Controller
         return view('shop',compact('shop'));
     }
 
-    public function cari(Request $request)
-    {
-        $cari = $request->cari;
-        $shop = Shop::where('nama','like',"%".$cari."%")->paginate(9);
-        return view('shop',compact('shop'));
-    }
+    
+    
 
     /**
      * Show the form for creating a new resource.
