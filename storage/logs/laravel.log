@@ -20522,6 +20522,7 @@ Did you mean one of these?
 #63 D:\\github\\medics\\server.php(21): require_once('D:\\\\github\\\\medic...')
 #64 {main}
 "} 
+<<<<<<< HEAD
 [2020-04-02 05:32:40] local.ERROR: Trying to get property 'id' of non-object (View: D:\github\medics\resources\views\shop.blade.php) {"exception":"[object] (Facade\\Ignition\\Exceptions\\ViewException(code: 0): Trying to get property 'id' of non-object (View: D:\\github\\medics\esources\\views\\shop.blade.php) at D:\\github\\medics\esources\\views/shop.blade.php:78)
 [stacktrace]
 #0 D:\\github\\medics\esources\\views/shop.blade.php(78): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(8, 'Trying to get p...', 'D:\\\\github\\\\medic...', 78, Array)
@@ -22181,4 +22182,9 @@ Did you mean one of these?
 #33 D:\\github\\medics\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #34 D:\\github\\medics\\server.php(21): require_once('D:\\\\github\\\\medic...')
 #35 {main}
+=======
+[2020-04-02 05:48:07] local.ERROR: Maximum execution time of 60 seconds exceeded {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Maximum execution time of 60 seconds exceeded at D:\\github\\medics\\vendor\\doctrine\\inflector\\lib\\Doctrine\\Common\\Inflector\\Inflector.php:36)
+[stacktrace]
+#0 {main}
+>>>>>>> 923f2b22e9406349d6bf4ddb8e9365318c9f1675
 "} 
