@@ -22,7 +22,25 @@ class CartController extends Controller
     public function index2($id)
     {
         $cart = Cart::where('id_user',$id)->get();
-        return view('obat',compact('cart'));
+        $d=0;
+        foreach ($cart as $c) {
+            $dd = ($c->tbproduk->harga) * ($c->jlh);            
+            $d += $dd;
+        }
+        //return $d;
+        return view('obat',compact('cart','d'));
+    }
+
+    public function index3($id)
+    {
+        $cart = Cart::where('id_user',$id)->get();
+        $d=0;
+        foreach ($cart as $c) {
+            $dd = ($c->tbproduk->harga) * ($c->jlh);            
+            $d += $dd;
+        }
+        //return $d;
+        return view('checkout',compact('cart','d'));
     }
 
     /**

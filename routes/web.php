@@ -252,6 +252,7 @@ Route::get('/hospitalback', function () {
 	Route::get('/shopSearch','ShopController@cari');
 	Route::get('/cart/{id}','CartController@index2');
 	Route::get('/cartDel/{id}/{iduser}','CartController@destroy');
+	Route::get('/checkout/{iduser}','CartController@index3');
 
 //USER CONSULT
 	Route::resource('/doctor','DoctorController');

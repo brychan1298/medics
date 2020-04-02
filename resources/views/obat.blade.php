@@ -92,7 +92,7 @@
 	}
 	.text4{
 		font-size: 20px;
-		margin-left: 260px;
+		margin-left: 220px;
 	}
 	.text5{
 		font-size: 20px;
@@ -219,14 +219,13 @@
 		<div class="row">
 			<div class="col-sm-6">
 				<a href="/shop" class="btn btn-primary btn2">Continue Shopping</a> 
-
 			</div>
 			<div class="col-sm-6">
 				<p class="text2">CART TOTAL</p>
 				<p class="line2"></p>
-				<p><span class="text3">Subtotal</span><span class="text4">$100.00</span></p>
-				<p><span class="text3">Total</span><span class="text5">$100.00</span></p>
-				<p><button class="btn3">PROCEED TO CHECKOUT</button></p>
+				<p><span class="text3">Subtotal</span><span class="text4">Rp{{$d}},00</span></p>
+				<!--<p><span class="text3">Total</span><span class="text5">$100.00</span></p>-->
+				<p><a href="/checkout/{{Auth::user()->id}}" class="btn btn-primary btn3">PROCEED TO CHECKOUT</a></p>
 			</div>
 		</div>
 	</div>

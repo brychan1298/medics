@@ -77,12 +77,13 @@
 					<div style="color: white;background-color: #2E5EBE;border:0px;border-radius: 0px 0px 25px 25px; padding:15px;font-weight: bold;">
 						<center>
 							<form action="/addCart" method="GET">
-								<input type="hidden" name="idproduk" value="{{$s->id}}">
+								<input type="hidden" name="idproduk" value="{{$s->id}}">								
 								@guest
+								<a href="/login" class="btn" style="color: white;">ADD TO CART</a>
 								@else
 								<input type="hidden" name="iduser" value="{{ Auth::user()->id }}">
-								@endguest
 								<button  type="submit" class="btn" style="color: white;">ADD TO CART</button>
+								@endguest								
 							</form>
 						</center>
 
