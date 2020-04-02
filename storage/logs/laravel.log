@@ -20522,3 +20522,7 @@ Did you mean one of these?
 #63 D:\\github\\medics\\server.php(21): require_once('D:\\\\github\\\\medic...')
 #64 {main}
 "} 
+[2020-04-02 05:48:07] local.ERROR: Maximum execution time of 60 seconds exceeded {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Maximum execution time of 60 seconds exceeded at D:\\github\\medics\\vendor\\doctrine\\inflector\\lib\\Doctrine\\Common\\Inflector\\Inflector.php:36)
+[stacktrace]
+#0 {main}
+"} 
