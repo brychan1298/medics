@@ -12,6 +12,18 @@
 		.bar1{
 			padding-right: 15px;
 		}
+		.is2{
+			border:1px solid grey;
+			border-radius: 15px 0px 0px 15px; 
+			padding-right: 550px; 
+			padding-top: 10px;
+			padding-bottom: 9px;
+			padding-left: 10px;
+		}
+	    @media(max-width: 1024px){
+	    	.is{
+	    		padding-right: 150px;
+	    	}	
 	</style>
 </head>
 <body data-spy="scroll" data-target="menu">
@@ -54,7 +66,7 @@
 					<form action="/UhosSearch" method="GET">
 						<center>
 							<span >
-								<input type="text" name="cari" value="{{ old('cari') }}" placeholder="Search" style="border:1px solid grey;border-radius: 15px 0px 0px 15px; padding-right: 550px; padding-top: 10px;padding-bottom: 9px;padding-left: 10px;">
+								<input type="text" name="cari" value="{{ old('cari') }}" class="is is2" placeholder="Search">
 							</span>
 							<span>
 								<button type="submit" style="background-color: #6672EC;padding: 12px;border-radius: 0px 10px 10px 0px; margin-left: -5px;border:none;">
@@ -69,7 +81,7 @@
 
 			<div class="row">
 				@foreach( $hospitals as $h )
-					<div class="col-sm-4 col-6 mt-5">
+					<div class="col-sm-4 col-12 mt-5">
 						<a href="">
 							<div style="border:1px solid #707070;border-radius: 15px;padding: 40px;">
 								<center>								

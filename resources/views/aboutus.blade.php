@@ -14,6 +14,14 @@
 			padding-right: 15px;
 			color: white;
 		}
+		.fs{
+			font-size: 40px;margin-top: 100px
+		}
+	    @media(max-width: 1024px){
+	    	.fs2{
+	    		margin-top: 0px;
+	    	}
+		}
 	</style>
 </head>
 <body data-spy="scroll" data-target="menu">
@@ -23,9 +31,9 @@
 				<center><img src="gambar/hem.webp" class="w-100 mt-5"></center>
 			</div>
 			<div class="col-sm-6 mt-5">
-				<div class="" style="font-size: 40px;text-align: right;margin-top: 100px;">About Medics</div>
-				<div style="text-align: right;" class="mt-3 mb-3">Medics is an application that we made<br> to facilitate us in consulting, buying drugs, in the health sector.</div>
-				<div style="text-align: right;">we created this application<br> so that all people can use our application. so that it is more instant, <br> practical and easy in all matters in the field of health</div>
+				<div class="text-sm-right text-center fs fs2" style="">About Medics</div>
+				<div class="mt-3 mb-3 text-sm-right text-center">Medics is an application that we made<br> to facilitate us in consulting, buying drugs, in the health sector.</div>
+				<div class="text-sm-right text-center">we created this application<br> so that all people can use our application. so that it is more instant, <br> practical and easy in all matters in the field of health</div>
 			</div>
 		</div>
 	</div>
@@ -95,26 +103,26 @@
 	<div class="container mt-5">
 		<div class="row" style="margin-bottom: 100px;">
 			<div class="col-sm-6">
-				<div class="col-sm-12">
+				<div class="col-sm-12 col-12">
 					<div style="border: 1px solid grey;margin-right: 280px;padding: 5px;">
 						<p style="text-align: center;color:#2E5EBE;font-size: 18px;font-weight: bold;margin-top: 20px;">OUR VISION</p>
 						<p style="text-align: center;padding: 0px;margin-top: 0px;">Our vision is to make an application that has many benefits for everyone</p>
 					</div>
 				</div>
-				<div class="col-sm-12">
+				<div class="col-sm-12 col-12">
 					<div style="margin-left: 280px;border: 1px solid grey;padding: 5px;">
 						<p style="text-align: center;color:#2E5EBE;font-size: 18px;font-weight: bold;margin-top: 20px;">OUR MISSION</p>
 						<p style="text-align: center;padding: 0px;margin-top: 0px;">our mission is to make people happy and make it easier for everyone</p>
 					</div>
 				</div>
-				<div class="col-sm-12">
+				<div class="col-sm-12 col-12">
 					<div style="border: 1px solid grey;margin-right: 280px;padding: 5px;">
 						<p style="text-align: center;color:#2E5EBE;font-size: 18px;font-weight: bold;margin-top: 20px;">OUR VALUES</p>
 						<p style="text-align: center;padding: 0px;margin-top: 0px;">Our values is to form an application that can benefit everyone</p>
 					</div>
 				</div>
 			</div>
-			<div class="col-sm-6">
+			<div class="col-sm-6 d-none d-lg-none">
 				<img src="gambar/jantung.jpg">
 			</div>
 		</div>
@@ -126,7 +134,7 @@
 	</div>
 	<div class="container">
 		<div class="row">
-			<div class="col-sm-4">
+			<div class="col-sm-4 col-12 mt-5 ">
 				<div style="border: 1px solid lightgrey;padding: 40px;"><center><img src="gambar/Asset 13.png" style="width: 200px;"><div style="text-align: center;color:#2E5EBE;font-size: 20px;font-weight: bold;margin-top: 20px;">FIND DOCTORS</div>
 				<div class="mt-2">
 					<center>
@@ -135,7 +143,7 @@
 				</div>
 			</center></div>
 			</div>
-			<div class="col-sm-4">
+			<div class="col-sm-4 col-12 mt-5 ">
 				<div style="border: 1px solid lightgrey;padding: 40px;"><center><img src="gambar/Asset 15.png" style="width: 200px;"><div style="text-align: center;color:#2E5EBE;font-size: 20px;font-weight: bold;margin-top: 20px;">SUPPORTING VIA CHAT</div>
 				<div class="mt-2">
 					<center>
@@ -144,7 +152,7 @@
 				</div>
 			</center></div>
 			</div>
-			<div class="col-sm-4">
+			<div class="col-sm-4 col-12 mt-5 mb-5">
 				<div style="border: 1px solid lightgrey;padding: 40px;"><center><img src="gambar/Asset 20.png" style="width: 200px;"><div style="text-align: center;color:#2E5EBE;font-size: 20px;font-weight: bold;margin-top: 20px;">INSTANT BOOKING</div>
 				<div class="mt-2">
 					<center>

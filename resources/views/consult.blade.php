@@ -10,22 +10,55 @@
 		.bar1{
 			padding-right: 15px;
 		}
+		.fs{
+			font-size: 40px;
+		}
+		.is2{
+			border:1px solid grey;
+			border-radius: 15px 0px 0px 15px; 
+			padding-right: 550px; 
+			padding-top: 10px;
+			padding-bottom: 9px;
+			padding-left: 10px;
+		}
+		.gam{
+			border-radius: 50%;
+		}
+		.nam{
+			float: right;margin-right: 180px;
+		}
+	    @media(max-width: 1024px){
+	    	.naik{
+	    		margin-top: -330px;
+	    		font-size: 40px;
+	    		margin-bottom: 50px;
+	    	}
+	    	.turun{
+	    		margin-top: 50px;
+	    	}
+	    	.is{
+	    		padding-right: 150px;
+	    	}
+	    	.nam2{
+	    		margin-top: -100px;
+	    	}
+	    }
 	</style>
 </head>
 <body>
 	<div class="container" style="padding-top:200px;">
 		<div class="row">
 			<div class="col-sm-6">
-				<img src="gambar/doctorcall.png" class="w-100">
+				<img src="gambar/doctorcall.png" class="w-100 turun">
 			</div>
 			<div class="col-sm-6" style="padding-top: 50px;">
-					<div style="font-size: 40px; text-align: right;">Consult a Doctor</div>
-					<div style="text-align: right;">everything becomes easier with your features. let's meet your doctor.</div>
+					<div class="text-sm-right text-center naik fs">Consult a Doctor</div>
+					<div class="d-none d-lg-block text-sm-right">everything becomes easier with your features. let's meet your doctor.</div>
 			</div>
 		</div>
 	</div>
 
-	<div style="background-color: lightblue;margin-top: 100px;">
+	<div style="background-color: lightblue;margin-top: 100px;" class="d-lg-block d-none">
 		<div class="container" style="padding-bottom: 50px;">
 			<div class="row">
 				<div class="col-sm-6">
@@ -44,16 +77,16 @@
 	<div class="container mt-5">	
 		<div class="row">
 			<div class="col-sm-12">
-				<center><img src="gambar/doctor3.png" style="width: 750px;"></center>
+				<center><img src="gambar/doctor3.png" class="w-75"></center>
 			</div>
 			<div class="col-sm-12">
 				<form action="/consultSearch" method="GET">
 					<center>
 						<span >
-							<input type="text" name="cari" value="{{ old('cari') }}" placeholder="Search" style="border:1px solid grey;border-radius: 15px 0px 0px 15px; padding-right: 550px; padding-top: 10px;padding-bottom: 9px;padding-left: 10px;">
+							<input type="text" name="cari" value="{{ old('cari') }}" class="is is2" placeholder="Search" style="">
 						</span>
-						<span>
-							<button type="submit" style="background-color: #6672EC;padding: 12px;border-radius: 0px 10px 10px 0px; margin-left: -5px;border:none;">
+						<span style="margin-top: -10px;">
+							<button type="submit" style="background-color: #6672EC;padding: 9px;border-radius: 0px 10px 10px 0px; margin-left: -5px;border:none;margin-bottom:-10px;">
 								<img src="gambar/searchicon.png" style="width: 30px;">
 							</button>
 						</span>
@@ -66,17 +99,17 @@
 	<div class="container mt-5">
 		<div class="row">
 			@foreach($doctor as $d)
-				<div class="col-sm-6">
+				<div class="col-sm-6 col-12 mt-3 ">
 					<div style="border: 1px solid grey;border-radius: 15px; padding: 10px;">
 						<div style="margin: 10px;">	
-							<span><img src="../../gambar/{{$d->gambar}}" style="width: 80px;border-radius: 50%;padding-right: 12px;"></span>
+							<span><img src="../../gambar/{{$d->gambar}}" class ="w-25 gam"></span>
 							<span>
 								<div style="float: right;">
 									<button style="background-color: blue;color: white; font-size: 12px;border: 0px; font-weight: bold;padding: 5px 25px 5px 25px;margin-top: 35px;margin-bottom: 10px;">							
 										CHAT
 									</button>
 								</div>						
-								<div style="float: right;margin-right: 210px;">
+								<div style="" class="nam nam2">
 									<div style="color: blue;font-size:16px;font-weight:bold;">{{$d->nama}}</div>
 									<div style="color: grey;">{{$d->spesialisasi}}</div>
 									<div style="color: blue;">FREE</div>
@@ -101,7 +134,7 @@
 
 	<div class="container">
 		<div class="row">
-			<div class="col-sm-4">
+			<div class="col-sm-4 col-12 mt-3 mb-5">
 				<div style="border: 1px solid lightgrey;padding: 30px;border-radius: 15px;">
 					<center>
 						<div style="text-align: center;color:#2E5EBE;font-size: 20px;margin-bottom: 15PX;font-weight: semibold;">MORE EFFECTIVE</div>
@@ -114,7 +147,7 @@
 					</center>
 				</div>
 			</div>
-			<div class="col-sm-4">
+			<div class="col-sm-4 col-12 mt-3 mb-5">
 				<div style="border: 1px solid lightgrey;padding: 30px;border-radius: 15px;">
 					<center>
 						<div style="text-align: center;color:#2E5EBE;font-size: 20px;margin-bottom: 15PX;font-weight: semibold;">QUICK REPLY</div>
@@ -127,7 +160,7 @@
 					</center>
 				</div>
 			</div>
-			<div class="col-sm-4">
+			<div class="col-sm-4 col-12 mt-3 mb-5">
 				<div style="border: 1px solid lightgrey;padding: 30px;border-radius: 15px;">
 					<center>
 						<div style="text-align: center;color:#2E5EBE;font-size: 20px;margin-bottom: 15PX;font-weight: semibold;">FRIENDLY $ HELPER</div>
