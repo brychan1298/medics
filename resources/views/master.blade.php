@@ -27,7 +27,7 @@
 		<div class="collapse navbar-collapse" id="menu">
 			<ul class="navbar-nav ml-auto">
 				<li class="nav-item bar1">
-					<a href="/homepage" class="nav-link text-white">Home</a>					
+					<a href="/" class="nav-link text-white">Home</a>					
 				</li>
 				<li class="nav-item bar1">
 					<a href="/aboutus" class="nav-link text-white">About Us</a>					
@@ -41,7 +41,7 @@
 				<li class="nav-item bar1">
 					<a href="/hospital" class="nav-link text-white">Hospital</a>					
 				</li>
-				@guest
+						@guest
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                             </li>
@@ -70,7 +70,15 @@
                             </li>
                         @endguest
 				<li class="nav-item bar1">
-					<a href="#" class="nav-link text-white"><img src="gambar/ADDT.png" style="width: 30px;"></a>
+					@guest
+					<a href="/login" class="nav-link text-white">
+						<img src="../../gambar/ADDT.png" style="width: 30px;">
+					</a>
+					@else
+					<a href="/cart/{{Auth::user()->id}}" class="nav-link text-white">
+						<img src="../../gambar/ADDT.png" style="width: 30px;">
+					</a>
+					@endguest
 				</li>		
 			</ul>
 		</div>

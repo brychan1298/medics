@@ -13,4 +13,10 @@ class aproduk extends Model
     {
     	return $this->hasOne(Acustomer::class,'id');
     }
+
+    public function tbcart()
+    {
+    	return $this->hasOne(Cart::class,'id');
+    }
 }
+

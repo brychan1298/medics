@@ -206,9 +206,13 @@ Route::get('/hospitalSearch','AhospitalController@cari');
 // USER USER USER USER USER USER USER USER
 // USER USER USER USER USER USER USER USER
 
-Route::get('/', function () {
-    return view('homepage');
+Route::group(['middleware' => ['auth']], function(){
+	Route::get('/addCart','CartController@store');	
 });
+
+Route::get('/', function () {
+    	return view('homepage');
+	});
 
 Route::get('/aboutus', function () {
     return view('aboutus');
@@ -246,6 +250,8 @@ Route::get('/hospitalback', function () {
 // USER SHOP
 	Route::resource('/shop','ShopController');
 	Route::get('/shopSearch','ShopController@cari');
+	Route::get('/cart/{id}','CartController@index2');
+	Route::get('/cartDel/{id}/{iduser}','CartController@destroy');
 
 //USER CONSULT
 	Route::resource('/doctor','DoctorController');
