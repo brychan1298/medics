@@ -17,18 +17,41 @@
 		<center>PROOF OF PAYMENT</center>
 	</div>
 
-	<div class="mt-5">
+	<div class="mt-5" style="margin-bottom: -100px;">
 		<center>
-			<div style="border:1px solid grey;padding: 20px 0px 20px 0px;width: 300px;border-radius: 15px;">
-				<div style="border:1px solid grey;width: 250px;border-radius: 5px;">
-					<img src="gambar/bukti.png" style="width: 200px;">
+			<form action="/uploadProof/{{$id}}" method="GET">
+				<div class="col-sm-4">
+						<input type="file" id="myFile" name="img" accept="image/*"><br>
 				</div>
-				<div>
-					<div style="background-color:rgb(67,133,255);width: 250px;margin-top: 17px;padding: 5px 0px;color: white;">Send</div>
+				<div style="border:1px solid grey;padding: 20px 0px 20px 0px;width: 300px;border-radius: 15px;">
+					
+					<div style="border:1px solid grey;width: 250px;border-radius: 5px;">
+						<img src="../../gambar/bukti.png" id="myImg" style="width: 200px;">
+					</div>
+					<div>
+						<button class="btn" type="submit" style="background-color:rgb(67,133,255);width: 250px;margin-top: 17px;padding: 5px 0px;color: white;">Send</button>
+					</div>
 				</div>
-			</div>
+			</form>
 		</center>
 	</div>
 </body>
 </html>
+<script type="text/javascript">
+	function readURL(input) {
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+
+        reader.onload = function (e) {
+            $('#myImg').attr('src', e.target.result);
+        }
+
+        reader.readAsDataURL(input.files[0]);
+    }
+}
+
+$("#myFile").change(function(){
+    readURL(this);
+});
+</script>
 @endsection

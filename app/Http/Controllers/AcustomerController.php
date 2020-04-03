@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\acustomer;
 use App\acheck;
 use App\aproduk;
+use App\users;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 

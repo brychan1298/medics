@@ -38,13 +38,13 @@
 				</div>
 			</div>
 	<!-- form -->
-	<div class="container" style="margin-top: 30px;border:1px solid; margin-bottom: 100px;border-radius: 30px; height: 300px">
+	<div class="container" style="margin-top: 30px; margin-bottom: 100px;border-radius: 30px; height: 300px">
 		<div class="row" style="margin-top:0px;">
 			<!-- <div class="col-sm-12">
 				<center> <div style="margin-bottom: 40px;font-size: 50px;margin-top: 40px;">	NEW DOCTORS </div></center>
 			</div> -->
-			<div class="col-sm-12">									
-				<table  class="table-border col-lg-12" style="border-bottom: 1px solid #707070;margin: 5px;">
+			<div class="col-sm-12" style="border:1px solid;">									
+				<table  class="table col-lg-12" style="border-bottom: 1px solid #707070;margin: 5px;">
 					<tr style="border-bottom: 1px solid grey;text-align: center;">
 						<th style="padding-top: 40px;padding-bottom: 20px;">Name</th>
 						<th style="padding-top: 40px;padding-bottom: 20px;">Date</th>						
@@ -54,7 +54,7 @@
 					</tr>
 					@foreach($transaksi as $aa)
 					<tr style="border-bottom: 1px solid grey;text-align: center;">
-						<td style="padding-top: 40px;padding-bottom: 20px;">{{ $aa->tbprofile->nama }}</td>
+						<td style="padding-top: 40px;padding-bottom: 20px;">{{ $aa->tbuser->name }}</td>
 						<td style="padding-top: 40px;padding-bottom: 20px;">{{ $aa->tanggal }}</td>
 						<td style="padding-top: 40px;padding-bottom: 20px;">Rp {{ $aa->total }},00</td>
 						<td style="padding-top: 20px;padding-bottom: 20px;"><img src="../../img/{{$aa->img}}" style="width: 60px;" type="button" data-toggle="modal" data-target="#myModal">

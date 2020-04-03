@@ -40,8 +40,12 @@
 		<center>SHOP</center>
 	</div>
 
-	<div>
-		<img src="img/calendar.png" style="width: 40px;margin-left: 80%;margin-bottom: 100px;">
+	<div style="margin-left: 80%;">
+		@guest
+		<a href="/login"><img src="img/calendar.png" style="width: 40px;margin-bottom: 100px;"></a>
+		@else
+		<a href="/buyHis/{{Auth::user()->id}}"><img src="img/calendar.png" style="width: 40px;margin-bottom: 100px;"></a>
+		@endguest
 	</div>
 
 	<div class="row">				

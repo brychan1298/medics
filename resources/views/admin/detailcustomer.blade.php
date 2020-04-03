@@ -23,15 +23,15 @@
 	</div>
 
 	<!-- form -->
-	<div class="container" style="margin-top: 30px;border:1px solid; margin-bottom: 100px;border-radius: 30px; height: 300px">
-		<div class="row" style="margin-top:0px;">
+	<div class="container" style="margin-top: 30px; margin-bottom: 100px;border-radius: 30px; height: 300px">
+		<div class="row" style="margin-top:0px;border: 1px solid">
 			<!-- <div class="col-sm-12">
 				<center> <div style="margin-bottom: 40px;font-size: 50px;margin-top: 40px;">	NEW DOCTORS </div></center>
 			</div> -->
 			<div class="col-sm-12">									
-				<table  class="table-border col-lg-12" style="border-bottom: 0px solid #707070;margin: 5px;">
+				<table class="table col-lg-12" style="border-bottom: 0px solid #707070;margin: 5px;">
 					<tr style="border-bottom: 1px solid lightgrey">
-						<td colspan="2" style="padding-left: 40px;font-size: 22px;font-weight: bold; font-family: Trebuchet MS; padding-top: 20px;padding-bottom: 20px;">{{$acustomer->tbprofile->nama}}</td>
+						<td colspan="2" style="padding-left: 40px;font-size: 22px;font-weight: bold; font-family: Trebuchet MS; padding-top: 20px;padding-bottom: 20px;">{{$acustomer->tbuser->name}}</td>
 						<td colspan="3" style="text-align: right;padding-top: 20px;padding-bottom: 20px; font-family: Trebuchet MS;font-size: 20px;font-weight: thin;"><span id="dates" style="padding-right: 30px;text-align: right;">{{$acustomer->tanggal}}</span></td>
 					</tr>
 					@foreach($acustomers as $ac)
@@ -39,7 +39,7 @@
 						<td style="padding-top: 20px;padding-left: 10px;padding-bottom: 20px;"><img src="../../gambar/{{$ac->tbproduk->img}}" style="width: 80px;"></td>	
 						<td class="">{{$ac->tbproduk->nama}}</td>
 						<td class="">Rp.{{$ac->tbproduk->harga}},00</td>
-						<td class="">{{$ac->jumlah}}Item</td>
+						<td class="">{{$ac->jumlah}} Item</td>
 						<td class="" style="text-align: right;padding-right: 30px;">Rp.{{($ac->jumlah)*($ac->tbproduk->harga)}},00</td>
 					</tr>
 					@endforeach

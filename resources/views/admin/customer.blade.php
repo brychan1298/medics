@@ -65,7 +65,7 @@
 					</tr>
 					@foreach($acustomer as $ac)
 					<tr style="border-bottom: 1px solid grey;text-align: center;">
-						<td style="padding-bottom: 25px;padding-top: 25px;">{{$ac->tbprofile->nama}}</td>
+						<td style="padding-bottom: 25px;padding-top: 25px;">{{$ac->tbuser->name}}</td>
 						<td style="padding-bottom: 25px;padding-top: 25px;">{{$ac->tanggal}}</td>
 						<td style="padding-bottom: 25px;padding-top: 25px;">{{$ac->tbtransaksidetil->jumlah}}</td>
 						<td style="padding-bottom: 25px;padding-top: 25px;">{{$ac->total}}</td>

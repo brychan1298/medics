@@ -11,7 +11,7 @@ class users extends Authenticatable
 
 
     protected $table = "tbuser";    
-    protected $primaryKey = "id_user";
+    protected $primaryKey = "id";
     public $timestamps = false;
     protected $hidden =['password'];
 
@@ -28,6 +28,10 @@ class users extends Authenticatable
     ];
 
     public function aqueue(){
-        return $this->hasOne(Aqueue::class , 'id_user');
+        return $this->hasOne(Aqueue::class , 'id');
+    }
+
+    public function acheck(){
+        return $this->hasOne(Acheck::class , 'id');
     }
 }

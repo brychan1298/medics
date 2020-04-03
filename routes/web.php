@@ -253,6 +253,10 @@ Route::get('/hospitalback', function () {
 	Route::get('/cart/{id}','CartController@index2');
 	Route::get('/cartDel/{id}/{iduser}','CartController@destroy');
 	Route::get('/checkout/{iduser}','CartController@index3');
+	Route::get('/bayar/{iduser}','CartController@bayar');
+	Route::get('/buyHis/{id}','CartController@index4');
+	Route::get('/proof/{id}','CartController@index5');
+	Route::get('/uploadProof/{id}','CartController@update2');
 
 //USER CONSULT
 	Route::resource('/doctor','DoctorController');

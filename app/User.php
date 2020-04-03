@@ -44,4 +44,8 @@ class User extends Authenticatable
     public function aqueue(){
         return $this->hasOne(Aqueue::class , 'id_user');
     }
+
+    public function acheck(){
+        return $this->hasOne(Acheck::class , 'id_user');
+    }
 }

@@ -8,6 +8,9 @@ class acustomer extends Model
 {
     protected $table="tbtransaksidetil";
     protected $primaryKey="id_transaksi";
+    
+    protected $fillable = ['id_transaksi','id_produk','jumlah'];
+    public $timestamps = false;
 
     public function tbtransaksi()
     {

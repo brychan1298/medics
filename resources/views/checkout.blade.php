@@ -33,7 +33,7 @@
     }  
     #box2{
       width:500px;
-    height:350px;
+    height:450px;
     position:relative;
     border:1px solid black;
     background-color:white;
@@ -244,20 +244,22 @@
     <div class="container-fluid" style="margin-top: 200px;">
         <span class="text1">Biling Details</span>
         <span class="text3">Your Order</span>
+        <form action="/bayar/{{Auth::user()->id}}" method="GET">
         <div class="row">
               <div class="col-sm-7">
             <div id="box1">
             <div>
-              <p class="text2">Country</p>
-              <input id="ph1" type="text" name="" class="kotak1" placeholder="Country" />
+              <input type="hidden" name="iduser" value="{{Auth::user()->id}}">
+              <p class="text2">City</p>
+                <input id="ph1" type="text" name="city" class="kotak1" placeholder="City" />
               <p class="text2">Name</p>
-              <input type="text" name="" class="kotak2" placeholder="First Name"/><input type="text" name="" class="kotak3" placeholder="Last Name"/>
+                <input type="text" name="name" class="kotak2" placeholder="Name"/>
               <p class="text2">Email</p>
-              <input type="Email" name="" class="kotak1" placeholder="Email"/>
+                <input type="Email" name="email" class="kotak1" placeholder="Email"/>
               <p class="text2">Address</p>
-              <input type="text" name="" class="kotak1" placeholder="Address"/>
+                <input type="text" name="address" class="kotak1" placeholder="Address"/>
               <p class="text2">Notes</p>
-              <input type="text" name="" class="kotak4" placeholder="Write Your Notes Here..." />
+                <input type="text" name="notes" class="kotak4" placeholder="Write Your Notes Here..." />
             </div>
               </div>
             </div>
@@ -278,11 +280,14 @@
                   <p class="g1"></p>
                   <p style="font-size: 18px; margin-left: 38px; font-weight: bold;">Total</p>
                   <p style="font-size: 18px; margin-top: -43px; margin-left: 380px; font-weight: bold;">Rp{{$d}},00</p>
-                  <button class="btn1">PLACE ORDER</button>
+                  <p>Direct Bank Transfer</p>
+                  <p>Place Order</p>
+                  <button type="submit" class="btn1">PLACE ORDER</button>
                 </div>
               </div>
             </div>
         </div>
+        </form>
       </div>
 </body>
 </html>

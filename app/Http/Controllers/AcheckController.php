@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\acheck;
 use App\acheckdetil;
+use App\users;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -17,7 +18,7 @@ class AcheckController extends Controller
      */
     public function index()
     {
-        $transaksi = Acheck::with('tbprofile')->get();
+        $transaksi = Acheck::with('tbuser')->get();
         // $transaksi = DB::table('tbtransaksi')
         // ->join('tbprofile','tbtransaksi.id_user','=','tbprofile.id_user')
         // ->select('tbprofile.nama','tbtransaksi.tanggal','tbtransaksi.img','tbtransaksi.total');
