@@ -81,8 +81,9 @@
 
 			<div class="row">
 				@foreach( $hospitals as $h )
+					@guest
 					<div class="col-sm-4 col-12 mt-5">
-						<a href="">
+						<a href="/login">
 							<div style="border:1px solid #707070;border-radius: 15px;padding: 40px;">
 								<center>								
 									<img src="../../gambar/{{$h->img}}" class="w-100">
@@ -92,6 +93,19 @@
 							</div>
 						</a>
 					</div>
+					@else
+					<div class="col-sm-4 col-12 mt-5">
+						<a href="/choosedoctor/{{$h->id}}">
+							<div style="border:1px solid #707070;border-radius: 15px;padding: 40px;">
+								<center>								
+									<img src="../../gambar/{{$h->img}}" class="w-100">
+									<div style="color: black;">Rs.{{$h->nama}}</div>
+									<div style="color: black;">{{$h->alamat}}</div>
+								</center>
+							</div>
+						</a>
+					</div>
+					@endguest
 				@endforeach
 				<!--
 				<div class="col-sm-4 col-6 mt-5">

@@ -17,7 +17,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-12">
-				<center> <div style="margin-bottom: 0px;font-size: 50px;margin-top: 160px;">NEW MEDICINE</div></center>
+				<center> <div style="margin-bottom: 0px;font-size: 50px;margin-top: 160px;">EDIT MEDICINE</div></center>
 			</div>
 		</div>
 	</div>

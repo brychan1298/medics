@@ -14,4 +14,9 @@ class ahospital extends Model
     public function aqueue(){
         return $this->hasOne(Aqueue::class , 'id');
     }
+
+    public function tbchosehos()
+    {
+    	return $this->hasOne(Dokterhospital::class,'id');
+    }
 }

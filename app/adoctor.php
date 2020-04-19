@@ -10,4 +10,9 @@ class adoctor extends Model
     protected $primaryKey = 'id';
     protected $fillable = ['nama','spesialisasi','nohp','email','alamat','tgl_mulai_kerja','kota','gambar'];
     public $timestamps = false;
+
+    public function tbchosedoc()
+    {
+    	return $this->hasOne(Dokterhospital::class,'id');
+    }
 }

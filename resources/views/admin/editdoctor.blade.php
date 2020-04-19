@@ -17,7 +17,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-12">
-				<center> <div style="margin-bottom: 0px;font-size: 50px;margin-top: 160px;">NEW DOCTORS </div></center>
+				<center> <div style="margin-bottom: 0px;font-size: 50px;margin-top: 160px;">EDIT DOCTORS </div></center>
 			</div>
 		</div>
 	</div>
@@ -63,7 +63,7 @@
 							<div class="col-sm-4">Kota<br><input type="text" name="kota" value="{{$doctor->kota}}" style="width: 100%; height: 45px; border-radius: 15px; border:1px solid #707070; padding-left:10px;"></div>
 							<div class="col-sm-4"></div>
 							<div class="col-sm-4">
-								<input type="submit" name="" style="background-color: #4385FF; color: white;border:0px;border-radius: 20px;padding: 18px 50px; margin-left: 160px;">
+								<input type="submit" name="" value="Submit" style="background-color: #4385FF; color: white;border:0px;border-radius: 20px;padding: 18px 50px; margin-left: 160px;">
 							</div>
 						</div>
 					</div>

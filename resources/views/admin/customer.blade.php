@@ -48,7 +48,7 @@
 				</div>
 			</div> -->
 	<!-- form -->
-	<div class="container" style="margin-top: 30px;border:1px solid; margin-bottom: 100px;border-radius: 30px; height: 300px">
+	<div class="container" style="margin-top: 30px;border:1px solid; margin-bottom: 100px;border-radius: 30px;">
 		<div class="row" style="margin-top:0px;">
 			<!-- <div class="col-sm-12">
 				<center> <div style="margin-bottom: 40px;font-size: 50px;margin-top: 40px;">	NEW DOCTORS </div></center>

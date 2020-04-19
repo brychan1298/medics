@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\hospital;
+use App\dokterhospital;
+use App\adoctor;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
@@ -17,6 +19,27 @@ class HospitalController extends Controller
     {
         $hospitals = Hospital::paginate(6);
         return view('hospital',compact('hospitals'));
+    }
+
+    public function index2($id)
+    {   
+        $chosedok = dokterhospital::where('id_hospital',$id)->get();
+        $hospital = Hospital::findorFail($id);
+        return view('choosedoctor',compact('chosedok','hospital','id'));
+    }
+
+    public function index3($id)
+    {   
+        $chosehos = dokterhospital::where('id_dokter',$id)->get();
+        $docter = Adoctor::findorFail($id);
+        return view('choosehospital',compact('chosehos','docter'));
+    }    
+
+    public function index4($iddokter,$idhospital)
+    {
+        $chosehos = dokterhospital::where('id_dokter',$iddokter)->get();
+        $docter = Adoctor::findorFail($iddokter);
+        return view('patientdata',compact('iddokter','idhospital','docter'));
     }
 
     public function cari(Request $request)

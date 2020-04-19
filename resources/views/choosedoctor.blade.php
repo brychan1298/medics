@@ -19,18 +19,18 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-3 col-12">
-					 <center><img src="gambar/hospital.png" style="width: 350px;"></center>
+					 <center><img src="../../gambar/{{$hospital->img}}" style="width: 350px;"></center>
 				</div>
 				<div class="col-sm-4 mt-5 col-12 text-center">
 					<div class="ml-sm-5 pl-sm-5">
-						<div style="font-size: 38px;">RS.Mentari</div>
-						<div>Pontianak,Pontianak Barat</div>
-						<div>Jl.Kemerdekaan No.561</div>
+						<div style="font-size: 38px;">{{$hospital->nama}}</div>
+						<div>{{$hospital->kota}}, {{$hospital->provinsi}}</div>
+						<div>{{$hospital->alamat}}</div>
 					</div>
 				</div>
 				<div class="col-sm-5 mt-5 d-none d-lg-block">
 					<div style="text-align: right;margin-right: 200px;">
-						<img src="gambar/girldoctor.png" class="w-75">
+						<img src="../../gambar/girldoctor.png" class="w-75">
 					</div>
 				</div>
 			</div>
@@ -55,7 +55,7 @@
 						<input type="text" name="" placeholder="Search" style="border:1px solid grey;border-radius: 15px 0px 0px 15px; width: 65%; padding-top: 10px;padding-bottom: 9px;padding-left: 10px;">
 					</span>
 					<span style="background-color: #6672EC;padding: 12px;border-radius: 0px 15px 15px 0px; margin-left: -5px;">
-						<img src="gambar/searchicon.png" style="width: 30px;">
+						<img src="../../gambar/searchicon.png" style="width: 30px;">
 					</span>
 				</center>
 				</div>
@@ -63,7 +63,20 @@
 
 
 			<div class="row mt-5">
+				@foreach($chosedok as $c)
 				<div class="col-sm-4 mt-sm-0 col-6 mt-5">
+					<a href="/booking/{{$c->tbdokter->id}}/{{$id}}">
+						<div style="border:1px solid #707070;border-radius: 15px;padding: 40px 10px;">
+							<center>								
+								<img src="../../gambar/{{$c->tbdokter->gambar}}" class="w-50" style="border-radius: 50%;">
+								<div style="color: black;" class="mt-3">Dr.{{$c->tbdokter->nama}}</div>
+								<div style="color: black;">{{$c->tbdokter->spesialisasi}} Specialist</div>
+							</center>
+						</div>
+					</a>
+				</div>
+				@endforeach
+			<!--	<div class="col-sm-4 mt-sm-0 col-6 mt-5">
 					<a href="">
 						<div style="border:1px solid #707070;border-radius: 15px;padding: 40px 10px;">
 							<center>								
@@ -97,10 +110,10 @@
 							</center>
 						</div>
 					</a>
-				</div>
-			</div>			
+				</div>-->
+			</div>
 
-			<div class="row mt-5">
+			<!-- <div class="row mt-5">
 				<div class="col-sm-12">
 					<center>
 							<div>
@@ -132,8 +145,8 @@
 								
 							</div>					
 					</center>					
-				</div>
-
+				</div> -->
+<!-- 
 				<div class="col-sm-12 mt-4 mb-4">
 					<center>
 						<div>
@@ -142,7 +155,7 @@
 							</button>
 						</div>
 					</center>
-				</div>
+				</div> -->
 			</div>
 		</div>
 	</div>

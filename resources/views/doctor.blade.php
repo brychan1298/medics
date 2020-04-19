@@ -73,17 +73,31 @@
 
 			<div class="row">
 				@foreach($doctor2 as $d)
-				<div class="col-sm-4 col-6 mt-5">
-					<a href="">
-						<div style="border:1px solid #707070;border-radius: 15px;padding: 50px 10px;">
-							<center>								
-								<img src="../../gambar/{{$d->gambar}}" class="w-50" style="border-radius: 50%;">
-								<div style="color: black;">{{$d->nama}}</div>
-								<div style="color: black;">{{$d->spesialisasi}} Spesialist</div>
-							</center>
-						</div>
-					</a>
-				</div>
+					@guest
+					<div class="col-sm-4 col-6 mt-5">
+						<a href="/login">
+							<div style="border:1px solid #707070;border-radius: 15px;padding: 50px 10px;">
+								<center>								
+									<img src="../../gambar/{{$d->gambar}}" class="w-50" style="border-radius: 50%;">
+									<div style="color: black;">{{$d->nama}}</div>
+									<div style="color: black;">{{$d->spesialisasi}} Spesialist</div>
+								</center>
+							</div>
+						</a>
+					</div>	
+					@else
+					<div class="col-sm-4 col-6 mt-5">
+						<a href="/choosehospital/{{$d->id}}">
+							<div style="border:1px solid #707070;border-radius: 15px;padding: 50px 10px;">
+								<center>								
+									<img src="../../gambar/{{$d->gambar}}" class="w-50" style="border-radius: 50%;">
+									<div style="color: black;">{{$d->nama}}</div>
+									<div style="color: black;">{{$d->spesialisasi}} Spesialist</div>
+								</center>
+							</div>
+						</a>
+					</div>
+					@endguest
 				@endforeach
 				<!--<div class="col-sm-4 col-6 mt-5">
 					<a href="">

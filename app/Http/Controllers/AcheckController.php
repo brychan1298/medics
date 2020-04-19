@@ -88,6 +88,15 @@ class AcheckController extends Controller
         return redirect("/Acheck")->with('disableButton', true);            
     }
 
+    public function batal($id)
+    {
+        $Acheck = Acheck::find($id);
+        $Acheck->status="BELUM PROSES";
+        $Acheck->save();
+
+        return redirect("/Acheck")->with('disableButton',true);
+    }
+
     /**
      * Remove the specified resource from storage.
      *

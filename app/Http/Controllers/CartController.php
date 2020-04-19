@@ -119,7 +119,7 @@ class CartController extends Controller
         $cartdel = Cart::where('id_user',$iduser)->delete();
 
         
-        return view('send',compact('destination'));
+        return view('send',compact('destination','id_transaksi'));
     }
 
     /**

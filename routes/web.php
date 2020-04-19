@@ -94,6 +94,7 @@ Route::get('/hospitalSearch','AhospitalController@cari');
 	Route::resource('/Acheck','AcheckController');
 
 	Route::get('/cekproses/update/{id}','AcheckController@update');
+	Route::get('/batal/{id}','AcheckController@batal');
 	Route::get('/Acheckproses',function(){
 		return view('admin.detailcustomer');
 	});
@@ -107,11 +108,9 @@ Route::get('/hospitalSearch','AhospitalController@cari');
 	Route::get('/customer/detil/{id}','AcustomerController@edit');
 	Route::get('/showcustomer','AcustomerController@show');
 
-
-
-
-
-
+	Route::get('/tampilanTv',function(){
+		return view('admin.tampilanRS');
+	});
 
 
 
@@ -263,12 +262,19 @@ Route::get('/hospitalback', function () {
 	Route::get('/consultSearch','DoctorController@cari');
 
 
-//USE HOSPITAL
+//USER HOSPITAL
 	Route::resource('/hospital','HospitalController');
 	Route::get('/UhosSearch','HospitalController@cari');
 
 	Route::get('/doctorqueue','DoctorController@index2');
 	Route::get('/UdocSearch','DoctorController@cari2');
+	Route::get('/choosedoctor/{id}','HospitalController@index2');
+	Route::get('/choosehospital/{id}','HospitalController@index3');
+	Route::get('/ff',function(){
+		return view('patientdata');
+	});
+	Route::get('/booking/{iddokter}/{idhospital}','HospitalController@index4');
+	Route::get('/insertpatient','AqueueController@insert');
 
 //Route::get('/home', 'HomeController@index')->name('home');
 
@@ -276,3 +282,10 @@ Route::get('/logout', 'Auth\LoginController@logout');
 
 Auth::routes();
 
+
+Route::get('/details', function () {
+
+	$ip = Location::get();
+    //$data = \Location::get($ip);
+    return $ip;
+});

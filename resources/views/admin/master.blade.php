@@ -10,6 +10,9 @@
 		.bar1{
 			padding-right: 15px;
 		}
+		body{
+			overflow-x: hidden;
+		}
 	</style>	
 </head>
 <body data-spy="scroll" data-target="menu">
@@ -49,7 +52,7 @@
 		@yield('konten')
 	</div>	
 
-	<div class="row d-none d-lg-block" style="background-color: rgb(67,133,255); padding-top: 20px;padding-bottom: 20px;margin-top: 250px;">
+	<div class="row d-none d-lg-block" style="background-color: rgb(67,133,255); padding-top: 20px;padding-bottom: 20px;margin-top: 350px;">
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-4">

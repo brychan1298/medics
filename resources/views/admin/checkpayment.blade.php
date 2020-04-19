@@ -10,9 +10,10 @@
 		.bar1{
 			padding-right: 10px;
 		}	
-	    #disables {
+	    .disables {
 	        pointer-events: none;
 	        cursor: default;
+	        opacity: 40%;
 	    }
 	</style>
 </head>
@@ -38,12 +39,12 @@
 				</div>
 			</div>
 	<!-- form -->
-	<div class="container" style="margin-top: 30px; margin-bottom: 100px;border-radius: 30px; height: 300px">
+	<div class="container" style="margin-top: 30px;border-radius: 30px; height: 300px">
 		<div class="row" style="margin-top:0px;">
 			<!-- <div class="col-sm-12">
 				<center> <div style="margin-bottom: 40px;font-size: 50px;margin-top: 40px;">	NEW DOCTORS </div></center>
 			</div> -->
-			<div class="col-sm-12" style="border:1px solid;">									
+			<div class="col-sm-12" style="border:1px solid grey;">									
 				<table  class="table col-lg-12" style="border-bottom: 1px solid #707070;margin: 5px;">
 					<tr style="border-bottom: 1px solid grey;text-align: center;">
 						<th style="padding-top: 40px;padding-bottom: 20px;">Name</th>
@@ -75,10 +76,14 @@
 							<td style="padding-top:40px;padding-bottom: 20px;">
 								<center>
 									@if($aa->status=="BELUM PROSES")
-										<a href="/cekproses/update/{{ $aa->id_transaksi }}" value="{{$aa->id_transaksi}}" style="background-color: #4385FF; color: white;border:0px;border-radius: 20px;padding: 10px 30px;">PROSES
+										<a href="/cekproses/update/{{ $aa->id_transaksi }}" value="{{$aa->id_transaksi}}" style="background-color: #4385FF; color: white;border:0px;border-radius: 20px;padding: 10px 30px;margin-right : 10px;">PROSES
+										</a>
+										<a href="/" class="disables" style="background-color: #4385FF; color: white;border:0px;border-radius: 20px;padding: 10px 30px;">CANCEL
 										</a>
 									@else
-										<a href="/cekproses/update/{{ $aa->id_transaksi }}" id="disables" value="{{$aa->id_transaksi}}" style="background-color: #4385FF; color: white;border:0px;border-radius: 20px;padding: 10px 30px;opacity: 40%;">PROSES
+										<a href="/cekproses/update/{{ $aa->id_transaksi }}" class="disables" value="{{$aa->id_transaksi}}" style="background-color: #4385FF; color: white;border:0px;border-radius: 20px;padding: 10px 30px;margin-right: 10px;">PROSES
+										</a>										
+										<a href="/batal/{{$aa->id_transaksi}}" style="background-color: #4385FF; color: white;border:0px;border-radius: 20px;padding: 10px 30px;">CANCEL
 										</a>
 									@endif
 									

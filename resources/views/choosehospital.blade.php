@@ -21,7 +21,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-12 ">
-					<center><img src="gambar/asset 16.png" style="width: 400px; margin-top: 40px;"></center>
+					<center><img src="../../gambar/asset 16.png" style="width: 400px; margin-top: 40px;"></center>
 				</div>
 			</div>
 		</div>
@@ -34,7 +34,27 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-sm-6 mt-4">
+				@foreach($chosehos as $c)
+				<div class="col-sm-6 mt-4 mb-5">
+					<div style="border:1px solid #707070;border-radius: 20px;padding: 20px;">
+						<center>
+							<div class="row">
+								<div class="col-sm-4 col-2">
+									<img src="../../gambar/{{$c->tbhospital->img}}" style="width:156px;" class="ml-5 gambar1">
+								</div>
+								<div class="col-sm-8 col-10" style="text-align: right;">
+									<div style="font-size: 28px;">{{$c->tbhospital->nama}}</div>
+									<div style="font-size: 13px;color:#707070 ">{{$c->tbhospital->alamat}}</div>
+									<div>
+										<button style="border:none;background-color: rgb(67,133,255);padding: 5px 20px;border-radius: 10px;margin-top: 20px;color: white; font-weight:bold;">CHOOSE</button>
+									</div>
+								</div>
+							</div>	
+						</center>
+					</div>					
+				</div>
+				@endforeach
+				<!-- <div class="col-sm-6 mt-4">
 					<div style="border:1px solid #707070;border-radius: 20px;padding: 20px;">
 						<center>
 							<div class="row">
@@ -108,7 +128,7 @@
 							</div>	
 						</center>
 					</div>					
-				</div>
+				</div> -->
 			</div>
 		</div>
 	</div>

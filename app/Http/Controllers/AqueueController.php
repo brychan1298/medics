@@ -67,6 +67,39 @@ class AqueueController extends Controller
         return redirect('/Aqueue');
     }
 
+    public function insert(Request $request)
+    {
+        $validasi = $request->validate([
+            'nama'=>'required',
+            'appointment'=>'required',
+            'disease'=>'required',
+            'nohp'=>'required',
+            'date'=>'required',
+            'dokter'=>'required',
+            'spesialist'=>'required'
+        ]);
+
+        $hours=date('H') + 2;
+        $dd = date('H:i:s');
+
+        $d = date('i');
+        $c = $hours . ':' . $d;
+        //return $c;
+
+        $aqueue = new Aqueue;
+        $aqueue->id_hospital = $request->id_hospital;
+        $aqueue ->nama = $request->nama;
+        $aqueue ->date = $request->date;
+        $aqueue ->appointment = $c;
+        $aqueue ->disease = $request->disease;
+        $aqueue ->nohp = $request->nohp;
+        $aqueue ->dokter = $request->dokter;
+        $aqueue ->spesialist = $request->spesialist;
+        $aqueue ->save();
+
+        return redirect('');
+    }
+
     /**
      * Display the specified resource.
      *

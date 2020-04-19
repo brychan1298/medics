@@ -19,7 +19,7 @@
 				<p style="font-size: 40px;"><b>{{$destination}}</b></p>
 				<p>at the nearest ATM</p>
 				<div>
-					<button class="btn btn-primary" style="background-color:rgb(67,133,255);width: 250px;margin-top: 17px;padding: 5px 0px;color: white;">Confirm Payment</button>
+					<a href="/proof/{{$id_transaksi}}" class="btn btn-primary" style="background-color:rgb(67,133,255);width: 250px;margin-top: 17px;padding: 5px 0px;color: white;">Confirm Payment</a>
 				</div>			
 		</center>
 	</div>

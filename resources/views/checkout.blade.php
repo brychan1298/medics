@@ -280,8 +280,6 @@
                   <p class="g1"></p>
                   <p style="font-size: 18px; margin-left: 38px; font-weight: bold;">Total</p>
                   <p style="font-size: 18px; margin-top: -43px; margin-left: 380px; font-weight: bold;">Rp{{$d}},00</p>
-                  <p>Direct Bank Transfer</p>
-                  <p>Place Order</p>
                   <button type="submit" class="btn1">PLACE ORDER</button>
                 </div>
               </div>
