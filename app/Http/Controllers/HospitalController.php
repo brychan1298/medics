@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\hospital;
 use App\dokterhospital;
 use App\adoctor;
+use App\Profile;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
@@ -32,14 +33,29 @@ class HospitalController extends Controller
     {   
         $chosehos = dokterhospital::where('id_dokter',$id)->get();
         $docter = Adoctor::findorFail($id);
-        return view('choosehospital',compact('chosehos','docter'));
+        return view('choosehospital',compact('chosehos','docter','id'));
     }    
 
     public function index4($iddokter,$idhospital)
-    {
+    {           
         $chosehos = dokterhospital::where('id_dokter',$iddokter)->get();
         $docter = Adoctor::findorFail($iddokter);
         return view('patientdata',compact('iddokter','idhospital','docter'));
+    }
+
+    public function index5($iddokter,$idhospital,$iduser)
+    {
+        $chosehos = dokterhospital::where('id_dokter',$iddokter)->get();
+        $docter = Adoctor::findorFail($iddokter);
+        $profs = Profile::findorFail($iduser);
+        return view('patientdata',compact('iddokter','idhospital','docter','profs'));
+    }
+
+    public function detaildoctor($id)
+    {
+        $chosehos = dokterhospital::where('id_dokter',$id)->get();
+        $docter = Adoctor::findorFail($id);
+        return view('detaildoctor',compact('id','docter','chosehos'));
     }
 
     public function cari(Request $request)

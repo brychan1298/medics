@@ -245,6 +245,10 @@ Route::get('/hospitalback', function () {
     return view('hospital');
 });
 
+// USER PROFILE
+	Route::get('/profile/{id}','ProfileController@index');
+	Route::get('/editprofile/{id}','ProfileController@update');
+
 
 // USER SHOP
 	Route::resource('/shop','ShopController');
@@ -271,10 +275,12 @@ Route::get('/hospitalback', function () {
 	Route::get('/choosedoctor/{id}','HospitalController@index2');
 	Route::get('/choosehospital/{id}','HospitalController@index3');
 	Route::get('/ff',function(){
-		return view('patientdata');
+		return view('detaildoctor');
 	});
 	Route::get('/booking/{iddokter}/{idhospital}','HospitalController@index4');
 	Route::get('/insertpatient','AqueueController@insert');
+	Route::get('/thisMe/{iddokter}/{idhospital}/{iduser}','HospitalController@index5');
+	Route::get('/detaildoctor/{id}','HospitalController@detaildoctor');
 
 //Route::get('/home', 'HomeController@index')->name('home');
 

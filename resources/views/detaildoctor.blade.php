@@ -27,11 +27,11 @@
 					<div style="border:1px solid;border-radius: 20px;padding: 20px;margin-right: 100px;">
 						<div class="row">
 							<div class="col-sm-4">
-								<img src="gambar/doctor2.jpg" style="width: 100px;border-radius: 50%;">
+								<img src="../../gambar/{{$docter->gambar}}" style="width: 100px;border-radius: 50%;">
 							</div>
 							<div class="col-sm-8">
-								<div style="font-size: 25px;margin-top: 18px;">Dr.Susan</div>
-								<div>Surgery Specialist</div>
+								<div style="font-size: 25px;margin-top: 18px;">Dr.{{$docter->nama}}</div>
+								<div>{{$docter->spesialisasi}} Specialist</div>
 							</div>
 						</div>
 					</div>					
@@ -106,9 +106,7 @@
 			<div class="col-sm-12">
 				<center>
 					<div>
-						<button style="border:none;background-color:rgb(67,133,255);padding: 10px 50px;color: white;border-radius: 200px;">
-								BOOKING
-							</button>
+						<a href="/choosehospital/{{$id}}" class="btn btn-primary" style="border:none;background-color: rgb(67,133,255);padding: 10px 30px;border-radius: 10px;margin-top: 20px;color: white; font-weight:bold;">BOOKING</a>
 					</div>
 				</center>
 			</div>

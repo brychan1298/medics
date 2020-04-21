@@ -46,7 +46,7 @@
 									<div style="font-size: 28px;">{{$c->tbhospital->nama}}</div>
 									<div style="font-size: 13px;color:#707070 ">{{$c->tbhospital->alamat}}</div>
 									<div>
-										<button style="border:none;background-color: rgb(67,133,255);padding: 5px 20px;border-radius: 10px;margin-top: 20px;color: white; font-weight:bold;">CHOOSE</button>
+										<a href="/booking/{{$id}}/{{$c->tbhospital->id}}" class="btn btn-primary" style="border:none;background-color: rgb(67,133,255);padding: 5px 20px;border-radius: 10px;margin-top: 20px;color: white; font-weight:bold;">CHOOSE</a>
 									</div>
 								</div>
 							</div>	

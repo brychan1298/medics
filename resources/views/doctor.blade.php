@@ -87,7 +87,7 @@
 					</div>	
 					@else
 					<div class="col-sm-4 col-6 mt-5">
-						<a href="/choosehospital/{{$d->id}}">
+						<a href="/detaildoctor/{{$d->id}}">
 							<div style="border:1px solid #707070;border-radius: 15px;padding: 50px 10px;">
 								<center>								
 									<img src="../../gambar/{{$d->gambar}}" class="w-50" style="border-radius: 50%;">

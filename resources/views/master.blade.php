@@ -20,7 +20,7 @@
 </head>
 <body data-spy="scroll" data-target="menu">
 	<nav style="background-color: rgb(67,133,255);" class="navbar navbar-dark navbar-expand-md fixed-top">
-		<h1><img src="../../img/apasi.png" style="width: 120px;"></h1>
+		<h1><img src="../../../img/apasi.png" style="width: 120px;"></h1>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu">
 			<span class="navbar-toggler-icon"></span>
 		</button>
@@ -57,7 +57,7 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                	<a class="dropdown-item" href="">
+                                	<a class="dropdown-item" href="/profile/{{ Auth::user()->id }}">
                                 		Profile
                                     </a>
 
@@ -78,11 +78,11 @@
 				<li class="nav-item bar1">
 					@guest
 					<a href="/login" class="nav-link text-white">
-						<img src="../../gambar/ADDT.png" style="width: 30px;">
+						<img src="../../../gambar/ADDT.png" style="width: 30px;">
 					</a>
 					@else
 					<a href="/cart/{{Auth::user()->id}}" class="nav-link text-white">
-						<img src="../../gambar/ADDT.png" style="width: 30px;">
+						<img src="../../../gambar/ADDT.png" style="width: 30px;">
 					</a>
 					@endguest
 				</li>		
