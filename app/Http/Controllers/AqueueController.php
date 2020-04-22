@@ -24,6 +24,15 @@ class AqueueController extends Controller
         return view('admin.adminpatient',compact('nama','aqueue'));
     }
 
+    public function indexHistory($id)
+    {
+        $list = Aqueue::where('id_user',$id)->get();
+        $date = date('Y-m-d');
+
+        return view('queueHis',compact('list','date'));
+        //return $date;
+    }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -62,12 +71,13 @@ class AqueueController extends Controller
         $aqueue ->nohp = $request->nohp;
         $aqueue ->dokter = $request->dokter;
         $aqueue ->spesialist = $request->spesialist;
+        $aqueue->status="BELUM";
         $aqueue ->save();
 
         return redirect('/Aqueue');
     }
 
-    public function insert(Request $request)
+    public function insert(Request $request,$id)
     {
         $validasi = $request->validate([
             'nama'=>'required',
@@ -95,9 +105,11 @@ class AqueueController extends Controller
         $aqueue ->nohp = $request->nohp;
         $aqueue ->dokter = $request->dokter;
         $aqueue ->spesialist = $request->spesialist;
+        $aqueue->id_user = $id;
+        $aqueue->status="BELUM";
         $aqueue ->save();
 
-        return redirect('');
+        return view('successQueue');
     }
 
     /**

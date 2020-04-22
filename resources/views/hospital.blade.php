@@ -59,7 +59,7 @@
 				<div class="col-sm-4 col-5 mt-4">
 					<img src="gambar/calendar.png" style="width: 50px;"> 
 					<span style="color: #2680EB;">
-						Queue History
+						<a href="/historyQueue/{{Auth::user()->id}}">Queue History</a>
 					</span>
 				</div>
 				<div class="col-sm-12 mt-5">

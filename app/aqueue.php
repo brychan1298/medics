@@ -19,6 +19,11 @@ class aqueue extends Model
 
     public function ahospital()
     {
-        return $this->belongsTo(Users::class , 'id');
+        return $this->belongsTo(Users::class , 'id_hospital');
+    }
+
+    public function tbhospital()
+    {
+        return $this->belongsTo(ahospital::class , 'id_hospital');
     }
 }

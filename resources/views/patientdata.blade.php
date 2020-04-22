@@ -26,7 +26,7 @@
 						<div style="width: 100%;margin-bottom: 50px;">
 							<a href="/thisMe/{{$iddokter}}/{{$idhospital}}/{{Auth::user()->id}}" style="margin-left: 85%;font-size: 23px;">Is This You?</a>
 						</div>
-						<form action="/insertpatient" method="GET">
+						<form action="/insertpatient/{{Auth::user()->id}}" method="GET">
 							<input type="hidden" name="dokter" value="{{$docter->nama}}">
 							<input type="hidden" name="spesialist" value="{{$docter->spesialisasi}}">
 							<input type="hidden" name="id_hospital" value="{{$idhospital}}">
@@ -63,7 +63,7 @@
 						<div style="width: 100%;margin-bottom: 50px;">
 							<a href="/thisMe/{{$iddokter}}/{{$idhospital}}/{{Auth::user()->id}}" style="margin-left: 85%;font-size: 23px;">Is This You?</a>
 						</div>
-						<form action="/insertpatient" method="GET">
+						<form action="/insertpatient/{{Auth::user()->id}}" method="GET">
 							<input type="hidden" name="dokter" value="{{$docter->nama}}">
 							<input type="hidden" name="spesialist" value="{{$docter->spesialisasi}}">
 							<input type="hidden" name="id_hospital" value="{{$idhospital}}">
