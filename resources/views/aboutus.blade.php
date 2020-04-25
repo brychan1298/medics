@@ -44,16 +44,16 @@
 	<div class="container d-none d-lg-block" style="margin-bottom: 100px;">
 		<div class="row">
 			<div class="col-sm-4">
-				<img src="gambar/banks.jpg" class="w-100">
-				<center><div style="font-size: 20px;border: 1px solid black ;border-radius: 0px 0px 15px 15px;padding: 20px; color:#2E5EBE;font-weight: bold;">Liana Marlins</div></center>
+				<img src="gambar/flume.jpg" class="w-100">
+				<center><div style="font-size: 20px;border: 1px solid black ;border-radius: 0px 0px 15px 15px;padding: 20px; color:#2E5EBE;font-weight: bold;">Brychan Artanto</div></center>
 			</div>
 			<div class="col-sm-4">
-				<img src="gambar/flume.jpg" class="w-100">
-				<center><div style="font-size: 20px;border: 1px solid black ;border-radius: 0px 0px 15px 15px;padding: 20px; color:#2E5EBE;font-weight: bold;">Steve Marlins</div></center>
+				<img src="gambar/banks.jpg" class="w-100">
+				<center><div style="font-size: 20px;border: 1px solid black ;border-radius: 0px 0px 15px 15px;padding: 20px; color:#2E5EBE;font-weight: bold;">Indra Wijaya</div></center>
 			</div>
 			<div class="col-sm-4">
 				<img src="gambar/chet_faker_2.jpg" class="w-100">
-				<center><div style="font-size: 20px;border: 1px solid black ;border-radius: 0px 0px 15px 15px;padding: 20px; color:#2E5EBE;font-weight: bold;">Mark Marlins</div></center>
+				<center><div style="font-size: 20px;border: 1px solid black ;border-radius: 0px 0px 15px 15px;padding: 20px; color:#2E5EBE;font-weight: bold;">Wilson Pratama</div></center>
 			</div>
 		</div>
 	</div>
@@ -123,7 +123,7 @@
 				</div>
 			</div>
 			<div class="col-sm-6 d-none d-lg-none">
-				<img src="gambar/jantung.jpg">
+				<img src="../../gambar/jantung.jpg">
 			</div>
 		</div>
 	</div>

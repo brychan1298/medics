@@ -264,6 +264,17 @@ Route::get('/hospitalback', function () {
 //USER CONSULT
 	Route::resource('/doctor','DoctorController');
 	Route::get('/consultSearch','DoctorController@cari');
+	Route::get('/dashboard/{iddokter}/{iduser}',[
+		'uses' => 'ChatController@getDashboard',
+		'as' => 'dashboard',
+		'middleware' => 'auth'
+	]);
+
+	Route::post('/createpost',[
+		'uses' => 'ChatController@postSavedChat',
+		'as' => 'post.create',
+		'middleware' => 'auth'
+	]);
 
 
 //USER HOSPITAL

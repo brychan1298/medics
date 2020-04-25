@@ -58,9 +58,15 @@
 				<div class="col-sm-8 col-7"></div>
 				<div class="col-sm-4 col-5 mt-4">
 					<img src="gambar/calendar.png" style="width: 50px;"> 
-					<span style="color: #2680EB;">
-						<a href="/historyQueue/{{Auth::user()->id}}">Queue History</a>
-					</span>
+					@guest
+						<span style="color: #2680EB;">
+							<a href="/login">Queue History</a>
+						</span>
+					@else
+						<span style="color: #2680EB;">
+							<a href="/historyQueue/{{Auth::user()->id}}">Queue History</a>
+						</span>
+					@endguest
 				</div>
 				<div class="col-sm-12 mt-5">
 					<form action="/UhosSearch" method="GET">

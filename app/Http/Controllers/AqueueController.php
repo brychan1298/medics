@@ -89,6 +89,21 @@ class AqueueController extends Controller
             'spesialist'=>'required'
         ]);
 
+        // $datess = $request->date;
+        // $dokterss = $request->dokter;
+        // $appointmentss = "";
+
+        // $rows = Aqueue::where('date',$datess)->where('dokter',$dokterss)->count();
+
+        // if ($rows>0) {
+        //     $query = Aqueue::where('date',$datess)->where('dokter',$dokterss)->orderBy('id','DESC')->first();
+        //     $appointmentss = $query->appointment;
+
+        // }
+        // else{
+        //     $appointmentss = '08:00';
+        // }
+
         $hours=date('H') + 2;
         $dd = date('H:i:s');
 
@@ -110,6 +125,7 @@ class AqueueController extends Controller
         $aqueue ->save();
 
         return view('successQueue');
+        //return $appointmentss;
     }
 
     /**

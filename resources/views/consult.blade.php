@@ -4,8 +4,10 @@
 <html>
 <head>
 	<title></title>
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>	
 	<style type="text/css">
 		.bar1{
 			padding-right: 15px;
@@ -99,25 +101,29 @@
 	<div class="container mt-5">
 		<div class="row">
 			@foreach($doctor as $d)
-				<div class="col-sm-6 col-12 mt-3 ">
+				<div class="col-sm-6 mt-3">
 					<div style="border: 1px solid grey;border-radius: 15px; padding: 10px;">
 						<div style="margin: 10px;">	
-							<span><img src="../../gambar/{{$d->gambar}}" class ="w-25 gam"></span>
-							<span>
-								<div style="float: right;">
-									<button style="background-color: blue;color: white; font-size: 12px;border: 0px; font-weight: bold;padding: 5px 25px 5px 25px;margin-top: 35px;margin-bottom: 10px;">							
-										CHAT
-									</button>
-								</div>						
-								<div style="" class="nam nam2">
-									<div style="color: blue;font-size:16px;font-weight:bold;">{{$d->nama}}</div>
-									<div style="color: grey;">{{$d->spesialisasi}}</div>
-									<div style="color: blue;">FREE</div>
-								</div>						
-							</span>					
+							<div class="row">
+								<span class="col-3"><img src="../../gambar/{{$d->gambar}}" class ="w-100 gam"></span>
+									<span class="col-6">										
+										<div style="" class="nam nam2">
+										<div style="color: blue;font-size:16px;font-weight:bold;">{{$d->nama}}</div>
+										<div style="color: grey;">{{$d->spesialisasi}}</div>
+										<div style="color: blue;">FREE</div>
+										</div>						
+									</span>	
+									<span class="col-3">
+										<div>
+											<a href="/dashboard/{{$d->id}}/{{Auth::user()->id}}" class="btn btn-primary" style="color: white; font-size: 12px;border: 0px; font-weight: bold;padding: 5px 25px 5px 25px;margin-top: 35px;margin-bottom: 10px;">							
+														CHAT
+											</a>
+										</div>		
+									</span>
+								</div>
+							</div>
 						</div>
 					</div>
-				</div>
 			@endforeach
 		</div>
 		<div class="mt-5 pagination justify-content-center">
