@@ -12,6 +12,139 @@
 		.gam{
 			border-radius: 50%;
 		}
+		.scrollbar {
+		margin-left: 30px;
+		float: left;
+		height: 300px;
+		width: 65px;
+		background: #fff;
+		overflow-y: scroll;
+		margin-bottom: 25px;
+		}
+		.force-overflow {
+		min-height: 450px;
+		}
+
+		.scrollbar-primary::-webkit-scrollbar {
+		width: 12px;
+		background-color: #F5F5F5; }
+
+		.scrollbar-primary::-webkit-scrollbar-thumb {
+		border-radius: 10px;
+		-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+		background-color: #4285F4; }
+
+		.scrollbar-primary {
+		scrollbar-color: #4285F4 #F5F5F5;
+		}
+
+		.scrollbar-danger::-webkit-scrollbar-track {
+		-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+		background-color: #F5F5F5;
+		border-radius: 10px; }
+
+		.scrollbar-danger::-webkit-scrollbar {
+		width: 12px;
+		background-color: #F5F5F5; }
+
+		.scrollbar-danger::-webkit-scrollbar-thumb {
+		border-radius: 10px;
+		-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+		background-color: #ff3547; }
+
+		.scrollbar-danger {
+		scrollbar-color: #ff3547 #F5F5F5;
+		}
+
+		.scrollbar-warning::-webkit-scrollbar-track {
+		-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+		background-color: #F5F5F5;
+		border-radius: 10px; }
+
+		.scrollbar-warning::-webkit-scrollbar {
+		width: 12px;
+		background-color: #F5F5F5; }
+
+		.scrollbar-warning::-webkit-scrollbar-thumb {
+		border-radius: 10px;
+		-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+		background-color: #FF8800; }
+
+		.scrollbar-warning {
+		scrollbar-color: #FF8800 #F5F5F5;
+		}
+
+		.scrollbar-success::-webkit-scrollbar-track {
+		-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+		background-color: #F5F5F5;
+		border-radius: 10px; }
+
+		.scrollbar-success::-webkit-scrollbar {
+		width: 12px;
+		background-color: #F5F5F5; }
+
+		.scrollbar-success::-webkit-scrollbar-thumb {
+		border-radius: 10px;
+		-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+		background-color: #00C851; }
+
+		.scrollbar-success {
+		scrollbar-color: #00C851 #F5F5F5;
+		}
+
+		.scrollbar-info::-webkit-scrollbar-track {
+		-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+		background-color: #F5F5F5;
+		border-radius: 10px; }
+
+		.scrollbar-info::-webkit-scrollbar {
+		width: 12px;
+		background-color: #F5F5F5; }
+
+		.scrollbar-info::-webkit-scrollbar-thumb {
+		border-radius: 10px;
+		-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+		background-color: #33b5e5; }
+
+		.scrollbar-info {
+		scrollbar-color: #33b5e5 #F5F5F5;
+		}
+
+		.scrollbar-default::-webkit-scrollbar-track {
+		-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+		background-color: #F5F5F5;
+		border-radius: 10px; }
+
+		.scrollbar-default::-webkit-scrollbar {
+		width: 12px;
+		background-color: #F5F5F5; }
+
+		.scrollbar-default::-webkit-scrollbar-thumb {
+		border-radius: 10px;
+		-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+		background-color: #2BBBAD; }
+
+		.scrollbar-default {
+		scrollbar-color: #2BBBAD #F5F5F5;
+		}
+
+		.scrollbar-secondary::-webkit-scrollbar-track {
+		-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+		background-color: #F5F5F5;
+		border-radius: 10px; }
+
+		.scrollbar-secondary::-webkit-scrollbar {
+		width: 12px;
+		background-color: #F5F5F5; }
+
+		.scrollbar-secondary::-webkit-scrollbar-thumb {
+		border-radius: 10px;
+		-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+		background-color: #aa66cc; }
+
+		.scrollbar-secondary {
+		scrollbar-color: #aa66cc #F5F5F5;
+		}		
 	</style>
 </head>
 <body>
@@ -19,7 +152,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-6">
-					<center><h3>The Other Doctors</h3></center>
+					<center><h2 class="mb-4">THE OTHER DOCTORS</h2></center>
 					@foreach($doctor as $d)
 						<div class="col-sm-12 mt-3">
 							<div style="border: 1px solid grey;border-radius: 15px; padding: 10px;">
@@ -50,34 +183,42 @@
 				<div class="col-sm-6">
 					<div class="ml-5">						
 						<section class="row posts">
-							<div class="col-md-12 col-md-offset-3" style="width: 50%;height: 250px;overflow-y: scroll;">				
+							<div class="scrollbar scrollbar-primary col-md-12 col-md-offset-3" style="width: 50%;height: 400px;overflow-y: scroll; border:1px solid lightgrey;padding: 15px;padding-left: 0px;border-radius: 15px;">				
 								@foreach($posts as $s)
+								<div class="force-overflow">
+									
 									<article class="post panel panel-success" data-postid="{{$s->id}}">
-										<div class="info panel-heading">
-											{{$s->tbuser->name}} {{$s->date}}
+										<div class="info panel-heading" style="padding-top: 10px;">
+											<label style="font-size: 16px;margin-left: 30px;font-weight: semibold;">{{$s->tbuser->name}}</label> 
+											<label style="float: right;font-size: 15px;margin-right: 15px;">{{$s->date}}</label>
 										</div>
-										<div class="panel-body" style="margin-left: 20px">
+										<div class="panel-body form-control" style="margin-left: 30px; margin-right:  30px; width: 450px;margin-top: 0px;">
 											{{$s->message}}
 										</div>
 									</article>
-								@endforeach
+								@endforeach	
+								<!-- <div class="row"> -->
+									<form action="{{route('post.create')}}" method="post" class="row ml-3 new-posts" style="margin-top: 165px;">
+									<div class="col-10">
+										<div class="form-group">
+											<input class="form-control" name="message" id="new-post" placeholder="Enter your message">							
+											</input>
+										</div>
+									</div>
+									<div class="col-2" style="margin-left: -20px;">
+										<button type="submit" class="btn btn-primary">Send</button>
+										<input type="hidden" value="{{ Session::token() }}" name="_token">
+										<input type="hidden" value="{{ Auth::user()->id }}" name="id_user">
+										<input type="hidden" value="{{ $iddokter }}" name="id_dokter">
+									</div>
+									</form>	
+								<!-- </div> -->
+								</div>
 							</div>
 						</section>	
 
 						<section class="row new-posts">
-							<div class="col-md-12 col-md-offset-3">				
-								<header><h3>What do you have to say?</h3></header>
-								<form action="{{route('post.create')}}" method="post">
-									<div class="form-group">
-										<input class="form-control" name="message" id="new-post" placeholder="Enter your message">							
-										</input>
-									</div>
-									<button type="submit" class="btn btn-primary">Send Message</button>
-									<input type="hidden" value="{{ Session::token() }}" name="_token">
-									<input type="hidden" value="{{ Auth::user()->id }}" name="id_user">
-									<input type="hidden" value="{{ $iddokter }}" name="id_dokter">
-								</form>
-							</div>
+							
 						</section>	
 					</div>
 				</div>

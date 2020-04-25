@@ -299,11 +299,3 @@ Route::get('/hospitalback', function () {
 Route::get('/logout', 'Auth\LoginController@logout');
 
 Auth::routes();
-
-
-Route::get('/details', function () {
-
-	$ip = Location::get();
-    //$data = \Location::get($ip);
-    return $ip;
-});

@@ -122,7 +122,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-sm-6 d-none d-lg-none">
+			<div class="col-sm-6">
 				<img src="../../gambar/jantung.jpg">
 			</div>
 		</div>

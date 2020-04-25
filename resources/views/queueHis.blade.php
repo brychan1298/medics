@@ -21,25 +21,26 @@
 
 	<div class="container" style="margin-bottom: -100px;">
 		@foreach($list as $h)		
-			<div class="row border mt-3">
+			<div class="row border mt-4 pt-4 pb-4 pl-3" style="border-radius: 15px;">
 				<div class="col-sm-8">
-					<div><b>{{$h->date}}</b></div>
-					<div>{{$h->nama}}</div>
+					<div style="font-weight: ;color: darkgrey;">{{$h->date}}</div>
+					<div style="font-weight:bold;font-size: 17px;margin-top: 2px;">{{$h->nama}}</div>
 					<div></div>
-					<p><i>Rs. {{$h->tbhospital->nama}} - {{$h->tbhospital->alamat}}<br>(Dr.{{$h->dokter}})</i></p>
-					<p>Time : {{$h->appointment}}</p>
+					<div><i>Rs. {{$h->tbhospital->nama}} - {{$h->tbhospital->alamat}}</i></div>
+					<div><b>(Dr.{{$h->dokter}})</b></div>
+					<div>Time : {{$h->appointment}}</div>
 				</div>
 				<div class="col-sm-4">
 					<div class="ml-5 mt-3">
 						@if($h->status=="BELUM")
 						@if($h->date < $date )
-							<p><b>Status :</b> <div style="color: red;font-size: 20px;"><b>LATE/FORFEITED</b></div></p>
+							<p><b>Status :</b> <div class="text-danger" style="font-size: 18px;"><b>LATE/FORFEITED</b></div></p>
 						@else
-							<p><b>Status :</b> <div style="color: yellow;font-size: 20px;"><b>ON DOING</b></div></p>
+							<p><b>Status :</b> <div class="text-warning" style="font-size: 18px;"><b>ON DOING</b></div></p>
 						@endif						
 						<!-- <p><a href="" class="btn btn-primary pl-5 pr-5">CHECK</a></p>	 -->
 						@else
-						<p>Status : <div style="color: green;font-size: 20px;"><b>DONE</b></div></p>						
+						<p>Status : <div class="text-primary" style=";font-size: 18px;"><b>DONE</b></div></p>						
 						@endif
 					</div>				
 				</div>
