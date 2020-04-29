@@ -92,8 +92,8 @@
 						<a href="/login">
 							<div style="border:1px solid #707070;border-radius: 15px;padding: 40px;">
 								<center>								
-									<img src="../../gambar/{{$h->img}}" class="w-100">
-									<div style="color: black;">Rs.{{$h->nama}}</div>
+									<img src="../../gambar/{{$h->img}}" class="w-100 mb-3">
+									<div style="color: black;" class="mt-3">Rs.{{$h->nama}}</div>
 									<div style="color: black;">{{$h->alamat}}</div>
 								</center>
 							</div>
@@ -104,8 +104,8 @@
 						<a href="/choosedoctor/{{$h->id}}">
 							<div style="border:1px solid #707070;border-radius: 15px;padding: 40px;">
 								<center>								
-									<img src="../../gambar/{{$h->img}}" class="w-100">
-									<div style="color: black;">Rs.{{$h->nama}}</div>
+									<img src="../../gambar/{{$h->img}}" class="w-100 mb-3">
+									<div style="color: black;" class="mt-3">Rs.{{$h->nama}}</div>
 									<div style="color: black;">{{$h->alamat}}</div>
 								</center>
 							</div>

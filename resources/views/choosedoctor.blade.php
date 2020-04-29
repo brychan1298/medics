@@ -18,19 +18,14 @@
 	<div style="margin-top: 180px;">
 		<div class="container">
 			<div class="row">
-				<div class="col-sm-3 col-12">
-					 <center><img src="../../gambar/{{$hospital->img}}" style="width: 350px;"></center>
+				<div class="col-sm-6 col-12">
+					 <center><img src="../../gambar/{{$hospital->img}}" style="" class="w-100"></center>
 				</div>
-				<div class="col-sm-4 mt-5 col-12 text-center">
+				<div class="col-sm-6 mt-5 col-12 text-center">
 					<div class="ml-sm-5 pl-sm-5">
-						<div style="font-size: 38px;">{{$hospital->nama}}</div>
-						<div>{{$hospital->kota}}, {{$hospital->provinsi}}</div>
-						<div>{{$hospital->alamat}}</div>
-					</div>
-				</div>
-				<div class="col-sm-5 mt-5 d-none d-lg-block">
-					<div style="text-align: right;margin-right: 200px;">
-						<img src="../../gambar/girldoctor.png" class="w-75">
+						<div style="font-size: 38px;margin-top: 40px;font-size: 48px;">Rs. {{$hospital->nama}}</div>
+						<div style="font-size: 30px;">{{$hospital->kota}}, {{$hospital->provinsi}}</div>
+						<div style="font-size: 26px;">{{$hospital->alamat}}</div>
 					</div>
 				</div>
 			</div>
@@ -42,17 +37,17 @@
 			<div class="row">
 				<div class="col-sm-12">
 					<center>
-						<div style="font-size: 25px;">
+						<div style="font-size: 28px;">
 							Choose a Doctor:
 						</div>						
 					</center>
 				</div>
 			</div>
 			<div class="row">				
-				<div class="col-sm-12 mt-3">
+				<div class="col-sm-12 mt-3 mb-2">
 					<center>
 					<span >
-						<input type="text" name="" placeholder="Search" style="border:1px solid grey;border-radius: 15px 0px 0px 15px; width: 65%; padding-top: 10px;padding-bottom: 9px;padding-left: 10px;">
+						<input type="text" name="" placeholder="Search" style="border:1px solid grey;border-radius: 15px 0px 0px 15px; width: 65%; padding-top: 10px;padding-bottom: 9px;padding-left: 15px;">
 					</span>
 					<span style="background-color: #6672EC;padding: 12px;border-radius: 0px 15px 15px 0px; margin-left: -5px;">
 						<img src="../../gambar/searchicon.png" style="width: 30px;">
@@ -66,11 +61,11 @@
 				@foreach($chosedok as $c)
 				<div class="col-sm-4 mt-sm-0 col-6 mt-5">
 					<a href="/booking/{{$c->tbdokter->id}}/{{$id}}">
-						<div style="border:1px solid #707070;border-radius: 15px;padding: 40px 10px;">
+						<div style="border:1px solid #707070;border-radius: 15px;padding: 40px 10px;" class="mt-3">
 							<center>								
-								<img src="../../gambar/{{$c->tbdokter->gambar}}" class="w-50" style="border-radius: 50%;">
-								<div style="color: black;" class="mt-3">Dr.{{$c->tbdokter->nama}}</div>
-								<div style="color: black;">{{$c->tbdokter->spesialisasi}} Specialist</div>
+								<img src="../../gambar/{{$c->tbdokter->gambar}}" class="w-50 mb-2" style="border-radius: 50%;">
+								<div style="color: black;font-size: 18px;" class="mt-3">Dr. {{$c->tbdokter->nama}}</div>
+								<div style="color: black;font-size: 18px;">{{$c->tbdokter->spesialisasi}} Specialist</div>
 							</center>
 						</div>
 					</a>
