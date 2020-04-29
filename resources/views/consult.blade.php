@@ -115,9 +115,15 @@
 									</span>	
 									<span class="col-2">
 										<div>
+											@guest
+											<a href="/login" class="btn btn-primary" style="color: white; font-size: 12px;border: 0px; font-weight: bold;padding: 5px 25px 5px 25px;margin-top: 35px;margin-bottom: 10px;">							
+														CHAT
+											</a>
+											@else
 											<a href="/dashboard/{{$d->id}}/{{Auth::user()->id}}" class="btn btn-primary" style="color: white; font-size: 12px;border: 0px; font-weight: bold;padding: 5px 25px 5px 25px;margin-top: 35px;margin-bottom: 10px;">							
 														CHAT
 											</a>
+											@endguest
 										</div>		
 									</span>
 								</div>

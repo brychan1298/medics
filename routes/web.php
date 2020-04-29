@@ -293,6 +293,9 @@ Route::get('/hospitalback', function () {
 	Route::get('/thisMe/{iddokter}/{idhospital}/{iduser}','HospitalController@index5');
 	Route::get('/detaildoctor/{id}','HospitalController@detaildoctor');
 	Route::get('/historyQueue/{id}','AqueueController@indexHistory');
+	Route::get('/tampilanRS',function(){
+		return view('tampilanRS');
+	});
 
 //Route::get('/home', 'HomeController@index')->name('home');
 

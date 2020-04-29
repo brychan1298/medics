@@ -79,15 +79,15 @@ class AqueueController extends Controller
 
     public function insert(Request $request,$id)
     {
-        $validasi = $request->validate([
-            'nama'=>'required',
-            'appointment'=>'required',
-            'disease'=>'required',
-            'nohp'=>'required',
-            'date'=>'required',
-            'dokter'=>'required',
-            'spesialist'=>'required'
-        ]);
+        // $validasi = $request->validate([
+        //     'nama'=>'required',
+        //     'appointment'=>'required',
+        //     'disease'=>'required',
+        //     'nohp'=>'required',
+        //     'date'=>'required',
+        //     'dokter'=>'required',
+        //     'spesialist'=>'required'
+        // ]);
 
         // $datess = $request->date;
         // $dokterss = $request->dokter;
@@ -113,18 +113,18 @@ class AqueueController extends Controller
 
         $aqueue = new Aqueue;
         $aqueue->id_hospital = $request->id_hospital;
-        $aqueue ->nama = $request->nama;
-        $aqueue ->date = $request->date;
-        $aqueue ->appointment = $c;
-        $aqueue ->disease = $request->disease;
-        $aqueue ->nohp = $request->nohp;
-        $aqueue ->dokter = $request->dokter;
-        $aqueue ->spesialist = $request->spesialist;
+        $aqueue->nama = $request->nama;
+        $aqueue->date = $request->date;
+        $aqueue->appointment = $c;
+        $aqueue->disease = $request->disease;
+        $aqueue->nohp = $request->nohp;
+        $aqueue->dokter = $request->dokter;
+        $aqueue->spesialist = $request->spesialist;
         $aqueue->id_user = $id;
         $aqueue->status="BELUM";
-        $aqueue ->save();
+        $aqueue->save();
 
-        return view('successQueue');
+        return redirect('/hospital');
         //return $appointmentss;
     }
 

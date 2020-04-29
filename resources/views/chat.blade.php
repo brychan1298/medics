@@ -200,14 +200,14 @@
 								</div>
 							</div>
 						</section>	
-								<!-- <div class="row"> -->
-						<section class="">
+								
+						<section class="" style="">
 								<form action="{{route('post.create')}}" method="post" class="row new-posts ml-3" style="margin-top: 0px;margin-top: -100px;">
 									<div class="col-10">
-											<div class="ml-3 form-group">
-												<input class="form-control" name="message" id="new-post" placeholder="Enter your message">							
-												</input>
-											</div>
+										<div class="ml-3 form-group">
+											<input class="form-control" name="message" id="new-post" placeholder="Enter your message">							
+											</input>
+										</div>
 									</div>
 									<div class="col-2" style="margin-left: -10px;">
 										<button type="submit" class="btn btn-primary">Send</button>
@@ -215,11 +215,8 @@
 										<input type="hidden" value="{{ Auth::user()->id }}" name="id_user">
 										<input type="hidden" value="{{ $iddokter }}" name="id_dokter">
 									</div>
-									</form>	
-						</section>	
-								<!-- </div> -->
-
-							
+								</form>	
+						</section>
 					</div>
 				</div>
 			</div>
