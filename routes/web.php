@@ -304,3 +304,17 @@ Route::get('/hospitalback', function () {
 Route::get('/logout', 'Auth\LoginController@logout');
 
 Auth::routes();
+
+
+
+
+
+
+// doctor
+Route::get('/aqueuedoctor', function () {
+    return view('aqueuedoctor');
+});
+
+Route::get('/chatdoctor', function () {
+    return view('chatdoctor');
+});
