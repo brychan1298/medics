@@ -296,6 +296,8 @@ Route::get('/hospitalback', function () {
 	Route::get('/tampilanRS',function(){
 		return view('tampilanRS');
 	});
+	Route::get('/tampilanRS/{idhospital}','AqueueController@index2');
+	Route::get('/tampilanRSs/{idhospital}','AqueueController@index3');
 
 //Route::get('/home', 'HomeController@index')->name('home');
 

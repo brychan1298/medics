@@ -56,12 +56,10 @@ function bulan(){
 </head>
 <body data-spy="scroll" data-target="menu" onload="startTime();bulan();">
 	<!-- judul -->	
-	<a href="">b</a>
-	
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-12">
-				<center> <div style="margin-bottom: 0px;font-size: 50px;margin-top: 30px;">RS. MENTARI PAGI</div></center>
+				<center> <div style="margin-bottom: 0px;font-size: 50px;margin-top: 30px;">RS. {{$hos->nama}}</div></center>
 				<!-- JAM -->
 				<label style="color: red;text-align: right;margin-left: 1000px;font-size: 30px;" id="txt"></label>
 			</div>
@@ -76,159 +74,8 @@ function bulan(){
 		<div class="row" style="margin-top:0px;">
 			<div class="col-sm-12" style="">
 				<div class="row" style="">
-					<div class="col-sm-4">
-						<!-- nomor antri -->
-						<label style="font-size: 14px; margin-left: 3px">NUMBER</label>
-						<div style="border: 1px solid grey;width: 60px; height: 60px">
-							<center>
-								<label style="font-size: 35px;color: black;">10</label>
-							</center>
-						</div>
-						<div style="font-size: 25px;margin-left: 70px;margin-top:-50px;">Johan</div>
-					<div>
-						<!-- INI NAMA DOCTER KONSULNYA -->
-						<div style="border:1px solid #707070;border-radius: 15px 15px 0px 0px;padding: 15px; margin-top: 35px;background-color:#1492E6;border:1px solid #1492E6;	 ">
-							<img src="img/doctor1.jpg" style="border-radius: 50px;width: 60px; height: 60px;">
-							<div style="color: white;font-size: 26px;position:absolute;margin-left: 80px; margin-top: -50px;font-family:  ">Dr Johan</div>
-						</div>
-						<!-- INI DATA PASIEN ANTRIAN -->
-						<tbody style="border-radius:0px 0px 15px 15px;">
-							<table class="table table-stripped" style="margin-top:-0px;border:1px solid grey;color: black;font-size: 18px;">
-								<tr>
-									<th>
-										No
-									</th>
-									<th>	
-										Nama
-									</th>
-									<th>
-										Time
-									</th>
-								</tr>
-
-								<!-- COBA ORANG -->
-								<tr style="border-radius: 0px 0px 15px 15px;">
-									<td>10</td>
-									<td>Johan</td>
-									<td>10.00</td>
-								</tr>
-								<tr style="border-radius: 0px 0px 15px 15px;">
-									<td>10</td>
-									<td>Johan</td>
-									<td>10.00</td>
-								</tr>
-								<tr style="border-radius: 0px 0px 15px 15px;">
-									<td>10</td>
-									<td>Johan</td>
-									<td>10.00</td>
-								</tr>
-							</table>
-						</tbody>		
-					</div>
+					{!! $html !!}					
 				</div>
-
-				<div class="col-sm-4">
-						<!-- nomor antri -->
-						<label style="font-size: 14px; margin-left: 3px">NUMBER</label>
-						<div style="border: 1px solid grey;width: 60px; height: 60px">
-							<center>
-								<label style="font-size: 35px;color: black;">10</label>
-							</center>
-						</div>
-						<div style="font-size: 25px;margin-left: 70px;margin-top:-50px;">Johan</div>
-						<div>
-						<!-- INI NAMA DOCTER KONSULNYA -->
-						<div style="border:1px solid #707070;border-radius: 15px 15px 0px 0px;padding: 15px; margin-top: 35px;background-color:#1492E6;border:1px solid #1492E6;	 ">
-							<img src="img/doctor1.jpg" style="border-radius: 50px;width: 60px; height: 60px;">
-							<div style="color: white;font-size: 26px;position:absolute;margin-left: 80px; margin-top: -50px;font-family:  ">Dr Johan</div>
-						</div>
-						<!-- INI DATA PASIEN ANTRIAN -->
-						<tbody style="border-radius:0px 0px 15px 15px;">
-							<table class="table table-stripped" style="margin-top:-0px;border:1px solid grey;color: black;font-size: 18px;">
-								<tr>
-									<th>
-										No
-									</th>
-									<th>	
-										Nama
-									</th>
-									<th>
-										Time
-									</th>
-								</tr>
-
-								<!-- COBA ORANG -->
-								<tr style="border-radius: 0px 0px 15px 15px;">
-									<td>10</td>
-									<td>Johan</td>
-									<td>10.00</td>
-								</tr>
-								<tr style="border-radius: 0px 0px 15px 15px;">
-									<td>10</td>
-									<td>Johan</td>
-									<td>10.00</td>
-								</tr>
-								<tr style="border-radius: 0px 0px 15px 15px;">
-									<td>10</td>
-									<td>Johan</td>
-									<td>10.00</td>
-								</tr>
-							</table>
-						</tbody>		
-					</div>
-				</div>
-
-				<div class="col-sm-4">
-						<!-- nomor antri -->
-						<label style="font-size: 14px; margin-left: 3px">NUMBER</label>
-						<div style="border: 1px solid grey;width: 60px; height: 60px">
-							<center>
-								<label style="font-size: 35px;color: black;">10</label>
-							</center>
-						</div>
-						<div style="font-size: 25px;margin-left: 70px;margin-top:-50px;">Johan</div>
-					<div>
-						<!-- INI NAMA DOCTER KONSULNYA -->
-						<div style="border:1px solid #707070;border-radius: 15px 15px 0px 0px;padding: 15px; margin-top: 35px;background-color:#1492E6;border:1px solid #1492E6;	 ">
-							<img src="img/doctor1.jpg" style="border-radius: 50px;width: 60px; height: 60px;">
-							<div style="color: white;font-size: 26px;position:absolute;margin-left: 80px; margin-top: -50px;font-family:  ">Dr Johan</div>
-						</div>
-						<!-- INI DATA PASIEN ANTRIAN -->
-						<tbody style="border-radius:0px 0px 15px 15px;">
-							<table class="table table-stripped" style="margin-top:-0px;border:1px solid grey;color: black;font-size: 18px;">
-								<tr>
-									<th>
-										No
-									</th>
-									<th>	
-										Nama
-									</th>
-									<th>
-										Time
-									</th>
-								</tr>
-
-								<!-- COBA ORANG -->
-								<tr style="border-radius: 0px 0px 15px 15px;">
-									<td>10</td>
-									<td>Johan</td>
-									<td>10.00</td>
-								</tr>
-								<tr style="border-radius: 0px 0px 15px 15px;">
-									<td>10</td>
-									<td>Johan</td>
-									<td>10.00</td>
-								</tr>
-								<tr style="border-radius: 0px 0px 15px 15px;">
-									<td>10</td>
-									<td>Johan</td>
-									<td>10.00</td>
-								</tr>
-							</table>
-						</tbody>		
-					</div>
-				</div>
-			</div>
 			</div>
 		</div>
 	</div>
