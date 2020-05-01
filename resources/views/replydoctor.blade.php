@@ -38,11 +38,11 @@
 	    	}
 	    	
 	    	.gam{
-				border-radius: 50%;
+				border-radius: 50%;				
 			}
 			.w1{
 				width:60px;
-				height:60px; 
+				height:60px; 				
 			}
 			.bt2{
 				margin-left: 60px;
@@ -50,6 +50,7 @@
 			.w2{
 				width: 55px;
 				height: 38px;
+				rotate:180deg;
 			}
 			.w3{
 				width: 50px;
@@ -100,27 +101,45 @@
 			<div class="col-12 border1 mb-2">
 				<div class="row">
 					<div class="col-1 mt-2">
-						<img src="../../gambar/hemhem.png" class ="w2 gam mt-3 mb-3">
+						<a href="/chatdoctor/{{$iddokter}}">
+							<img src="../../gambar/left.PNG" class ="w2 gam mt-3 mb-3">
+						</a>
 					</div>
 					<div class="col-4 ml-4">
 						<img src="../../gambar/banks.jpg" class ="w1 gam mt-3 mb-3">
 					</div>
 					<div class="col-6">
-						<div class="fs3 text-sm-left">JOHAN</div>
+						<div class="fs3 text-sm-left">{{$user->name}}</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="row">
+		@foreach($posts as $s)
+		@if($s->froms == 'user')
+		<div class="row force-overflow">
 			<div class="col-2">	
 				<img src="../../gambar/banks.jpg" class ="w3 gam mt-3 mb-3">
 			</div>
 			<div class="col-8 border2 pt-1 form-control">
-				heloooooooooooo
+				{{$s->message}}
 			</div>
 			<div class="col-2"></div>
 		</div>
-		<div class="row mt-1">
+		@else
+		<div class="row force-overflow" style="text-align: right;">
+			<div class="col-2">	
+				
+			</div>
+			<div class="col-8 border2 pt-1 form-control">
+				{{$s->message}}
+			</div>
+			<div class="col-2">
+				<img src="../../gambar/{{$s->tbdokter->gambar}}" class ="w3 gam mt-3 mb-3">
+			</div>
+		</div>
+		@endif
+		@endforeach
+		<!-- <div class="row mt-1">
 			<div class="col-2">
 			</div>
 			<div class="col-8 border3 pt-1 text-sm-right form-control">
@@ -129,16 +148,20 @@
 			<div class="col-1">	
 				<img src="../../gambar/doctor1.jpg" class ="w3 gam mt-3 mb-3">
 			</div>
-		</div>
-		<div class="row turun">
-			<div class="col-11">
-				<input class="form-control besar" placeholder="Type your text..."></input>
-			</div>
-			<div class="col-1">
-				<img src="../../gambar/kirim.png" class ="w4 mt-1 mars">
-				
-			</div>
-		</div>
+		</div> -->
+		
+			<form action="/saveChatDoctor" method="get" class="row new-posts ml-3 turun" style="">
+				<div class="col-10">
+					<input class="form-control besar" name="message" placeholder="Type your text..."></input>
+					<input type="hidden" name="id_user" value="{{$user->id}}">
+					<input type="hidden" name="id_dokter" value="{{$iddokter}}">
+				</div>
+				<div class="col-2">
+					<button type="submit" style="border: none">
+						<img src="../../gambar/kirim.png" class ="w4 mt-1 mars">				
+					</button>
+				</div>
+			</form>
 	</div>
 	</body>
 </html>

@@ -314,6 +314,13 @@ Route::get('/aqueuedoctor/{iddokter}','AqueueController@index3');
 Route::get('/queuenote/{idpatient}/{iddokter}','AqueueController@note');
 
 Route::get('/chatdoctor/{iddokter}','ChatController@ShowChatDoctor');
+Route::get('/doctorDashboard/{iduser}/{iddokter}','ChatController@getDashboardDoctor');
+Route::get('/saveChatDoctor','ChatController@saveChatDoctor');
+Route::post('/createpostdoctor',[
+		'uses' => 'ChatController@saveChatDoctor',
+		'as' => 'post.createdoctor',
+		'middleware' => 'auth'
+	]);
 Route::get('/chatdoctor', function () {
     return view('chatdoctor');
 });

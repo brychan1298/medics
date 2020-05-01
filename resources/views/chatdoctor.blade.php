@@ -72,7 +72,7 @@
 						<div class="fs3">NEED YOUR HELP</div>
 					</div>	
 					<div class="col-5">						
-						<a href="" class="btn btn-primary bt2 mt-5">			
+						<a href="/doctorDashboard/{{$d->tbuser->id}}/{{$iddokter}}" class="btn btn-primary bt2 mt-5">	
 							CHAT
 						</a>
 					</div>	

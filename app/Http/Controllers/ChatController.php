@@ -27,8 +27,15 @@ class ChatController extends Controller
     {
         $posts = Chat::where('id_user',$iduser)->where('id_dokter',$iddokter)->get();
         $doctor = Adoctor::all();
-        return view('chat',compact('posts','doctor','iddokter'));
-        
+        return view('chat',compact('posts','doctor','iddokter'));        
+    }
+
+    public function getDashboardDoctor($iduser,$iddokter)
+    {
+        $posts = Chat::where('id_user',$iduser)->where('id_dokter',$iddokter)->get();
+        $user = Users::where('id',$iduser)->first();
+
+        return view('replydoctor',compact('posts','user','iddokter'));
     }
 
     public function postSavedChat(Request $Request)
@@ -64,7 +71,24 @@ class ChatController extends Controller
             ->groupBy('id_user')->get();
 
         $data = Chat::where('id_dokter',$iddokter)->select('id_user')->groupBy('id_user')->get();
-        return view('chatdoctor',compact('data'));
+        return view('chatdoctor',compact('data','iddokter'));
+    }
+
+    public function saveChatDoctor(Request $Request)
+    {   
+        $datetime = date('Y-m-d H:i:s');
+        $iduser=$Request['id_user'];
+        $iddokter=$Request['id_dokter'];
+        $chat = new Chat();
+        $chat->id_user = $Request->id_user;
+        $chat->id_dokter = $Request->id_dokter;
+        $chat->message = $Request->message;
+        $chat->date = $datetime;
+        $chat->froms = 'dokter';
+        $chat->save();
+
+        return redirect('/doctorDashboard/'.$iduser.'/'.$iddokter);
+        //return 'aa';
     }
 
     /**
