@@ -317,3 +317,7 @@ Route::get('/chatdoctor/{iddokter}','ChatController@ShowChatDoctor');
 Route::get('/chatdoctor', function () {
     return view('chatdoctor');
 });
+
+Route::get('/replydoctor', function () {
+    return view('replydoctor');
+});
