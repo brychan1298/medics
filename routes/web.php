@@ -297,7 +297,6 @@ Route::get('/hospitalback', function () {
 		return view('tampilanRS');
 	});
 	Route::get('/tampilanRS/{idhospital}','AqueueController@index2');
-	Route::get('/tampilanRSs/{idhospital}','AqueueController@index3');
 
 //Route::get('/home', 'HomeController@index')->name('home');
 
@@ -310,11 +309,11 @@ Auth::routes();
 
 
 
-// doctor
-Route::get('/aqueuedoctor', function () {
-    return view('aqueuedoctor');
-});
+// DOCTOR
+Route::get('/aqueuedoctor/{iddokter}','AqueueController@index3');
+Route::get('/queuenote/{idpatient}/{iddokter}','AqueueController@note');
 
+Route::get('/chatdoctor/{iddokter}','ChatController@ShowChatDoctor');
 Route::get('/chatdoctor', function () {
     return view('chatdoctor');
 });

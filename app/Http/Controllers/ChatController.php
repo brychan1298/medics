@@ -8,6 +8,7 @@ use App\adoctor;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Session;
 
 class ChatController extends Controller
@@ -27,6 +28,7 @@ class ChatController extends Controller
         $posts = Chat::where('id_user',$iduser)->where('id_dokter',$iddokter)->get();
         $doctor = Adoctor::all();
         return view('chat',compact('posts','doctor','iddokter'));
+        
     }
 
     public function postSavedChat(Request $Request)
@@ -44,6 +46,7 @@ class ChatController extends Controller
         $chats->id_user = $Request['id_user'];
         $chats->id_dokter = $Request['id_dokter'];
         $chats->date = $datetime;
+        $chats->froms = 'user';
         $chats->save();
         // $pesan = "There was an error";
         // if($Request->Chat()->save($chats))
@@ -51,6 +54,17 @@ class ChatController extends Controller
         //     $message = "Message send succesfully";
         // }
         return redirect('/dashboard/'.$iddokter.'/'.$iduser);
+    }
+
+    public function ShowChatDoctor($iddokter)
+    {
+        $data = DB::table('tbchat')
+            ->where('id_dokter',$iddokter)
+            ->select('id_user')
+            ->groupBy('id_user')->get();
+
+        $data = Chat::where('id_dokter',$iddokter)->select('id_user')->groupBy('id_user')->get();
+        return view('chatdoctor',compact('data'));
     }
 
     /**

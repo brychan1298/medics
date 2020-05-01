@@ -53,33 +53,33 @@
 	<div class="container mt-5">
 		<div class="row">
 			<div class="col-12 mt-5">
-				<center><img src="gambar/chats.png" class="w-100 mt-5"></center>
+				<center><img src="../../gambar/chats.png" class="w-100 mt-5"></center>
 			</div>
 			<div class="col-12 mt-3">
 				<div class="text-sm-right text-center fs fs2 mb-4" style="">Chat With Patient</div>
 			</div>			
 		</div>
 		<div class="row mb-4">
+			@foreach($data as $d)
 			<div class="col-1"></div>
 			<div class="col-10 border1 mb-2">
 				<div class="row">
 					<div class="col-3">
-						<img src="gambar/banks.jpg" class ="w1 gam mt-3 mb-3">
+						<img src="../../gambar/banks.jpg" class ="w1 gam mt-3 mb-3">
 					</div>
 					<div class="col-4">
-						<div class="fs4 mt-4">Johan</div>
-						<div class="fs3">need your help</div>
+						<div class="fs4 mt-3">{{$d->tbuser->name}}</div>
+						<div class="fs3">NEED YOUR HELP</div>
 					</div>	
-					<div class="col-5">
-						<label class="fs3 mt-3">12-12-2020 12:12</label>
-						<a href="" class="btn btn-primary bt2">			
+					<div class="col-5">						
+						<a href="" class="btn btn-primary bt2 mt-5">			
 							CHAT
 						</a>
 					</div>	
 				</div>
 			</div>	
 			<div class="col-1"></div>
-
+			@endforeach
 		</div>
 	</div>
 	</body>

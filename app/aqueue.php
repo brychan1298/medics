@@ -8,7 +8,7 @@ class aqueue extends Model
 {
     protected $table = 'tbcheckup';
     protected $primaryKey = 'id';
-    protected $fillable = ['appointment','disease','dokter','nohp','spesialist','date','nama','id_hospital','id_user','status'];
+    protected $fillable = ['appointment','disease','dokter','nohp','spesialist','date','nama','id_hospital','id_user','status','note'];
     public $timestamps = false;
 
     // public function users()

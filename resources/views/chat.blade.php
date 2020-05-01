@@ -185,17 +185,31 @@
 						<section class="row posts">
 							<div class="scrollbar scrollbar-primary col-md-12 col-md-offset-3" style="width: 50%;height: 400px;overflow-y: scroll; border:1px solid lightgrey;padding: 15px;padding-left: 0px;border-radius: 15px;">				
 								@foreach($posts as $s)
+								@if($s->froms == 'user')
 								<div class="force-overflow">
 									
 									<article class="post panel panel-success" data-postid="{{$s->id}}">
 										<div class="info panel-heading" style="padding-top: 10px;">
-											<label style="font-size: 16px;margin-left: 30px;font-weight: semibold;">{{$s->tbuser->name}}</label> 
-											<label style="float: right;font-size: 15px;margin-right: 15px;">{{$s->date}}</label>
+											<label style="font-size: 16px;margin-left: 30px;font-weight: semibold;">{{$s->tbuser->name}} - {{$s->date}}</label> 
+											<!-- <label style="float: right;font-size: 15px;margin-right: 15px;">{{$s->date}}</label> -->
 										</div>
-										<div class="panel-body form-control" style="margin-left: 30px; margin-right:  30px; width: 450px;margin-top: 0px;">
+										<div class="panel-body form-control" style="margin-left: 30px; margin-right:  30px; display: inline-block;margin-top: 5px;width: auto;">
 											{{$s->message}}
 										</div>
 									</article>
+								@else
+								<div class="force-overflow">
+									
+									<article class="post panel panel-success" style="text-align: right;" data-postid="{{$s->id}}">
+										<div class="info panel-heading" style="padding-top: 10px;">
+											<label style="font-size: 16px;margin-left: 30px;font-weight: semibold;">{{$s->tbdokter->nama}} - {{$s->date}}</label> 
+											<!-- <label style="float: right;font-size: 15px;margin-right: 15px;">{{$s->date}}</label> -->
+										</div>
+										<div class="panel-body form-control" style="margin-left: 30px; margin-top: 0px;text-align: right;display: inline-block;width: auto;">
+											{{$s->message}}
+										</div>
+									</article>
+								@endif
 								@endforeach	
 								</div>
 							</div>

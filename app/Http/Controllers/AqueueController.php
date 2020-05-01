@@ -42,8 +42,8 @@ class AqueueController extends Controller
                 $gambars = $g->gambar;
             }
             $date = date('Y-m-d');
-            $datas = Aqueue::where('dokter',$dokter)->where('date',$date)->get();  
-            $patients = Aqueue::where('dokter',$dokter)->where('date',$date)->first();
+            $datas=Aqueue::where('dokter',$dokter)->where('date',$date)->where('status','BELUM')->get();  
+            $patients=Aqueue::where('dokter',$dokter)->where('date',$date)->where('status','BELUM')->first();
             $items = '';
             foreach($datas as $d) {
                 $item = "<tr style=border-radius: 0px 0px 15px 15px;>".
@@ -96,8 +96,27 @@ class AqueueController extends Controller
 
     public function index3($id)
     {
-        $data = Aqueue::where('id_hospital',$id)->where('status','BELUM')->get();
-        return $data;
+        $dokters = Adoctor::whereId($id)->first();
+        $dokter = $dokters->nama;
+        $date = date('Y-m-d');
+        $datas=Aqueue::where('dokter',$dokter)->where('date',$date)->where('status','BELUM')->get();  
+        $patients=Aqueue::where('dokter',$dokter)->where('date',$date)->where('status','BELUM')->first();
+
+        if (count($datas)>0) {
+            return view('aqueuedoctor',compact('patients','id'));
+        }else{
+            return view('aqueuedoctor',compact('id'));
+        }        
+    }
+
+    public function note(Request $Request,$idpatient,$iddokter)
+    {
+        $notes = Aqueue::find($idpatient);
+        $notes->note = $Request->note;
+        $notes->status = "SUDAH";
+        $notes->save();
+
+        return redirect('/aqueuedoctor/'.$iddokter);
     }
 
     public function indexHistory($id)

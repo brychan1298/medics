@@ -34,4 +34,8 @@ class users extends Authenticatable
     public function acheck(){
         return $this->hasOne(Acheck::class , 'id');
     }
+
+    public function chat(){
+        return $this->hasOne(Chat::class , 'id');
+    }
 }

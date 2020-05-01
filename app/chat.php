@@ -13,4 +13,9 @@ class chat extends Model
     {
     	return $this->belongsTo(Users::class , 'id_user');
     }
+
+    public function tbdokter()
+    {
+    	return $this->belongsTo(Adoctor::class , 'id_dokter');
+    }
 }

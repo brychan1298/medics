@@ -17,6 +17,14 @@
 		.fs{
 			font-size: 40px;margin-top: 100px
 		}
+		body{
+			margin: 0;padding: 0;
+		}
+		.disables {
+	        pointer-events: none;
+	        cursor: default;
+	        opacity: 40%;
+	    }
 	    @media(max-width: 1024px){
 	    	.fs2{
 	    		margin-top: 0px;
@@ -66,10 +74,11 @@
 	</style>
 </head>
 <body data-spy="scroll" data-target="menu">
+	@if(isset($patients))
 	<div class="container mt-5">
 		<div class="row">
 			<div class="col-12 mt-5">
-				<center><img src="gambar/aqueue.png" class="w-100 mt-5"></center>
+				<center><img src="../../gambar/aqueue.png" class="w-100 mt-5"></center>
 			</div>
 			<div class="col-12 mt-5">
 				<div class="text-sm-right text-center fs fs2" style="">PATIENT NOW</div>
@@ -83,35 +92,87 @@
 						Number
 					</p>
 					<div class="border2">
-						11
+						{{$patients->id}}
 					</div>
 					<p class="text-sm-right text-center fs4">
 						<b>
-							JOHAN
+							{{$patients->nama}}
 						</b>
 					</p>
 					<p class="text-sm-right text-center fs3">
-						07.00 - 08.00
+						{{$patients->appointment}}
 					</p>
 					<p class="text-sm-right text-center fs4 mb-5">
-						Sakit Kepala
+						{{$patients->disease}}
 					</p>
 				</center>
 			</div>
 			<div class="col-1"></div>
 		</div>
+		<form action="/queuenote/{{$patients->id}}/{{$id}}" method="get">
+			<div class="row">
+				<div class="col-1"></div>
+				<div class="col-10 border1 mb-5">
+						<div class="text-sm-right text-center fs4 pb-3 pt-3">
+							NOTE
+						</div>
+						<input type="text" name="note" style="width:109% " placeholder="Write your note here.." class="form-control messe">
+				</div>
+				<div class="col-1"></div>
+			</div>
+			<button type="submit" style="width: 110%" class="btn btn-primary container but1">DONE</button>
+		</form>
+	</div>
+	@else
+	<div class="container mt-5">
+		<div class="row">
+			<div class="col-12 mt-5">
+				<center><img src="../../gambar/aqueue.png" class="w-100 mt-5"></center>
+			</div>
+			<div class="col-12 mt-5">
+				<div class="text-sm-right text-center fs fs2" style="">PATIENT NOW</div>
+			</div>			
+		</div>
 		<div class="row">
 			<div class="col-1"></div>
-			<div class="col-10 border1 mb-5">
-					<div class="text-sm-right text-center fs4 pb-3 pt-3">
-						NOTE
+			<div class="mt-5 col-10 border1 center mb-5">
+				<center>
+					<p class="text-sm-right text-center fs3 mt-5">
+						Number
+					</p>
+					<div class="border2">
+						
 					</div>
-					<input type="text" name="" placeholder="Write your note here.." class="form-control messe">
+					<p class="text-sm-right text-center fs4">
+						<b>
+							
+						</b>
+					</p>
+					<p class="text-sm-right text-center fs3">
+						
+					</p>
+					<p class="text-sm-right text-center fs4 mb-5">
+						
+					</p>
+				</center>
 			</div>
 			<div class="col-1"></div>
 		</div>
-		<input type="button" name="" value="DONE" class="btn btn-primary container but1">
+		<form action="" method="get">
+			<div class="row">
+				<div class="col-1"></div>
+				<div class="col-10 border1 mb-5">
+						<div class="text-sm-right text-center fs4 pb-3 pt-3">
+							NOTE
+						</div>
+						<input type="text" name="note" style="width:109% " placeholder="Write your note here.." class="form-control messe">
+				</div>
+				<div class="col-1"></div>
+			</div>
+			<button type="submit" style="width: 110%" class="btn btn-primary container but1 disables">DONE</button>
+		</form>
 	</div>
+	@endif
 </body>
 </html>
 @endsection

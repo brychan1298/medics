@@ -15,4 +15,9 @@ class adoctor extends Model
     {
     	return $this->hasOne(Dokterhospital::class,'id');
     }
+
+    public function chat()
+    {
+    	return $this->hasOne(Chat::class , 'id');
+    }
 }
