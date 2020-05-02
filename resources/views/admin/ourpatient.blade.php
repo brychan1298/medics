@@ -31,32 +31,91 @@
 			</div>					
 		</div>
 	</div>
-	<!-- form -->
-	<div class="container" style="margin-top: 30px;border:1px solid; margin-bottom: 50px;border-radius: 30px;">
+	<!-- form -->	
+	<div class="container" style="margin-top: 30px;border:1px solid;border-radius: 30px;">
 		<div class="row mb-3 mt-3" >
-			<!-- <div class="col-sm-12">
-				<center> <div style="margin-bottom: 40px;font-size: 50px;margin-top: 40px;">	NEW DOCTORS </div></center>
-			</div> -->
 			<div class="col-12">
-				<table>
-					<tr class="mt-5">
+				
+				<table class="">
+					@foreach($data as $d)
+					<tr class="" style="">
 						<td class="pl-4"><img src="gambar/images.png" class="img-fluid" style="width:60px;height: 60px;border-radius: 50px;margin:0px;"></td>
-						<td style="font-weight: bold;font-size: 18px; padding-left: 90px;">Nana</td>
-						<td style="font-size: 18px; padding-left: 90px;">done</td>
-						<td style="font-size: 18px; padding-left: 90px;">15-06-2020 12:00</td>
-						<td style="font-size: 18px; padding-left: 90px;">082152755499</td>
-						<td><button style="background-color: #4385FF; color: white;border:0px;border-radius: 20px;padding: 14px 40px; margin-left: 90px;">SIMPAN</button></td>
-					</tr>
-				</table>
-			</div>
-		</div>
-	</div>
+						<td style="font-weight: bold;font-size: 18px; padding-left: 90px;">{{$d->nama}}</td>
+						@if($d->date < $date && $d->status == 'BELUM')
+						<td style="font-size: 18px; padding-left: 90px;color: red;"><b>LATE</b></td>
+						@else
+						@if($d->status == 'BELUM')
+						<td style="font-size: 18px; padding-left: 90px;color: yellow;"><b>ON DOING</b></td>
+						@else
+						<td style="font-size: 18px; padding-left: 90px;color: green;"><b>DONE</b></td>
+						@endif
+						@endif						
+						<td style="font-size: 18px; padding-left: 90px;">{{$d->date}} {{$d->appointment}}</td>
+						<td style="font-size: 18px; padding-left: 90px;">{{$d->nohp}}</td>
+						<td>
+						<button style="background-color: #4385FF; color: white;border:0px;border-radius: 20px;padding: 14px 40px; margin-left: 90px;" type="button" data-toggle="modal" data-target="#{{$d->nama}}">DETAIL
+						</button></td>
 
+						<!-- Modal Box -->
+							<div class="modal fade" id="{{$d->nama}}">
+					    		<div class="modal-dialog">					    					      
+					      			<div class="modal-content">
+					      				<div class="modal-header">					      		
+					      					<h1 style="padding-left:160px;padding-top: 10px;">PATIENT DATA</h1>
+								          <button type="button" class="close" data-dismiss="modal">&times;</button>
+								        </div>
+					        			<div class="modal-body" style="">
+					        				<div class="container">
+					        					<div class="row">
+					        						<div class="col-sm-6 mt-2">
+					        							<b>Nama</b> <br> {{$d->nama}}
+					        						</div>
+					        						<div class="col-sm-6 mt-2">
+					        							<b>No Hp</b> <br> {{$d->nohp}}
+					        						</div>
+					        						<div class="col-sm-6 mt-4">
+					        							<b>Date</b> <br> {{$d->date}}
+					        						</div>
+					        						<div class="col-sm-6 mt-4">
+					        							<b>Time</b> <br> {{$d->appointment}}
+					        						</div>
+					        						<div class="col-sm-6 mt-4">
+					        							<b>Disease</b> <br> {{$d->disease}}
+					        						</div>
+					        						<div class="col-sm-6 mt-4">
+					        							<b>Note</b> <br> {{$d->note}}
+					        						</div>
+					        						<div class="col-sm-6 mt-4">
+					        							<b>Status</b> <br> 
+					        							@if($d->date < $date && $d->status == 'BELUM')
+														<span style="font-size: 18px;color: red;"><b>LATE</b></span>
+														@else
+															@if($d->status == 'BELUM')
+														<div style="font-size: 18px;color: yellow;"><b>ON DOING</b></div>
+															@else
+														<div style="font-size: 18px;color: green;"><b>DONE</b></div>
+															@endif
+														@endif	
+					        						</div>
+					        					</div>
+					        				</div>
+					        			</div>
+					      			</div>					      
+					    		</div>
+					  		</div>
+					</tr>
+					@endforeach
+				</table>		
+			</div>			
+		</div>
+	</div>	
+
+				<div class="mt-5 pagination justify-content-center" style="margin-bottom: -100px;">
+					{{$data->links()}}
+				</div>		
+<!-- 
 	<div class="container" style="margin-top: 30px;border:1px solid; margin-bottom: 100px;border-radius: 30px;">
 		<div class="row mb-3 mt-3" >
-			<!-- <div class="col-sm-12">
-				<center> <div style="margin-bottom: 40px;font-size: 50px;margin-top: 40px;">	NEW DOCTORS </div></center>
-			</div> -->
 			<div class="col-12">
 				<table>
 					<tr class="mt-5">
@@ -70,7 +129,10 @@
 				</table>
 			</div>
 		</div>
-	</div>
+	</div> -->
 </body>
 </html>
+<script type="text/javascript">
+	
+</script>
 @endsection

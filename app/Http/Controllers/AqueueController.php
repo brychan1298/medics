@@ -128,6 +128,13 @@ class AqueueController extends Controller
         //return $date;
     }
 
+    public function showPatient()
+    {
+        $data = Aqueue::paginate(5);
+        $date = date('Y-m-d');
+        return view('admin.ourpatient',compact('data','date'));
+    }
+
     /**
      * Show the form for creating a new resource.
      *
