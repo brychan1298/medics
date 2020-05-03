@@ -206,12 +206,31 @@ class AqueueController extends Controller
         //     $appointmentss = '08:00';
         // }
 
-        $hours=date('H') + 2;
+        $hours=date('H') + 1;
         $dd = date('H:i:s');
+        $datenow = $request->date;
+        $doctornow = $request->dokter;
+        $iddokter = $request->iddokter;
+        $id_hospital = $request->id_hospital;
 
-        $d = date('i');
+        $d = date('00');        
+        
         $c = $hours . ':' . $d;
-        //return $c;
+        for($i=0; $i<5;$i--)
+        {            
+            $c = $hours . ':' . $d;
+            $cek = Aqueue::where('date',$datenow)->where('appointment',$c)->where('dokter',$doctornow)->get();
+            $c = $hours . ':' . $d;
+            if ($hours>=24) {
+                return redirect('/booking/'.$iddokter.'/'.$id_hospital)->with('Error','Full Queued at Date');
+            }
+            if (count($cek)==0) {
+                break;
+            }
+            $hours++; 
+        }
+
+        $c = $hours . ':' . $d;
 
         $aqueue = new Aqueue;
         $aqueue->id_hospital = $request->id_hospital;
@@ -227,7 +246,7 @@ class AqueueController extends Controller
         $aqueue->save();
 
         return redirect('/hospital');
-        //return $appointmentss;
+        //return $c;
     }
 
     /**

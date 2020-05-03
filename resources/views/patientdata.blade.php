@@ -2,6 +2,11 @@
 @section('konten')
 <!DOCTYPE html>
 <html>
+@if(session()->get('Error'))
+	<div class="alert alert-success" style="margin-top: 160px;font-size: 27px;">
+		<b><center>Sorry, the queue is full on that date</center></b>
+	</div>
+@endif
 <head>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -15,7 +20,7 @@
 	</style>
 </head>
 <body data-spy="scroll" data-target="menu">
-	<div class="container" style="margin-top: 180px;border:1px solid lightgrey; margin-bottom: 100px;border-radius: 20px;">
+	<div class="container" style="margin-top: 160px;border:1px solid lightgrey; margin-bottom: 100px;border-radius: 20px;">
 		<div class="row">
 			<div class="col-sm-12">
 				<div>
@@ -67,6 +72,7 @@
 							<input type="hidden" name="dokter" value="{{$docter->nama}}">
 							<input type="hidden" name="spesialist" value="{{$docter->spesialisasi}}">
 							<input type="hidden" name="id_hospital" value="{{$idhospital}}">
+							<input type="hidden" name="iddokter" value="{{$iddokter}}">
 							<div class="container mb-4">
 								<div class="row">
 									<div class="col-sm-6" style="font-size: 16px;">Date<br><input type="date" name="date" class="form-control" style="padding-left: 15px;border-radius: 10px;border: 1px solid lightgrey;margin-top: 10px;"></div>
