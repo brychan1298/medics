@@ -41,9 +41,6 @@ Route::get('/shop', function () {
 //     return view('admin.customer');
 // });
 
-Route::get('/Apatient', function () {
-    return view('admin.ourpatient');
-});
 
 //ADMIN DOKTER
 	Route::resource('/Adoctor','AdoctorController');
@@ -112,6 +109,11 @@ Route::get('/hospitalSearch','AhospitalController@cari');
 		return view('admin.tampilanRS');
 	});
 
+//ADMIN PATIENT
+	Route::get('/Apatient', function () {
+    	return view('admin.ourpatient');	
+	});
+	Route::get('/Apatient','AqueueController@showPatient');
 
 
 
