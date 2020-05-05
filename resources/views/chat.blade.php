@@ -183,7 +183,7 @@
 				<div class="col-sm-6">
 					<div class="ml-5">						
 						<section class="row posts">
-							<div class="scrollbar scrollbar-primary col-md-12 col-md-offset-3" style="width: 50%;height: 400px;overflow-y: scroll; border:1px solid lightgrey;padding: 15px;padding-left: 0px;border-radius: 15px;">				
+							<div class="scrollbar scrollbar-primary col-md-12 col-md-offset-3" style="width: 500px;height: 400px;overflow-y: scroll; border:1px solid lightgrey;padding: 15px;padding-left: 0px;border-radius: 15px;">				
 								@foreach($posts as $s)
 								@if($s->froms == 'dokter')
 								<div class="force-overflow">
