@@ -20,17 +20,17 @@
 			<div class="row">
 				<div class="col-sm-12">
 					<center>
-						<div style="font-size: 30px;">DETAILS</div>
+						<div style="font-size: 40px;">DETAILS</div>
 					</center>
 				</div>			
 				<div class="col-sm-6 mt-3">
-					<div style="border:1px solid;border-radius: 20px;padding: 20px;margin-right: 100px;">
+					<div style="border:1px solid lightgrey;border-radius: 20px;padding: 20px;margin-right: 100px;">
 						<div class="row">
-							<div class="col-sm-4">
-								<img src="../../gambar/{{$docter->gambar}}" style="width: 100px;border-radius: 50%;">
+							<div class="col-sm-3">
+								<img src="../../gambar/{{$docter->gambar}}" style="width: 80px;border-radius: 50%;">
 							</div>
-							<div class="col-sm-8">
-								<div style="font-size: 25px;margin-top: 18px;">Dr.{{$docter->nama}}</div>
+							<div class="col-sm-9 text-left">
+								<div style="color:blue;font-size:20px;font-weight:bold;margin-top: 10px;">Dr.{{$docter->nama}}</div>
 								<div>{{$docter->spesialisasi}} Specialist</div>
 							</div>
 						</div>
@@ -42,7 +42,7 @@
 				<div class="col-sm-4 mt-3">
 
 					<center>
-						<div style="border:1px solid grey;border-radius: 20px;">
+						<div style="border:1px solid lightgrey;border-radius: 20px;">
 								<div style="background-color:rgb(67,133,255);padding: 10px;border-radius: 20px 20px 0px 0px; ">
 									<div class="row">
 										<div class="col-sm-6 text-white" style="font-weight: bold;">
@@ -106,7 +106,7 @@
 			<div class="col-sm-12">
 				<center>
 					<div>
-						<a href="/choosehospital/{{$id}}" class="btn btn-primary" style="border:none;background-color: rgb(67,133,255);padding: 10px 30px;border-radius: 10px;margin-top: 20px;color: white; font-weight:bold;">BOOKING</a>
+						<a href="/choosehospital/{{$id}}" class="btn btn-primary" style="border:none;background-color: rgb(67,133,255);padding: 10px 30px;border-radius: 10px;margin-top: 20px;color: white;">BOOKING</a>
 					</div>
 				</center>
 			</div>

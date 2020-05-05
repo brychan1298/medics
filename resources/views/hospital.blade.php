@@ -75,8 +75,8 @@
 								<input type="text" name="cari" value="{{ old('cari') }}" class="is is2" placeholder="Search">
 							</span>
 							<span>
-								<button type="submit" style="background-color: #6672EC;padding: 12px;border-radius: 0px 10px 10px 0px; margin-left: -5px;border:none;">
-										<img src="gambar/searchicon.png" style="width: 30px;">
+								<button type="submit" style="background-color: #6672EC;padding-top: 11px;padding-bottom: 8px;padding-left: 10px;padding-right: 10px;border-radius: 0px 10px 10px 0px; margin-left: -5px;border:none;">
+									<img src="gambar/searchicon.png" style="width: 30px;">
 								</button>
 							</span>
 						</center>	
@@ -93,7 +93,7 @@
 							<div style="border:1px solid #707070;border-radius: 15px;padding: 40px;">
 								<center>								
 									<img src="../../gambar/{{$h->img}}" class="w-100 mb-3">
-									<div style="color: black;" class="mt-3">Rs.{{$h->nama}}</div>
+									<div style="color: black;font-weight: bold;" class="mt-3">Rs. {{$h->nama}}</div>
 									<div style="color: black;">{{$h->alamat}}</div>
 								</center>
 							</div>
@@ -105,7 +105,7 @@
 							<div style="border:1px solid #707070;border-radius: 15px;padding: 40px;">
 								<center>								
 									<img src="../../gambar/{{$h->img}}" class="w-100 mb-3">
-									<div style="color: black;" class="mt-3">Rs.{{$h->nama}}</div>
+									<div style="color: black;font-weight: bold;font-size: 18px;" class="mt-3">Rs. {{$h->nama}}</div>
 									<div style="color: black;">{{$h->alamat}}</div>
 								</center>
 							</div>

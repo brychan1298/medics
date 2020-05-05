@@ -61,7 +61,7 @@
 								<input type="text" name="cari" value="{{ old('cari') }}" placeholder="Search" style="border:1px solid grey;border-radius: 15px 0px 0px 15px; padding-right: 550px; padding-top: 10px;padding-bottom: 9px;padding-left: 10px;">
 							</span>
 							<span>
-								<button type="submit" style="background-color: #6672EC;padding: 12px;border-radius: 0px 10px 10px 0px; margin-left: -5px;border:none;">
+								<button type="submit" style="background-color: #6672EC;padding-top: 11px;padding-bottom: 7px;padding-left: 10px;padding-right: 10px;border-radius: 0px 10px 10px 0px; margin-left: -5px;border:none;">
 									<img src="gambar/searchicon.png" style="width: 30px;">
 								</button>
 							</span>
@@ -79,7 +79,7 @@
 							<div style="border:1px solid #707070;border-radius: 15px;padding: 50px 10px;">
 								<center>								
 									<img src="../../gambar/{{$d->gambar}}" class="w-50" style="border-radius: 50%;">
-									<div style="color: black;">{{$d->nama}}</div>
+									<div style="color: black; font-weight: bold;font-size: 18px;margin-top: 20px;">{{$d->nama}}</div>
 									<div style="color: black;">{{$d->spesialisasi}} Spesialist</div>
 								</center>
 							</div>
@@ -91,7 +91,7 @@
 							<div style="border:1px solid #707070;border-radius: 15px;padding: 50px 10px;">
 								<center>								
 									<img src="../../gambar/{{$d->gambar}}" class="w-50" style="border-radius: 50%;">
-									<div style="color: black;">{{$d->nama}}</div>
+									<div style="color: black;font-weight: bold;font-size: 18px;margin-top: 20px;">{{$d->nama}}</div>
 									<div style="color: black;">{{$d->spesialisasi}} Spesialist</div>
 								</center>
 							</div>

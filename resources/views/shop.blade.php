@@ -36,15 +36,15 @@
 		<img src="img/lolsssss.jpg" style="width: 100%;">
 	</div>
 
-	<div id="shop1" style="font-size: 40px;">
+	<div id="shop1" style="font-size: 50px;">
 		<center>SHOP</center>
 	</div>
 
 	<div style="margin-left: 80%;">
 		@guest
-		<a href="/login"><img src="img/calendar.png" style="width: 40px;margin-bottom: 100px;"></a>
+		<a href="/login"><img src="img/calendar.png" style="width: 40px;margin-bottom: 90px;margin-top: 40px;"></a>
 		@else
-		<a href="/buyHis/{{Auth::user()->id}}"><img src="img/calendar.png" style="width: 40px;margin-bottom: 100px;"></a>
+		<a href="/buyHis/{{Auth::user()->id}}"><img src="img/calendar.png" style="width: 40px;margin-bottom: 90px;margin-top: 40px"></a>
 		@endguest
 	</div>
 
@@ -53,10 +53,10 @@
 			<form action="/shopSearch" method="GET">
 				<center>
 					<span >
-						<input type="text" name="cari" value="{{ old('cari') }}" placeholder="Search" style="border:1px solid grey;border-radius: 15px 0px 0px 15px; padding-right: 550px; padding-top: 10px;padding-bottom: 9px;padding-left: 10px;">
+						<input type="text" name="cari" value="{{ old('cari') }}" placeholder="Search" style="border:1px solid grey;border-radius: 15px 0px 0px 15px; padding-right: 550px; padding-top: 10px;padding-bottom: 9px;padding-left: 15px;">
 					</span>
 					<span>
-						<button type="submit" style="background-color: #6672EC;padding: 12px;border-radius: 0px 10px 10px 0px; margin-left: -5px;border:none;">
+						<button type="submit" style="background-color: #6672EC;padding-top: 11px;padding-bottom: 8px;padding-left: 10px;padding-right: 10px;border-radius: 0px 10px 10px 0px; margin-left: -5px;border:none;">
 								<img src="gambar/searchicon.png" style="width: 30px;">
 						</button>
 					</span>

@@ -64,7 +64,7 @@
         margin-top: 1000px;
       }
       .are1{
-        margin-top:-10px;
+        margin-top:10px;
         text-align: center;
         font-size: 60px;
       }

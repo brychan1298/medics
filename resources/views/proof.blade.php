@@ -13,23 +13,21 @@
 	</style>
 </head>
 <body>
-	<div style="font-size: 40px;margin-top: 170px;">
+	<div style="font-size: 50px;margin-top: 170px;">
 		<center>PROOF OF PAYMENT</center>
 	</div>
 
 	<div class="mt-5" style="margin-bottom: -100px;">
 		<center>
 			<form action="/uploadProof/{{$id}}" method="GET">
-				<div class="col-sm-4">
-						<input type="file" id="myFile" name="img" accept="image/*"><br>
-				</div>
-				<div style="border:1px solid grey;padding: 20px 0px 20px 0px;width: 300px;border-radius: 15px;">
+				<div style="border:1px solid lightgrey;padding: 40px 20px 40px 20px;width: 400px;border-radius: 15px;">
+						<input type="file" id="myFile" name="img" class="text-center" accept="image/*"><br>
 					
-					<div style="border:1px solid grey;width: 250px;border-radius: 5px;">
-						<img src="../../gambar/bukti.png" id="myImg" style="width: 200px;">
+					<div class="w-100" style="padding: 15px;">
+						<img src="../../gambar/bukti.png" id="myImg" class="w-100">
 					</div>
 					<div>
-						<button class="btn" type="submit" style="background-color:rgb(67,133,255);width: 250px;margin-top: 17px;padding: 5px 0px;color: white;">Send</button>
+						<button class="btn btn-primary form-control" type="submit">Send</button>
 					</div>
 				</div>
 			</form>

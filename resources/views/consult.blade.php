@@ -88,9 +88,9 @@
 							<input type="text" name="cari" value="{{ old('cari') }}" class="is is2" placeholder="Search" style="">
 						</span>
 						<span style="margin-top: -10px;">
-							<button type="submit" style="background-color: #6672EC;padding: 9px;border-radius: 0px 10px 10px 0px; margin-left: -5px;border:none;margin-bottom:-10px;">
+							<button type="submit" style="background-color: #6672EC;padding-top: 11px;padding-bottom: 8px;padding-left: 10px;padding-right: 10px;border-radius: 0px 10px 10px 0px; margin-left: -5px;border:none;">
 								<img src="gambar/searchicon.png" style="width: 30px;">
-							</button>
+						</button>
 						</span>
 					</center>	
 				</form>

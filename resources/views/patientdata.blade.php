@@ -32,14 +32,14 @@
 							<input type="hidden" name="id_hospital" value="{{$idhospital}}">
 							<div class="container mb-4">
 								<div class="row">
-									<div class="col-sm-6" style="font-size: 16px;">Date<br><input type="date" name="date" class="form-control" style="padding-left: 15px;border-radius: 10px;border: 1px solid lightgrey;margin-top: 10px;"></div>
+									<div class="col-sm-6" style="font-size: 16px;">Patient Name<br><input type="text" value="{{$profs->nama}}" name="nama" class="form-control" style="padding-left: 15px;border-radius: 10px;border: 1px solid lightgrey;margin-top: 10px;"></div>
 									<div class="col-sm-6" style="font-size: 16px;">Phone Number<br><input type="text" value="{{$profs->no_hp}}" name="nohp" class="form-control" style="padding-left: 15px;border-radius: 10px;border: 1px solid lightgrey;margin-top: 10px;"></div>
 								</div>
 							</div>
 							<div class="container mb-4">
 								<div class="row">
-									<div class="col-sm-6 mt-1" style="font-size: 16px;">Disease<br><textarea name="disease" class="mt-2" style="width: 100%;resize: none;height: 130px;border-radius: 10px;border: 1px solid lightgrey;"></textarea></div>
-									<div class="col-sm-6" style="font-size: 16px;">Patient Name<br><input type="text" value="{{$profs->nama}}" name="nama" class="form-control" style="padding-left: 15px;border-radius: 10px;border: 1px solid lightgrey;margin-top: 10px;"></div>
+									<div class="col-sm-6 mt-1" style="font-size: 16px;">Disease<br><textarea name="disease" class="mt-2" style="padding-left:15px;width: 100%;resize: none;height: 130px;border-radius: 10px;border: 1px solid lightgrey;"></textarea></div>
+									<div class="col-sm-6" style="font-size: 16px;">Date<br><input type="date" name="date" class="form-control" style="padding-left: 15px;border-radius: 10px;border: 1px solid lightgrey;margin-top: 10px;"></div>
 									<!-- <div class="col-sm-6"><b>Address</b><br><input type="text" name="" style="width: 100%;height: 50px;border-radius: 10px;border: 1px solid grey;"></div> -->
 								</div>
 							</div>
@@ -69,14 +69,14 @@
 							<input type="hidden" name="id_hospital" value="{{$idhospital}}">
 							<div class="container mb-4">
 								<div class="row">
-									<div class="col-sm-6" style="font-size: 16px;">Date<br><input type="date" name="date" class="form-control" style="padding-left: 15px;border-radius: 10px;border: 1px solid lightgrey;margin-top: 10px;"></div>
+									<div class="col-sm-6" style="font-size: 16px;">Patient Name<br><input type="text" name="nama" class="form-control" style="padding-left: 15px;border-radius: 10px;border: 1px solid lightgrey;margin-top: 10px;"></div>
 									<div class="col-sm-6" style="font-size: 16px;">Phone Number<br><input type="text" name="nohp" class="form-control" style="padding-left: 15px;border-radius: 10px;border: 1px solid lightgrey;margin-top: 10px;"></div>
 								</div>
 							</div>
 							<div class="container mb-4">
 								<div class="row">
-									<div class="col-sm-6 mt-1">Disease<br><textarea name="disease" class="mt-2" style="width: 100%;resize: none;height: 130px;border-radius: 10px;border: 1px solid lightgrey;"></textarea></div>
-									<div class="col-sm-6" style="font-size: 16px;">Patient Name<br><input type="text" name="nama" class="form-control" style="padding-left: 15px;border-radius: 10px;border: 1px solid lightgrey;margin-top: 10px;"></div>
+									<div class="col-sm-6 mt-1">Disease<br><textarea name="disease" class="mt-2" style="padding-left:15px;width: 100%;resize: none;height: 130px;border-radius: 10px;border: 1px solid lightgrey;"></textarea></div>
+									<div class="col-sm-6" style="font-size: 16px;">Date<br><input type="date" name="date" class="form-control" style="padding-left: 15px;border-radius: 10px;border: 1px solid lightgrey;margin-top: 10px;"></div>
 									<!-- <div class="col-sm-6"><b>Address</b><br><input type="text" name="" style="width: 100%;height: 50px;border-radius: 10px;border: 1px solid grey;"></div> -->
 								</div>
 							</div>

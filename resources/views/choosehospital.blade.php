@@ -30,7 +30,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-12 text-center">
-					<center><div style="font-size: 30px; margin-bottom: 20px;">CHOOSE A HOSPITAL</div></center>
+					<center><div style="font-size: 40px; margin-bottom: 20px;">CHOOSE A HOSPITAL</div></center>
 				</div>
 			</div>
 			<div class="row">
@@ -44,9 +44,9 @@
 								</div>
 								<div class="col-sm-8 col-10" style="text-align: right;">
 									<div style="font-size: 28px;">{{$c->tbhospital->nama}}</div>
-									<div style="font-size: 13px;color:#707070 ">{{$c->tbhospital->alamat}}</div>
+									<div style="font-size: 15px;color:#707070 ">{{$c->tbhospital->alamat}}</div>
 									<div>
-										<a href="/booking/{{$id}}/{{$c->tbhospital->id}}" class="btn btn-primary" style="border:none;background-color: rgb(67,133,255);padding: 5px 20px;border-radius: 10px;margin-top: 20px;color: white; font-weight:bold;">CHOOSE</a>
+										<a href="/booking/{{$id}}/{{$c->tbhospital->id}}" class="btn btn-primary" style="border:none;background-color: rgb(67,133,255);padding: 5px 20px;border-radius: 10px;margin-top: 20px;color: white;">CHOOSE</a>
 									</div>
 								</div>
 							</div>	
