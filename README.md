@@ -1,3 +1,3 @@
 #MEDICS
 
-sedang mengerjakan Admin
+sedang mengerjakan User
