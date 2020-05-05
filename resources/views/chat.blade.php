@@ -22,7 +22,8 @@
 		margin-bottom: 25px;
 		}
 		.force-overflow {
-		min-height: 450px;
+		min-height: 300px;
+		min-width:  ;
 		}
 
 		.scrollbar-primary::-webkit-scrollbar {
@@ -144,7 +145,7 @@
 
 		.scrollbar-secondary {
 		scrollbar-color: #aa66cc #F5F5F5;
-		}		
+		}	
 	</style>
 </head>
 <body>
@@ -183,7 +184,7 @@
 				<div class="col-sm-6">
 					<div class="ml-5">						
 						<section class="row posts">
-							<div class="scrollbar scrollbar-primary col-md-12 col-md-offset-3" style="width: 500px;height: 400px;overflow-y: scroll; border:1px solid lightgrey;padding: 15px;padding-left: 0px;border-radius: 15px;">				
+							<div class="scrollbar-primary col-md-12 col-md-offset-3" style="width: 500px;height: 400px;overflow-y: scroll; border:1px solid lightgrey;padding: 15px;padding-left: 0px;border-radius: 15px; float: left;overflow-x: hidden;">				
 								@foreach($posts as $s)
 								@if($s->froms == 'dokter')
 								<div class="force-overflow">
@@ -200,7 +201,7 @@
 								<div class="force-overflow">
 									<article class="post panel panel-success" style="text-align: right;" data-postid="{{$s->id}}">
 										<div class="info panel-heading" style="padding-top: 10px;">
-											<label style="font-size: 16px;margin-left: 30px;font-weight: semibold;">{{$s->tbuser->name}} - {{$s->date}}</label> 
+											<label style="font-size: 16px;margin-left: 30px;">{{$s->tbuser->name}} - {{$s->date}}</label> 
 											<!-- <label style="float: right;font-size: 15px;margin-right: 15px;">{{$s->date}}</label> -->
 										</div>
 										<div class="panel-body form-control" style="margin-left: 30px; margin-top: 0px;text-align: right;display: inline-block;width: auto;">
@@ -212,9 +213,10 @@
 								</div>
 							</div>
 						</section>	
+					</div>
 								
 						<section class="" style="">
-								<form action="{{route('post.create')}}" method="post" class="row new-posts ml-3" style="margin-top: 0px;margin-top: -100px;">
+								<form action="{{route('post.create')}}" method="post" class="row new-posts ml-3" style="margin-top: 0px;margin-top: -80px;">
 									<div class="col-10">
 										<div class="ml-3 form-group">
 											<input class="form-control" name="message" id="new-post" placeholder="Enter your message">							
