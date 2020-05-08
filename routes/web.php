@@ -95,6 +95,7 @@ Route::get('/hospitalSearch','AhospitalController@cari');
 	Route::get('/Acheckproses',function(){
 		return view('admin.detailcustomer');
 	});
+	Route::get('/delTran/{id}','AcheckController@delTran');
 
 
 //ADMIN CUSTOMER

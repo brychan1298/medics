@@ -30,10 +30,14 @@
 				<div class="col-sm-3">
 					<div class="ml-5 mt-3">
 						@if($h->status=="BELUM PROSES" && $h->img=="")
-						<p class="text-warning">Status : NOT PAID YET</p>
-						<p><a href="/proof/{{$h->id_transaksi}}" class="btn btn-primary pl-4 pr-4 mr-5" style="float: right;">CHECK</a></p>	
+						<p class="text-primary"><b>Status : NOT PAID YET</b></p>
+						<p><a href="/proof/{{$h->id_transaksi}}" class="btn btn-primary pl-4 pr-4 mr-5" style="float: right;">CHECK</a></p>
 						@else
-						<p class="text-success">Status : PAID</p>						
+						@if($h->status=="BELUM PROSES" && $h->img!="")
+						<p class="text-warning"><b>Status : Not Confirm Yet</b></p>
+						@else
+						<p class="text-success"><b>Status : ON PROCCESS</b></p>
+						@endif
 						@endif
 					</div>				
 				</div>

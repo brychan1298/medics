@@ -187,7 +187,7 @@
 							<div class="scrollbar-primary col-md-12 col-md-offset-3" style="width: 500px;height: 400px;overflow-y: scroll; border:1px solid lightgrey;padding: 15px;padding-left: 0px;border-radius: 15px; float: left;overflow-x: hidden;">				
 								@foreach($posts as $s)
 								@if($s->froms == 'dokter')
-								<div class="force-overflow">
+								<div class="overflow">
 									<article class="post panel panel-success" data-postid="{{$s->id}}">
 										<div class="info panel-heading" style="padding-top: 10px;">
 											<label style="font-size: 16px;margin-left: 30px;font-weight: semibold;">{{$s->tbdokter->nama}} - {{$s->date}}</label> 
@@ -197,8 +197,9 @@
 											{{$s->message}}
 										</div>
 									</article>
+								</div>
 								@else
-								<div class="force-overflow">
+								<div class="overflow">
 									<article class="post panel panel-success" style="text-align: right;" data-postid="{{$s->id}}">
 										<div class="info panel-heading" style="padding-top: 10px;">
 											<label style="font-size: 16px;margin-left: 30px;">{{$s->tbuser->name}} - {{$s->date}}</label> 
@@ -208,15 +209,16 @@
 											{{$s->message}}
 										</div>
 									</article>
+								</div>
 								@endif
 								@endforeach	
-								</div>
+								
 							</div>
 						</section>	
 					</div>
 								
 						<section class="" style="">
-								<form action="{{route('post.create')}}" method="post" class="row new-posts ml-3" style="margin-top: 0px;margin-top: -80px;">
+								<form action="{{route('post.create')}}" method="post" class="row new-posts ml-3" style="margin-top: 0px;margin-top: 10px;">
 									<div class="col-10">
 										<div class="ml-3 form-group">
 											<input class="form-control" name="message" id="new-post" placeholder="Enter your message">							

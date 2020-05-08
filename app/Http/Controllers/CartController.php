@@ -62,12 +62,11 @@ class CartController extends Controller
     {
         $history = Acheck::where('id_user',$id)->get();
 
-
         $trans = Acheck::find($id);
         $trans->img = $request->img;
         $trans->save();
         
-        return view('buyHis',compact('history'));
+        return redirect('/shop');
     }
 
     public function bayar(request $request,$iduser)
