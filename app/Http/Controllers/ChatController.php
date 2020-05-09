@@ -65,13 +65,15 @@ class ChatController extends Controller
 
     public function ShowChatDoctor($iddokter)
     {
+        $dokters = Adoctor::whereId($iddokter)->first();
+        $dokter = $dokters->nama;
         $data = DB::table('tbchat')
             ->where('id_dokter',$iddokter)
             ->select('id_user')
             ->groupBy('id_user')->get();
 
         $data = Chat::where('id_dokter',$iddokter)->select('id_user')->groupBy('id_user')->get();
-        return view('chatdoctor',compact('data','iddokter'));
+        return view('chatdoctor',compact('data','iddokter','dokters'));
     }
 
     public function saveChatDoctor(Request $Request)

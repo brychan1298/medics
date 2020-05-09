@@ -324,6 +324,7 @@ Route::post('/createpostdoctor',[
 		'as' => 'post.createdoctor',
 		'middleware' => 'auth'
 	]);
+
 Route::get('/chatdoctor', function () {
     return view('chatdoctor');
 });

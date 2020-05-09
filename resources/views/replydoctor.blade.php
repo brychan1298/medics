@@ -79,7 +79,9 @@
 				text-align: right;
 			}
 			.turun{
-				margin-top: 220px;
+				margin-top: 300px;
+				margin-bottom: 20px;
+				
 			}
 			.besar{
 				height: 110px;

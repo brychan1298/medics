@@ -94,18 +94,18 @@ class AqueueController extends Controller
         //return $htmls;
     }
 
-    public function index3($id)
+    public function index3($iddokter)
     {
-        $dokters = Adoctor::whereId($id)->first();
+        $dokters = Adoctor::whereId($iddokter)->first();
         $dokter = $dokters->nama;
         $date = date('Y-m-d');
         $datas=Aqueue::where('dokter',$dokter)->where('date',$date)->where('status','BELUM')->get();  
         $patients=Aqueue::where('dokter',$dokter)->where('date',$date)->where('status','BELUM')->first();
 
         if (count($datas)>0) {
-            return view('aqueuedoctor',compact('patients','id'));
+            return view('aqueuedoctor',compact('patients','iddokter','dokters'));
         }else{
-            return view('aqueuedoctor',compact('id'));
+            return view('aqueuedoctor',compact('iddokter','dokters'));
         }        
     }
 
