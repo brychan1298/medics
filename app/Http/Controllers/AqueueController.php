@@ -205,10 +205,17 @@ class AqueueController extends Controller
         // else{
         //     $appointmentss = '08:00';
         // }
-
-        $hours=date('H') + 1;
         $dd = date('H:i:s');
+        $dodo = date('Y-m-d');
+        $hours = null;
         $datenow = $request->date;
+        if($dodo == $datenow)
+        {
+            $hours=date('H') + 1;
+        }
+        else{
+            $hours='08';
+        }
         $doctornow = $request->dokter;
         $iddokter = $request->iddokter;
         $id_hospital = $request->id_hospital;

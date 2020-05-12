@@ -61,7 +61,7 @@
 					    		<div class="modal-dialog">					    					      
 					      			<div class="modal-content">
 					      				<div class="modal-header">					      		
-					      					<h1 style="padding-left:160px;padding-top: 10px;">PATIENT DATA</h1>
+					      					<h1 style="padding-left:115px;padding-top: 10px;">PATIENT DATA</h1>
 								          <button type="button" class="close" data-dismiss="modal">&times;</button>
 								        </div>
 					        			<div class="modal-body" style="">
