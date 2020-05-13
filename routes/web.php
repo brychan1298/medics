@@ -41,6 +41,11 @@ Route::get('/shop', function () {
 //     return view('admin.customer');
 // });
 
+Route::group(['middleware' => ['auth', 'cekAdmin']], function () {
+    Route::get('/Aqueue', 'AqueueController@index');
+});
+
+Route::post('/login','Auth\LoginController@login')->middleware('cekAdmin');
 
 //ADMIN DOKTER
 	Route::resource('/Adoctor','AdoctorController');
@@ -82,7 +87,7 @@ Route::get('/hospitalSearch','AhospitalController@cari');
 	
 // QUEUE
 	// Route::resource('/Aqueue','AqueueController');
-    Route::get('/Aqueue','AqueueController@index');
+    //Route::get('/Aqueue','AqueueController@index');
 
 //submit
     Route::post('/Aqueuesubmit', 'AqueueController@store');
@@ -300,6 +305,9 @@ Route::get('/hospitalback', function () {
 		return view('tampilanRS');
 	});
 	Route::get('/tampilanRS/{idhospital}','AqueueController@index2');
+	Route::get('/after',function(){
+		return view('afterQueue');
+	});
 
 //Route::get('/home', 'HomeController@index')->name('home');
 

@@ -145,7 +145,30 @@
 
 		.scrollbar-secondary {
 		scrollbar-color: #aa66cc #F5F5F5;
-		}	
+		}
+		.sen{
+			margin-left: -10px;
+		}
+		@media(max-width: 1024px){
+	    	.chat{
+	    		margin-left: -20px;
+	    	}
+	    	.joo{
+	    		
+	    		width: 100%;
+	    		margin-left: -25px;
+	    		margin-top: 40px;
+	    	}
+	    	.secc{
+	    		margin-left: -20px;
+	    	}
+	    	.inn{
+	    		width: 100%;
+	    	}
+	    	.sen{
+	    		margin-left: -50px;
+	    	}
+	    }	
 	</style>
 </head>
 <body>
@@ -169,7 +192,7 @@
 											</span>	
 											<span class="col-3">
 												<div>
-													<a href="/dashboard/{{$d->id}}/{{Auth::user()->id}}" class="btn btn-primary" style="color: white; font-size: 12px;border: 0px; font-weight: bold;padding: 5px 25px 5px 25px;margin-top: 35px;margin-bottom: 10px;">							
+													<a href="/dashboard/{{$d->id}}/{{Auth::user()->id}}" class="btn btn-primary chat" style="color: white; font-size: 12px;border: 0px; font-weight: bold;padding: 5px 25px 5px 25px;margin-top: 35px;margin-bottom: 10px;">							
 																CHAT
 													</a>
 												</div>		
@@ -183,7 +206,7 @@
 
 				<div class="col-sm-6">
 					<div class="ml-5">						
-						<section class="row posts">
+						<section class="row posts joo">
 							<div class="scrollbar-primary col-md-12 col-md-offset-3" style="width: 500px;height: 400px;overflow-y: scroll; border:1px solid lightgrey;padding: 15px;padding-left: 0px;border-radius: 15px; float: left;overflow-x: hidden;">				
 								@foreach($posts as $s)
 								@if($s->froms == 'dokter')
@@ -217,15 +240,15 @@
 						</section>	
 					</div>
 								
-						<section class="" style="">
+						<section class="secc" style="">
 								<form action="{{route('post.create')}}" method="post" class="row new-posts ml-3" style="margin-top: 0px;margin-top: 10px;">
 									<div class="col-10">
 										<div class="ml-3 form-group">
-											<input class="form-control" name="message" id="new-post" placeholder="Enter your message">							
+											<input class="form-control inn" name="message" id="new-post" placeholder="Enter your message">							
 											</input>
 										</div>
 									</div>
-									<div class="col-2" style="margin-left: -10px;">
+									<div class="col-2 sen" style="">
 										<button type="submit" class="btn btn-primary">Send</button>
 										<input type="hidden" value="{{ Session::token() }}" name="_token">
 										<input type="hidden" value="{{ Auth::user()->id }}" name="id_user">

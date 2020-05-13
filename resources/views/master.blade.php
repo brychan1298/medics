@@ -19,6 +19,7 @@
 	</style>	
 </head>
 <body data-spy="scroll" data-target="menu">
+
 	<nav style="background-color: rgb(67,133,255);" class="navbar navbar-dark navbar-expand-md fixed-top">
 		<h1><img src="../../../img/apasi.png" style="width: 120px;"></h1>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu">
@@ -89,6 +90,11 @@
 			</ul>
 		</div>
 	</nav>
+	@if(\Session::has('error'))
+    <div class="alert alert-danger" style="margin-top: 200px;">
+      <center>{{\Session::get('error')}}</center>
+    </div>
+  	@endif
 
 	<div>
 		@yield('konten')

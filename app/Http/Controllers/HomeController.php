@@ -19,6 +19,7 @@ class HomeController extends Controller
         $this->middleware('auth');
     }
 
+
     /**
      * Show the application dashboard.
      *
@@ -27,5 +28,10 @@ class HomeController extends Controller
     public function index()
     {
         return view('home');
+    }
+
+    public function admin()
+    {
+        return redirect('/Aqueue');
     }
 }

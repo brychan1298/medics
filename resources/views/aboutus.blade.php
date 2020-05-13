@@ -17,9 +17,19 @@
 		.fs{
 			font-size: 40px;margin-top: 100px
 		}
+		.why1{
+			font-size: 40px;
+		}
 	    @media(max-width: 1024px){
 	    	.fs2{
 	    		margin-top: 0px;
+	    	}
+	    	.lala{
+	    		margin:auto;
+	    		width: 70%;
+	    	}
+	    	.why1{
+	    		font-size: 25px;
 	    	}
 		}
 	</style>
@@ -61,30 +71,30 @@
 	<div id="demo" class="carousel slide d-block d-lg-none" data-ride="carousel">
 
 	  <!-- Indicators -->
-	  <ul class="carousel-indicators">
+	  <!-- <ul class="carousel-indicators">
 	    <li data-target="#demo" data-slide-to="0" class="active"></li>
 	    <li data-target="#demo" data-slide-to="1"></li>
 	    <li data-target="#demo" data-slide-to="2"></li>
-	  </ul>
+	  </ul> -->
 
 	  <!-- The slideshow -->
 	  <div class="carousel-inner">
 	    <div class="carousel-item active">
 	      <div class="col-sm-4">
 				<img src="gambar/banks.jpg" class="w-100">
-				<center><div style="font-size: 20px;border: 1px solid;border-radius: 0px 0px 15px 15px;padding: 20px; color:#2E5EBE;font-weight: bold;">Liana Marlins</div></center>
+				<center><div style="font-size: 20px;border: 1px solid;border-radius: 0px 0px 15px 15px;padding: 20px; color:#2E5EBE;font-weight: bold;">Brychan Artanto</div></center>
 			</div>
 	    </div>
 	    <div class="carousel-item">
 	      <div class="col-sm-4">
 				<img src="gambar/flume.jpg" class="w-100">
-				<center><div style="font-size: 20px;border: 1px solid;border-radius: 0px 0px 15px 15px;padding: 20px; color:#2E5EBE;font-weight: bold;">Steve Marlins</div></center>
+				<center><div style="font-size: 20px;border: 1px solid;border-radius: 0px 0px 15px 15px;padding: 20px; color:#2E5EBE;font-weight: bold;">Indra Wijaya</div></center>
 			</div>
 	    </div>
 	    <div class="carousel-item">
 	      <div class="col-sm-4">
 				<img src="gambar/chet_faker_2.jpg" class="w-100">
-				<center><div style="font-size: 20px;border: 1px solid;border-radius: 0px 0px 15px 15px;padding: 20px; color:#2E5EBE;font-weight: bold;">Mark Marlins</div></center>
+				<center><div style="font-size: 20px;border: 1px solid;border-radius: 0px 0px 15px 15px;padding: 20px; color:#2E5EBE;font-weight: bold;">Wilson Pratama</div></center>
 			</div>
 	    </div>
 	  </div>
@@ -102,7 +112,7 @@
 
 	<div class="container mt-5">
 		<div class="row" style="margin-bottom: 100px;">
-			<div class="col-sm-6">
+			<div class="col-sm-6 col-12 d-none d-lg-block">
 				<div class="col-sm-12 col-12">
 					<div style="border: 1px solid grey;margin-right: 280px;padding: 5px;">
 						<p style="text-align: center;color:#2E5EBE;font-size: 18px;font-weight: bold;margin-top: 20px;">OUR VISION</p>
@@ -123,18 +133,18 @@
 				</div>
 			</div>
 			<div class="col-sm-6">
-				<img src="../../gambar/jantung.jpg">
+				<center><img src="../../gambar/jantung.jpg" style="width: 90%;"></center>
 			</div>
 		</div>
 	</div>
 
 	<div>
-		<center><div style="font-size: 40px;" class="mt-5">WHY CHOOSE MEDICS</div></center>
+		<center><div class="mt-5 why1">WHY CHOOSE MEDICS</div></center>
 		<center><img src="gambar/pembatas.png" style="width: 160px;"></center>
 	</div>
 	<div class="container">
 		<div class="row">
-			<div class="col-sm-4 col-12 mt-5 ">
+			<div class="col-sm-4 col-12 mt-5  lala">
 				<div style="border: 1px solid lightgrey;padding: 40px;"><center><img src="gambar/Asset 13.png" style="width: 200px;"><div style="text-align: center;color:#2E5EBE;font-size: 20px;font-weight: bold;margin-top: 20px;">FIND DOCTORS</div>
 				<div class="mt-2">
 					<center>
@@ -143,7 +153,7 @@
 				</div>
 			</center></div>
 			</div>
-			<div class="col-sm-4 col-12 mt-5 ">
+			<div class="col-sm-4 col-12 mt-5  lala">
 				<div style="border: 1px solid lightgrey;padding: 40px;"><center><img src="gambar/Asset 15.png" style="width: 200px;"><div style="text-align: center;color:#2E5EBE;font-size: 20px;font-weight: bold;margin-top: 20px;">SUPPORTING VIA CHAT</div>
 				<div class="mt-2">
 					<center>
@@ -152,7 +162,7 @@
 				</div>
 			</center></div>
 			</div>
-			<div class="col-sm-4 col-12 mt-5 mb-5">
+			<div class="col-sm-4 col-12 mt-5 mb-5 lala">
 				<div style="border: 1px solid lightgrey;padding: 40px;"><center><img src="gambar/Asset 20.png" style="width: 200px;"><div style="text-align: center;color:#2E5EBE;font-size: 20px;font-weight: bold;margin-top: 20px;">INSTANT BOOKING</div>
 				<div class="mt-2">
 					<center>

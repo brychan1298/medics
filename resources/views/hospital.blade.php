@@ -22,8 +22,11 @@
 		}
 	    @media(max-width: 1024px){
 	    	.is{
-	    		padding-right: 150px;
-	    	}	
+	    		padding-right: 100px;
+	    	}
+	    	.reshis{
+	    		
+	    	}
 	</style>
 </head>
 <body data-spy="scroll" data-target="menu">
@@ -55,8 +58,8 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-sm-8 col-7"></div>
-				<div class="col-sm-4 col-5 mt-4">
+				<div class="col-sm-8 col-6"></div>
+				<div class="col-sm-4 col-6 mt-4 reshis">
 					<img src="gambar/calendar.png" style="width: 50px;"> 
 					@guest
 						<span style="color: #2680EB;">

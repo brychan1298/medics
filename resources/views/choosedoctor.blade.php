@@ -57,15 +57,16 @@
 			</div>
 
 
-			<div class="row mt-5">
+			<div class="row mt-5 mb-5">
 				@foreach($chosedok as $c)
 				<div class="col-sm-4 mt-sm-0 col-6 mt-5">
 					<a href="/booking/{{$c->tbdokter->id}}/{{$id}}">
 						<div style="border:1px solid #707070;border-radius: 15px;padding: 40px 10px;" class="mt-3">
 							<center>								
 								<img src="../../gambar/{{$c->tbdokter->gambar}}" class="w-50 mb-2" style="border-radius: 50%;">
-								<div style="color: black;font-size: 18px;" class="mt-3">Dr. {{$c->tbdokter->nama}}</div>
-								<div style="color: black;font-size: 18px;">{{$c->tbdokter->spesialisasi}} Specialist</div>
+								<div style="color: black;font-size: 18px;" class="mt-3">
+									<b>Dr. {{$c->tbdokter->nama}}</b></div>
+								<div style="color: black;font-size: 18px;">{{$c->tbdokter->spesialisasi}}<br>Specialist</div>
 							</center>
 						</div>
 					</a>

@@ -15,17 +15,40 @@
 		#shop1{
 			margin-top: 100px;font-size: 35px;
 		}
+		.is2{
+			border:1px solid grey;
+			border-radius: 15px 0px 0px 15px; 
+			padding-right: 550px; 
+			padding-top: 10px;
+			padding-bottom: 9px;
+			padding-left: 10px;
+		}
+		.img1{
+			width: 230px;margin-bottom: 0px;z-index: 1;margin-top: -250px;
+		}
+		.bbb{
+			background-color: #ADC5DD;border-radius: 50%; border:1px solid #ADC5DD;width: 180px;height: 180px;margin-top: 80px;z-index: 0;
+		}
 		@media screen and (max-width: 1080px){
 			#shop1{
 				margin-top: 170px;
 			}
+			.bbb{
+				width: 100px;
+				height: 100px;
+				margin-top: 20px;
+			}
 			.img1{
-				width: 150px;
+				width: 100px;
 				text-align: center;
+				margin-bottom: -110px;
 			}
 			.resG1{
 				margin-top: 30px;
 			}
+			.is{
+	    		padding-right: 100px;
+	    	}
 		}
 		
 	</style>
@@ -52,15 +75,15 @@
 		<div class="col-sm-12" style="padding-top: 20px;">
 			<form action="/shopSearch" method="GET">
 				<center>
-					<span >
-						<input type="text" name="cari" value="{{ old('cari') }}" placeholder="Search" style="border:1px solid grey;border-radius: 15px 0px 0px 15px; padding-right: 550px; padding-top: 10px;padding-bottom: 9px;padding-left: 15px;">
-					</span>
-					<span>
-						<button type="submit" style="background-color: #6672EC;padding-top: 11px;padding-bottom: 8px;padding-left: 10px;padding-right: 10px;border-radius: 0px 10px 10px 0px; margin-left: -5px;border:none;">
-								<img src="gambar/searchicon.png" style="width: 30px;">
-						</button>
-					</span>
-				</center>	
+							<span >
+								<input type="text" name="cari" value="{{ old('cari') }}" class="is is2" placeholder="Search">
+							</span>
+							<span>
+								<button type="submit" style="background-color: #6672EC;padding-top: 11px;padding-bottom: 8px;padding-left: 10px;padding-right: 10px;border-radius: 0px 10px 10px 0px; margin-left: -5px;border:none;">
+									<img src="gambar/searchicon.png" style="width: 30px;">
+								</button>
+							</span>
+						</center>	
 			</form>
 		</div>
 	</div>
@@ -71,10 +94,10 @@
 				<div class="col-sm-4 col-6 mt-5">
 					<center>
 						<div style="border:1px solid;border-radius: 25px 25px 0px 0px;border-bottom: 1px solid blue;">
-							<div style="background-color: #ADC5DD;border-radius: 50%; border:1px solid #ADC5DD;width: 180px;height: 180px;margin-top: 80px;z-index: 0;">
+							<div style="" class="bbb">
 							</div>
-								<img src=".../../gambar/{{$s->img}}" class="img1" style="width: 230px;margin-bottom: 0px;z-index: 1;margin-top: -250px;">
-								<p style="text-align: center;color:#2E5EBE;font-size: 20px;margin-top: -30px;font-weight: bold;">{{$s->nama}}</p>
+								<img src=".../../gambar/{{$s->img}}" class="img1" style="">
+								<p style="text-align: center;color:#2E5EBE;font-size: 20px;margin-top: -20px;font-weight: bold;">{{$s->nama}}</p>
 								<p style="text-align: center;font-size: 18px;margin-top: -10px;">Rp{{$s->harga}},00</p>
 						</div>
 					</center>

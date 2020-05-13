@@ -105,7 +105,7 @@ class AqueueController extends Controller
         if (count($datas)>0) {
             return view('aqueuedoctor',compact('patients','iddokter','dokters'));
         }else{
-            return view('aqueuedoctor',compact('iddokter','dokters'));
+            return view('aqueuedoctor',compact('iddokter','dokters','patients'));
         }        
     }
 
@@ -209,6 +209,10 @@ class AqueueController extends Controller
         $dodo = date('Y-m-d');
         $hours = null;
         $datenow = $request->date;
+        $patient = $request->nama;
+        $ceknohp = $request->nohp;
+        $cekadaPatient = Aqueue::where('date',$datenow)->where('nama',$patient)->where('nohp',$ceknohp)->get();
+        
         if($dodo == $datenow)
         {
             $hours=date('H') + 1;
@@ -219,8 +223,11 @@ class AqueueController extends Controller
         $doctornow = $request->dokter;
         $iddokter = $request->iddokter;
         $id_hospital = $request->id_hospital;
+        if(count($cekadaPatient)>0){
+            return redirect('/booking/'.$iddokter.'/'.$id_hospital)->with('Errors','You have been queued in line and cannot queue on the same day anymore');
+        }
 
-        $d = date('00');        
+        $d = date('00');    
         
         $c = $hours . ':' . $d;
         for($i=0; $i<5;$i--)
@@ -252,7 +259,14 @@ class AqueueController extends Controller
         $aqueue->status="BELUM";
         $aqueue->save();
 
-        return redirect('/hospital');
+        $idhos = $request->id_hospital;
+        $lastid = Aqueue::orderBy('id','DESC')->first();
+        $lastids = $lastid->id;
+        $lasttime = $lastid->appointment;
+        $sqlhos = Ahospital::where('id',$idhos)->first();
+        $hosname = $sqlhos->nama;
+
+        return view('afterQueue',compact('hosname','datenow','lastids','lasttime'));
         //return $c;
     }
 

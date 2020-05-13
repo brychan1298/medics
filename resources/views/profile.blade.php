@@ -8,6 +8,13 @@
   	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>			
 	<title></title>
+	<style type="text/css">
+		@media(max-width: 1024px){
+      	.fs{
+      		margin-top: -150px;
+      	}
+    }
+	</style>
 </head>
 <body data-spy="scroll" data-target="menu">
 	<div class="container">
@@ -17,7 +24,7 @@
 			</div>
 			<div class="col-sm-6">
 			<div class="row">
-					<div class="col-sm-12">
+					<div class="col-sm-12 fs">
 						<center><div style="margin-bottom: 20px;font-size: 50px;margin-top: 160px;color: black;">MY PROFILE </div></center>
 					</div>
 				</div>
@@ -42,10 +49,10 @@
 							<input type="text" name="no_hp" value="{{$profile->no_hp}}" placeholder="no handphone.." class="form-control ">
 						</div>
 					</div>
-					<div class="row">
-						<div class="col-sm-4 col-3"></div>
-						<button type="submit" class="primary btn btn-primary form-control col-sm-4 col-3 mt-4">EDIT PROFILE</button>
-						<div class="col-sm-4"></div>
+					<div class="row mb-4">
+						<div class="col-sm-4 col-2"></div>
+						<button type="submit" class="primary btn btn-primary form-control col-sm-4 col-8 mt-4"><center>EDIT PROFILE</center></button>
+						<div class="col-sm-4 col-2"></div>
 					</div>
 				</form>
 				

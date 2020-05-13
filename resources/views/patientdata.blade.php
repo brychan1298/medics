@@ -7,6 +7,11 @@
 		<b><center>Sorry, the queue is full on that date</center></b>
 	</div>
 @endif
+@if(session()->get('Errors'))
+	<div class="alert alert-success" style="margin-top: 160px;font-size: 27px;">
+		<b><center>You have been queued in line and cannot queue on the same day anymore</center></b>
+	</div>
+@endif
 <head>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -17,24 +22,54 @@
 		.bar1{
 			padding-right: 10px;
 		}
+		.pat{
+			margin-top:40px;font-size: 45px;
+			margin-top:40px;font-size: 45px;
+		}
+		.ist{
+			margin-left: 85%;font-size: 22px;
+		}
+		.mav{
+			margin-top: 160px;border:1px solid lightgrey; margin-bottom: 100px;border-radius: 20px;
+		}
+		.queue{
+			color: white;margin-left: 420px;padding: 10px;
+		}
+		@media(max-width: 1024px){
+	    	.pat{
+	    		font-size: 25px;
+	    	}
+		}
+		.ist{
+			margin-left: 80%;
+			margin-top: 15px;
+			font-size: 15px;
+		}
+		.mav{
+			border: none;
+		}
+		.queue{
+			margin-left: 270px;
+			margin-top: 70px;
+		}
 	</style>
 </head>
 <body data-spy="scroll" data-target="menu">
-	<div class="container" style="margin-top: 160px;border:1px solid lightgrey; margin-bottom: 100px;border-radius: 20px;">
+	<div class="container mav" style="">
 		<div class="row">
 			<div class="col-sm-12">
-				<div>
 					@if(isset($profs))
 						<center>
-							<div style="margin-top:40px;font-size: 45px;">PATIENT DETAILS</div>
+							<div style="" class="pat">PATIENT DETAILS</div>
 						</center>
 						<div style="width: 100%;margin-bottom: 30px;">
-							<a href="/thisMe/{{$iddokter}}/{{$idhospital}}/{{Auth::user()->id}}" style="margin-left: 85%;font-size: 22px;">Is This You?</a>
+							<a href="/thisMe/{{$iddokter}}/{{$idhospital}}/{{Auth::user()->id}}" style="" class="ist">Is This You?</a>
 						</div>
 						<form action="/insertpatient/{{Auth::user()->id}}" method="GET">
 							<input type="hidden" name="dokter" value="{{$docter->nama}}">
 							<input type="hidden" name="spesialist" value="{{$docter->spesialisasi}}">
 							<input type="hidden" name="id_hospital" value="{{$idhospital}}">
+							<input type="hidden" name="iddokter" value="{{$iddokter}}">
 							<div class="container mb-4">
 								<div class="row">
 									<div class="col-sm-6" style="font-size: 16px;">Patient Name<br><input type="text" value="{{$profs->nama}}" name="nama" class="form-control" style="padding-left: 15px;border-radius: 10px;border: 1px solid lightgrey;margin-top: 10px;"></div>
@@ -56,17 +91,17 @@
 							</div> -->
 							<div class="container" style="margin-top: -70px;">
 								<div class="row">
-									<div class="col-sm-6"></div>
-									<div class="col-sm-6 mb-5"><button class="btn btn-primary" style="color: white;margin-left: 420px;padding: 10px;" type="submit">Queue Up</button></div>
+									<div class="col-sm-6 col-0"></div>
+									<div class="col-sm-6 mb-5 col-12"><button class="btn btn-primary queue" type="submit">Queue Up</button></div>
 								</div>
 							</div>
 						</form>
 					@else
 						<center>
-							<div style="margin-top:40px;font-size: 45px;">PATIENT DETAILS</div>
+							<div style="" class="pat">PATIENT DETAILS</div>
 						</center>
 						<div style="width: 100%;margin-bottom: 30px;">
-							<a href="/thisMe/{{$iddokter}}/{{$idhospital}}/{{Auth::user()->id}}" style="margin-left: 85%;font-size: 22px;">Is This You?</a>
+							<a href="/thisMe/{{$iddokter}}/{{$idhospital}}/{{Auth::user()->id}}" style="" class="ist">Is This You?</a>
 						</div>
 						<form action="/insertpatient/{{Auth::user()->id}}" method="GET">
 							<input type="hidden" name="dokter" value="{{$docter->nama}}">
@@ -94,13 +129,12 @@
 							</div> -->
 							<div class="container mb-4" style="margin-top: -70px;">
 								<div class="row">
-									<div class="col-sm-6"></div>
-									<div class="col-sm-6 mb-5"><button class="btn btn-primary" style="color: white;margin-left: 420px;padding: 10px;" type="submit">Queue Up</button></div>
+									<div class="col-sm-6 col-0"></div>
+									<div class="col-sm-6 mb-5 col-12"><button class="btn btn-primary queue"  type="submit">Queue Up</button></div>
 								</div>
 							</div>
 						</form>
 					@endif
-				</div>				
 			</div>
 		</div>
 	</div>

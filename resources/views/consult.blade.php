@@ -39,10 +39,13 @@
 	    		margin-top: 50px;
 	    	}
 	    	.is{
-	    		padding-right: 150px;
+	    		padding-right: 100px;
 	    	}
 	    	.nam2{
 	    		margin-top: -100px;
+	    	}
+	    	.chat{
+	    		margin-left: -20px;
 	    	}
 	    }
 	</style>
@@ -84,15 +87,15 @@
 			<div class="col-sm-12">
 				<form action="/consultSearch" method="GET">
 					<center>
-						<span >
-							<input type="text" name="cari" value="{{ old('cari') }}" class="is is2" placeholder="Search" style="">
-						</span>
-						<span style="margin-top: -10px;">
-							<button type="submit" style="background-color: #6672EC;padding-top: 11px;padding-bottom: 8px;padding-left: 10px;padding-right: 10px;border-radius: 0px 10px 10px 0px; margin-left: -5px;border:none;">
-								<img src="gambar/searchicon.png" style="width: 30px;">
-						</button>
-						</span>
-					</center>	
+							<span >
+								<input type="text" name="cari" value="{{ old('cari') }}" class="is is2" placeholder="Search">
+							</span>
+							<span>
+								<button type="submit" style="background-color: #6672EC;padding-top: 11px;padding-bottom: 8px;padding-left: 10px;padding-right: 10px;border-radius: 0px 10px 10px 0px; margin-left: -5px;border:none;">
+									<img src="gambar/searchicon.png" style="width: 30px;">
+								</button>
+							</span>
+						</center>
 				</form>
 			</div>
 		</div>
@@ -114,7 +117,7 @@
 										</div>						
 									</span>	
 									<span class="col-2">
-										<div>
+										<div class="chat">
 											@guest
 											<a href="/login" class="btn btn-primary" style="color: white; font-size: 12px;border: 0px; font-weight: bold;padding: 5px 25px 5px 25px;margin-top: 35px;margin-bottom: 10px;">							
 														CHAT

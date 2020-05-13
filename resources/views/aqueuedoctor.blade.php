@@ -109,7 +109,7 @@
 			</div>
 			<div class="col-1"></div>
 		</div>
-		<form action="/queuenote/{{$patients->id}}/{{$id}}" method="get">
+		<form action="/queuenote/{{$patients->id}}/{{$iddokter}}" method="get">
 			<div class="row">
 				<div class="col-1"></div>
 				<div class="col-10 border1 mb-5">

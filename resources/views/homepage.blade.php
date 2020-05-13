@@ -48,13 +48,13 @@
 
     @media(max-width: 1024px){
       .mar{
-        margin-top: 200px;
+        margin-top: 280px;
         text-align: center;
-        margin-left: 50px;
+        margin-left: 20px;
       }
       .hehe{
         margin-top: 30px;
-        margin-left: 50px;
+        margin-left: 20px;
 
       }
       .mtop{
@@ -74,6 +74,9 @@
         margin-bottom: 150px;
 
       }
+      .med{
+        font-size: 20px;
+      }
     }
   </style>
 </head>
@@ -85,7 +88,7 @@
             Stay Healthy<br>
             Be Active.
           </div>
-          <div style="color: grey;">
+          <div style="color: grey;" class="med">
             Medics is an application that we made for all of you.<br>
             this application can facilitate you in the health field.<br> use this application properly and responsibly.
           </div>
