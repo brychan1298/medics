@@ -7,19 +7,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><link href="css/sb-admin.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
+    <style>
+        .login{
+            font-family: roboto;margin-left: 230px; margin-top: 120px;
+        }
+    @media screen and (max-width: 1080px){
+            #shop1{
+                margin-top: 170px;
+            }
+            .bbb{
+                width: 100px;
+                height: 100px;
+                margin-top: 20px;
+            }
+            .img1{
+                width: 100px;
+                text-align: center;
+                margin-bottom: -110px;
+            }
+            .resG1{
+                margin-top: 30px;
+            }
+            .is{
+                padding-right: 100px;
+            }
+            .login{
+                margin-left: 0px;
+                text-align: center;
+                margin-top: 20px;
+            }
+        }
+    </style>
 </head>
 <body class="page-top">
 {{ Auth::user() }}
 <div class="container">
-     
+     <h1><img src="../../../img/apasi.png" style="width: 120px;"></h1>
     <div class="row justify-content-center">
-        <div class="col-6">
+        <div class="col-6 d-lg-block d-none">
             <img src="gambar/undraw_doctor_kw5l.png" class="" style="margin-left:0px;width: 600px;height: 450px;margin-top: 80px;margin-right: -50px;">
             </div>   
-        <div class="col-6 mt-5">            
+        <div class="col-sm-6 mt-sm-5 mt-0 col-12">            
                 <!--<div class="card-header">{{ __('Login') }}</div>-->
-                <h2 style="font-family: roboto;margin-left: 230px; margin-top: 120px;">LOGIN</h2>
+                <h2 style="" class="login">LOGIN</h2>
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}">
                         @csrf

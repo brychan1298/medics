@@ -98,7 +98,7 @@
 							</div>
 								<img src=".../../gambar/{{$s->img}}" class="img1" style="">
 								<p style="text-align: center;color:#2E5EBE;font-size: 20px;margin-top: -20px;font-weight: bold;">{{$s->nama}}</p>
-								<p style="text-align: center;font-size: 18px;margin-top: -10px;">Rp{{$s->harga}},00</p>
+								<p style="text-align: center;font-size: 18px;margin-top: -10px;">@currency($s->harga),00</p>
 						</div>
 					</center>
 					<div style="color: white;background-color: #2E5EBE;border:0px;border-radius: 0px 0px 25px 25px; padding:15px;font-weight: bold;">
