@@ -66,7 +66,7 @@ class CartController extends Controller
         $trans->img = $request->img;
         $trans->save();
         
-        return redirect('/shop');
+        return redirect('/successbuy');
     }
 
     public function bayar(request $request,$iduser)

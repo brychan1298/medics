@@ -268,6 +268,9 @@ Route::get('/hospitalback', function () {
 	Route::get('/buyHis/{id}','CartController@index4');
 	Route::get('/proof/{id}','CartController@index5');
 	Route::get('/uploadProof/{id}','CartController@update2');
+	Route::get('/successbuy',function(){
+		return view('successBuy');
+	});
 
 //USER CONSULT
 	Route::resource('/doctor','DoctorController');
