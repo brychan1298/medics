@@ -10,7 +10,11 @@
     <title></title>    
 </head>
   <style type="text/css">
-
+      @media(max-width: 1024px){
+        .haha{
+          margin-top: 20px;
+        }
+      }
   </style>
 </head>
 <body>
@@ -38,7 +42,7 @@
             </div>
             <div class="col-sm-1"></div>
             <div class="col-sm-4">
-              <div class="" style="border: 1px solid lightgrey;padding: 30px;border-radius: 10px;">
+              <div class="haha" style="border: 1px solid lightgrey;padding: 30px;border-radius: 10px;">
                   <h3 class="text-center">Product</h3>
                   <hr>
                   <p style="font-size: 16px;font-weight:;">Your Product</p>

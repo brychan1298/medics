@@ -94,7 +94,7 @@
 				<div class="col-sm-4 col-6 mt-5">
 					<center>
 						<div style="border:1px solid;border-radius: 25px 25px 0px 0px;border-bottom: 1px solid blue;">
-							<div style="" class="bbb">
+							<div style="" class="bbb mt-4">
 							</div>
 								<img src=".../../gambar/{{$s->img}}" class="img1" style="">
 								<p style="text-align: center;color:#2E5EBE;font-size: 20px;margin-top: -20px;font-weight: bold;">{{$s->nama}}</p>

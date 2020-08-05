@@ -26,42 +26,43 @@
 		<div class="row">
 			<div class="col-sm-12">
 				<center>
-					<input type="text" name="" placeholder="Search" class="" style="width: 75%;border-radius: 15px;padding: 10px;">
+					<input type="text" name="" placeholder="Search" class="" style="width: 75%;border-radius: 15px;padding: 10px;border: 1px solid lightgrey">
 				</center>
 			</div>					
 		</div>
 	</div>
 	<!-- form -->	
-	<div class="container" style="margin-top: 30px;border:1px solid;border-radius: 30px;">
+	<div class="container" class="" style="margin-top: 30px;border:1px solid lightgrey;border-radius: 30px;">
 		<div class="row mb-3 mt-3" >
 			<div class="col-12">
 				
 				<table class="">
 					@foreach($data as $d)
 					<tr class="" style="">
-						<td class="pl-4"><img src="gambar/images.png" class="img-fluid" style="width:60px;height: 60px;border-radius: 50px;margin:0px;"></td>
-						<td style="font-weight: bold;font-size: 18px; padding-left: 90px;">{{$d->nama}}</td>
+						<td class="pl-4 pt-2 pb-2">
+							<img src="gambar/images.png" class="img-fluid" style="width:60px;height: 60px;border-radius: 50px;margin:10px; margin-left: 20px;padding:5px;border:2px dashed #007bff"></td>
+						<td class="pt-2 pb-2" style="font-weight: ;font-size: 18px; padding-left: 70px;">{{$d->nama}}</td>
 						@if($d->date < $date && $d->status == 'BELUM')
-						<td style="font-size: 18px; padding-left: 90px;color: red;"><b>LATE</b></td>
+						<td class="pt-2 pb-2" style="font-size: 16px; padding-left: 90px;color: red;"><b>LATE</b></td>
 						@else
 						@if($d->status == 'BELUM')
-						<td style="font-size: 18px; padding-left: 90px;color: yellow;"><b>ON DOING</b></td>
+						<td class="pt-2 pb-2" style="font-size: 16px; padding-left: 90px;color: yellow;"><b>ON DOING</b></td>
 						@else
-						<td style="font-size: 18px; padding-left: 90px;color: green;"><b>DONE</b></td>
+						<td class="pt-2 pb-2" style="font-size: 16px; padding-left: 90px;color: green;"><b>DONE</b></td>
 						@endif
 						@endif						
-						<td style="font-size: 18px; padding-left: 90px;">{{$d->date}} {{$d->appointment}}</td>
-						<td style="font-size: 18px; padding-left: 90px;">{{$d->nohp}}</td>
+						<td class="pt-2 pb-2" style="font-size: 18px; padding-left: 90px;">{{$d->date}} {{$d->appointment}}</td>
+						<td class="pt-2 pb-2" style="font-size: 18px; padding-left: 90px;padding-right:30px;">{{$d->nohp}}</td>
 						<td>
-						<button style="background-color: #4385FF; color: white;border:0px;border-radius: 20px;padding: 14px 40px; margin-left: 90px;" type="button" data-toggle="modal" data-target="#{{$d->nama}}">DETAIL
-						</button></td>
+							<button class="pt-2 pb-2 btn btn-primary ml-5 pl-5 pr-5" type="button" data-toggle="modal" data-target="#{{$d->nama}}">DETAIL</button>
+						</td>
 
 						<!-- Modal Box -->
 							<div class="modal fade" id="{{$d->nama}}">
 					    		<div class="modal-dialog">					    					      
-					      			<div class="modal-content">
+					      			<div class="modal-content" style="margin-top: 150px;">
 					      				<div class="modal-header">					      		
-					      					<h1 style="padding-left:115px;padding-top: 10px;">PATIENT DATA</h1>
+					      					<h1 style="padding-left:115px;padding-top:10px;">PATIENT DATA</h1>
 								          <button type="button" class="close" data-dismiss="modal">&times;</button>
 								        </div>
 					        			<div class="modal-body" style="">
@@ -110,7 +111,7 @@
 		</div>
 	</div>	
 
-				<div class="mt-5 pagination justify-content-center" style="margin-bottom: -100px;">
+				<div class="mt-5 pagination justify-content-center" style="margin-bottom: -200px;">
 					{{$data->links()}}
 				</div>		
 <!-- 

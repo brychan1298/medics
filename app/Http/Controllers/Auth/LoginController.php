@@ -37,7 +37,7 @@ class LoginController extends Controller
             break;
             case 'admin';
             return '/Aqueue';
-            default:
+            default: 
             return '/login';
             break;
         }

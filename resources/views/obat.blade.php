@@ -84,7 +84,7 @@
 <body>
 	<div class="container-fluid" style="margin-top: 180px;">
 		<div class="row">
-			<table class="table table-border col-12 text-center">
+			<table class="table table-border col-12 text-center ">
   				<tr>
 	  				<th>Image</th>
 	  				<th>Product</th>
