@@ -146,9 +146,13 @@
           <div style="color: grey;font-size: 18px;text-align: right;" class="d-none d-lg-block">
             let's use this very useful application. help you in all difficulties and make you more instant in doing everything
           </div>
-          <div class="mt-2 but2 button2">
-            <button style="background-color:rgb(46,94,240);border-radius:25px;height:40px;width:140px;color:white;border:0px;">LOGIN</button>
-            <button style="background-color:rgb(130,180,253);border-radius:25px;height:40px;width:140px;color:white;border:0px;">REGISTER</button>
+          <div class="mt-2 but2 button2">            
+            <a href="{{ route('login') }}" class="btn"  style="background-color:rgb(46,94,240);border-radius:25px;height:40px;width:140px;color:white;border:0px;">
+              LOGIN
+            </a>
+            <a href="{{ route('register') }}" class="btn" style="background-color:rgb(130,180,253);border-radius:25px;height:40px;width:140px;color:white;border:0px;">
+              REGISTER
+            </a>
           </div>
         </div>
         <div class="col-sm-1"></div>

@@ -10,6 +10,14 @@
 		.bar1{
 			padding-right: 10px;
 		}
+		.is2{
+			border:1px solid grey;
+			border-radius: 15px 0px 0px 15px; 
+			padding-right: 550px; 
+			padding-top: 10px;
+			padding-bottom: 9px;
+			padding-left: 10px;
+		}
 	</style>
 </head>
 <body data-spy="scroll" data-target="menu">
@@ -22,13 +30,20 @@
 		</div>
 	</div>
 <!-- SEARCH -->
-	<div class="container mb-5 mt-4">	
-		<div class="row">
-			<div class="col-sm-12">
+	<div class="row">				
+		<div class="col-sm-12" style="padding-top: 20px;">
+			<form action="/patientSearch" method="GET">
 				<center>
-					<input type="text" name="" placeholder="Search" class="" style="width: 75%;border-radius: 15px;padding: 10px;border: 1px solid lightgrey">
-				</center>
-			</div>					
+							<span >
+								<input type="text" name="cari" value="{{ old('cari') }}" class="is is2" placeholder="Search">
+							</span>
+							<span>
+								<button type="submit" style="background-color: #6672EC;padding-top: 11px;padding-bottom: 8px;padding-left: 10px;padding-right: 10px;border-radius: 0px 10px 10px 0px; margin-left: -5px;border:none;">
+									<img src="gambar/searchicon.png" style="width: 30px;">
+								</button>
+							</span>
+						</center>	
+			</form>
 		</div>
 	</div>
 	<!-- form -->	

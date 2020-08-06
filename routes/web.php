@@ -120,6 +120,7 @@ Route::get('/hospitalSearch','AhospitalController@cari');
     	return view('admin.ourpatient');	
 	});
 	Route::get('/Apatient','AqueueController@showPatient');
+	Route::get('/patientSearch','AqueueController@cari');
 
 
 

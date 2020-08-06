@@ -25,6 +25,14 @@ class AqueueController extends Controller
         return view('admin.adminpatient',compact('nama','aqueue'));
     }
 
+    public function cari(Request $request)
+    {
+        $cari = $request->cari;
+        $data = Aqueue::where('nama','like',"%".$cari."%")->paginate(4);        
+        $date = date('Y-m-d');
+        return view('admin.ourpatient',compact('data','date'));
+    }
+
     public function index2($id)
     {
         $data = DB::table('tbcheckup')->select('dokter')->groupBy('dokter')->get();

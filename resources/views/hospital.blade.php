@@ -7,6 +7,7 @@
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>	
+  	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 	<title>Hospital</title>
 	<style type="text/css">
 		.bar1{
@@ -88,7 +89,8 @@
 			</div>
 
 
-			<div class="row">
+			<div class="row" id="app1">
+
 				@foreach( $hospitals as $h )
 					@guest
 					<div class="col-sm-4 col-12 mt-5">
@@ -197,4 +199,14 @@
 	</div>
 </body>
 </html>
+<script type="text/javascript">
+	new Vue({
+		el: "#app1",
+		data:{
+			message:'aaaa',
+			show:true
+		}
+	})
+</script>
 @endsection
+
