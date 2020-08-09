@@ -21,8 +21,8 @@
 
 	<div class="container" style="margin-bottom: -100px;">
 		@foreach($list as $h)		
-			<div class="row border mt-4 pt-4 pb-4 pl-3" style="border-radius: 15px;">
-				<div class="col-sm-8">
+			<div class="row border mt-4 pt-4 pb-4 pl-3 mb-5 ml-2 mr-2" style="border-radius: 15px;">
+				<div class="col-sm-8 col-6">
 					<div style="font-weight: ;color: darkgrey;">{{$h->date}}</div>
 					<div style="font-weight:bold;font-size: 17px;margin-top: 2px;">{{$h->nama}}</div>
 					<div></div>
@@ -30,11 +30,11 @@
 					<div><b>(Dr.{{$h->dokter}})</b></div>
 					<div>Time : {{$h->appointment}}</div>
 				</div>
-				<div class="col-sm-4">
+				<div class="col-sm-4 col-6">
 					<div class="ml-5 mt-3">
 						@if($h->status=="BELUM")
 						@if($h->date < $date )
-							<p><b>Status :</b> <div class="text-danger" style="font-size: 18px;"><b>LATE/FORFEITED</b></div></p>
+							<p><b>Status :</b> <div class="text-danger" style="font-size: 18px;"><b>LATE</b></div></p>
 						@else
 							<p><b>Status :</b> <div class="text-warning" style="font-size: 18px;"><b>ON DOING</b></div></p>
 						@endif						

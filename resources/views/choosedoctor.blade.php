@@ -32,7 +32,7 @@
 		</div>
 	</div>
 
-	<div style="margin-top: 120px;">
+	<div style="margin-top: 90px;">
 		<div class="container mt-sm-5">
 			<div class="row">
 				<div class="col-sm-12">
@@ -57,16 +57,16 @@
 			</div>
 
 
-			<div class="row mt-5 mb-5">
+			<div class="row mb-5">
 				@foreach($chosedok as $c)
-				<div class="col-sm-4 mt-sm-0 col-6 mt-5">
-					<a href="/booking/{{$c->tbdokter->id}}/{{$id}}">
+				<div class="col-sm-4 mt-sm-0 col-6 mt-5 btn">
+					<a href="/booking/{{$c->tbdokter->id}}/{{$id}}" class="">
 						<div style="border:1px solid #707070;border-radius: 15px;padding: 40px 10px;" class="mt-3">
 							<center>								
 								<img src="../../gambar/{{$c->tbdokter->gambar}}" class="w-50 mb-2" style="border-radius: 50%;">
 								<div style="color: black;font-size: 18px;" class="mt-3">
 									<b>Dr. {{$c->tbdokter->nama}}</b></div>
-								<div style="color: black;font-size: 18px;">{{$c->tbdokter->spesialisasi}}<br>Specialist</div>
+								<div style="color: #017bff;font-size: 18px;">{{$c->tbdokter->spesialisasi}}<br>Specialist</div>
 							</center>
 						</div>
 					</a>

@@ -35,9 +35,12 @@
 		.queue{
 			color: white;margin-left: 420px;padding: 10px;
 		}
+		.he{
+			padding-left: 15px;border-radius: 10px;border: 1px solid lightgrey;margin-top: 10px;
+		}
 		@media(max-width: 1024px){
 	    	.pat{
-	    		font-size: 25px;
+	    		font-size: 32px;
 	    	}
 		}
 		.ist{
@@ -49,7 +52,7 @@
 			border: none;
 		}
 		.queue{
-			margin-left: 270px;
+			margin-left: 320px;
 			margin-top: 70px;
 		}
 	</style>
@@ -72,8 +75,8 @@
 							<input type="hidden" name="iddokter" value="{{$iddokter}}">
 							<div class="container mb-4">
 								<div class="row">
-									<div class="col-sm-6" style="font-size: 16px;">Patient Name<br><input type="text" value="{{$profs->nama}}" name="nama" class="form-control" style="padding-left: 15px;border-radius: 10px;border: 1px solid lightgrey;margin-top: 10px;"></div>
-									<div class="col-sm-6" style="font-size: 16px;">Phone Number<br><input type="text" value="{{$profs->no_hp}}" name="nohp" class="form-control" style="padding-left: 15px;border-radius: 10px;border: 1px solid lightgrey;margin-top: 10px;"></div>
+									<div class="col-sm-6" style="font-size: 16px;">Patient Name<br><input type="text" value="{{$profs->nama}}" name="nama" class="form-control mb-3" style=""></div>
+									<div class="col-sm-6" style="font-size: 16px;">Phone Number<br><input type="text" value="{{$profs->no_hp}}" name="nohp" class="form-control"></div>
 								</div>
 							</div>
 							<div class="container mb-4">

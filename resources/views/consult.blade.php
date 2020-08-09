@@ -81,7 +81,7 @@
 
 	<div class="container mt-5">	
 		<div class="row">
-			<div class="col-sm-12">
+			<div class="col-sm-12 d-lg-block d-none">
 				<center><img src="gambar/doctor3.png" class="w-75"></center>
 			</div>
 			<div class="col-sm-12">

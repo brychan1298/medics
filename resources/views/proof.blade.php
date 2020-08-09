@@ -17,7 +17,7 @@
 		<center>PROOF OF PAYMENT</center>
 	</div>
 
-	<div class="mt-5" style="margin-bottom: -100px;">
+	<div class="mt-5 mb-5" style="margin-bottom: -100px;">
 		<center>
 			<form action="/uploadProof/{{$id}}" method="GET">
 				<div style="border:1px solid lightgrey;padding: 40px 20px 40px 20px;width: 400px;border-radius: 15px;">

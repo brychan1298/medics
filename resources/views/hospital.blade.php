@@ -21,6 +21,11 @@
 			padding-bottom: 9px;
 			padding-left: 10px;
 		}
+		.lpis{
+			padding-right: 250px;
+			padding-left: 250px;
+			margin: 0px;
+		}
 	    @media(max-width: 1024px){
 	    	.is{
 	    		padding-right: 100px;
@@ -28,6 +33,11 @@
 	    	.reshis{
 	    		
 	    	}
+	    	.lpis{
+			padding-right: 80px;
+			padding-left: 80px;
+			margin: 0px;
+		}
 	</style>
 </head>
 <body data-spy="scroll" data-target="menu">
@@ -50,28 +60,35 @@
 	<div>
 		<div class="container mt-5">
 			<div class="row">
-				<div class="col-sm-12">
-					<center>
-						<div style="font-size: 20px;color: black;">
-							<a href="" style="text-decoration: underline;">Hospital</a> | <a href="/doctorqueue">Doctor</a>
+						<div style="font-size: 20px;color: black;" class="col-sm-6 col-6">
+							<center>	
+							<a href="" class="lpis btn btn-primary text-whitr border-primary">Hospital</a>
+							</center>
 						</div>
+						<div style="font-size: 20px;color: black;" class="col-sm-6 col-6">
+							<center>	
+							<a href="/doctorqueue" class="lpis btn border-dark">Doctor</a>
+							</center>
+						</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-10 col-8"></div>
+				<div class="col-sm-2 col-4 mt-5 reshis">
+					<center>	
+						<img src="gambar/calendar.png" class="w-25"> 
+					@guest
+						<div style="color: #2680EB;" class="mt-2">
+							<a href="/login">Queue History</a>
+						</div>
+					@else
+						<div style="color: #2680EB;" class="mt-2">
+							<a href="/historyQueue/{{Auth::user()->id}}">Queue History</a>
+						</div>
+					@endguest
 					</center>
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-sm-8 col-6"></div>
-				<div class="col-sm-4 col-6 mt-4 reshis">
-					<img src="gambar/calendar.png" style="width: 50px;"> 
-					@guest
-						<span style="color: #2680EB;">
-							<a href="/login">Queue History</a>
-						</span>
-					@else
-						<span style="color: #2680EB;">
-							<a href="/historyQueue/{{Auth::user()->id}}">Queue History</a>
-						</span>
-					@endguest
-				</div>
 				<div class="col-sm-12 mt-5">
 					<form action="/UhosSearch" method="GET">
 						<center>
@@ -93,8 +110,8 @@
 
 				@foreach( $hospitals as $h )
 					@guest
-					<div class="col-sm-4 col-12 mt-5">
-						<a href="/login">
+					<div class="col-sm-4 col-12 mt-4">
+						<a href="/login" class="nav-link text-black">
 							<div style="border:1px solid #707070;border-radius: 15px;padding: 40px;">
 								<center>								
 									<img src="../../gambar/{{$h->img}}" class="w-100 mb-3">
@@ -105,8 +122,8 @@
 						</a>
 					</div>
 					@else
-					<div class="col-sm-4 col-12 mt-5">
-						<a href="/choosedoctor/{{$h->id}}">
+					<div class="col-sm-4 col-12 mt-4">
+						<a href="/choosedoctor/{{$h->id}}" class="nav-link text-black">
 							<div style="border:1px solid #707070;border-radius: 15px;padding: 40px;">
 								<center>								
 									<img src="../../gambar/{{$h->img}}" class="w-100 mb-3">

@@ -26,16 +26,16 @@
 			</div>
 		</div>
 	</div>
-	<div style="margin-top: 90px;">
+	<div style="margin-top: 80px;">
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-12 text-center">
 					<center><div style="font-size: 40px; margin-bottom: 20px;">CHOOSE A HOSPITAL</div></center>
 				</div>
 			</div>
-			<div class="row">
+			<div class="row mt-3 mb-5">
 				@foreach($chosehos as $c)
-				<div class="col-sm-6 mt-4 mb-5">
+				<div class="col-sm-6 mt-2 mb-2">
 					<div style="border:1px solid #707070;border-radius: 20px;padding: 20px;">
 						<center>
 							<div class="row">
@@ -46,7 +46,7 @@
 									<div style="font-size: 28px;">{{$c->tbhospital->nama}}</div>
 									<div style="font-size: 15px;color:#707070 ">{{$c->tbhospital->alamat}}</div>
 									<div>
-										<a href="/booking/{{$id}}/{{$c->tbhospital->id}}" class="btn btn-primary" style="border:none;background-color: rgb(67,133,255);padding: 5px 20px;border-radius: 10px;margin-top: 20px;color: white;">CHOOSE</a>
+										<a href="/booking/{{$id}}/{{$c->tbhospital->id}}" class="btn btn-primary mt-2">CHOOSE</a>
 									</div>
 								</div>
 							</div>	

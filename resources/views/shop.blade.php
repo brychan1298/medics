@@ -67,7 +67,7 @@
 		@guest
 		<a href="/login"><img src="img/calendar.png" style="width: 40px;margin-bottom: 90px;margin-top: 40px;"></a>
 		@else
-		<a href="/buyHis/{{Auth::user()->id}}"><img src="img/calendar.png" style="width: 40px;margin-bottom: 90px;margin-top: 40px"></a>
+		<a href="/buyHis/{{Auth::user()->id}}"><img src="img/calendar.png" style="width: 40px;margin-bottom: 50px;margin-top: 20px"></a>
 		@endguest
 	</div>
 

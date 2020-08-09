@@ -16,6 +16,28 @@
 			overflow-x: hidden;
 			width: 100%;
 		}
+		.lpis{
+			padding-right: 250px;
+			padding-left: 250px;
+			margin: 0px;
+		}
+		.is2{
+			border:1px solid grey;
+			border-radius: 15px 0px 0px 15px; 
+			padding-right: 550px; 
+			padding-top: 10px;
+			padding-bottom: 9px;
+			padding-left: 10px;
+		}
+	    @media(max-width: 1024px){
+	    	.lpis{
+			padding-right: 80px;
+			padding-left: 80px;
+			margin: 0px;
+		}
+		.is{
+			padding-right: 100px;
+		}
 	</style>
 </head>
 <body data-spy="scroll" data-target="menu">
@@ -38,27 +60,34 @@
 	<div>
 		<div class="container mt-5">
 			<div class="row">
-				<div class="col-sm-12">
+				<div style="font-size: 20px;color: black;" class="col-sm-6 col-6">
+					<center>	
+					<a href="/hospital" class="lpis btn border-dark">Hospital</a>
+					</center>
+				</div>
+				<div style="font-size: 20px;color: black;" class="col-sm-6 col-6">
+					<center>	
+					<a href="" class="lpis btn btn-primary text-whitr border-primary">Doctor</a>
+					</center>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-10 col-8"></div>
+				<div class="col-sm-2 col-4 mt-5">	
 					<center>
-						<div style="font-size: 20px;color: black;">
-							<a href="/hospital">Hospital</a> | <a href="" style="text-decoration: underline;">Doctor</a>
+						<img src="gambar/calendar.png" class="w-25"> 
+						<div style="color: #2680EB;" class="mt-2">
+							Queue History
 						</div>
 					</center>
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-sm-8 col-7"></div>
-				<div class="col-sm-4 col-5 mt-4">
-					<img src="gambar/calendar.png" style="width: 50px;"> 
-					<span style="color: #2680EB;">
-						Queue History
-					</span>
-				</div>
 				<div class="col-sm-12 mt-5">
 					<form action="/UdocSearch" method="GET">
 						<center>
 							<span >
-								<input type="text" name="cari" value="{{ old('cari') }}" placeholder="Search" style="border:1px solid grey;border-radius: 15px 0px 0px 15px; padding-right: 550px; padding-top: 10px;padding-bottom: 9px;padding-left: 10px;">
+								<input type="text" name="cari" value="{{ old('cari') }}" placeholder="Search" class="is is2">
 							</span>
 							<span>
 								<button type="submit" style="background-color: #6672EC;padding-top: 11px;padding-bottom: 7px;padding-left: 10px;padding-right: 10px;border-radius: 0px 10px 10px 0px; margin-left: -5px;border:none;">
@@ -69,6 +98,7 @@
 					</form>
 				</div>
 			</div>
+
 
 
 			<div class="row">

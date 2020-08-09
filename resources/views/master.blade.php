@@ -16,11 +16,19 @@
 			overflow-x: hidden;
 			width: 100%;
 		}
+		.inds{
+				z-index: 2;
+			}
+		@media(max-width: 1024px){
+			.inds{
+				z-index: 2;
+			}
+		}
 	</style>	
 </head>
 <body data-spy="scroll" data-target="menu">
 
-	<nav style="background-color: rgb(67,133,255);" class="navbar navbar-dark navbar-expand-md fixed-top">
+	<nav style="background-color: rgb(67,133,255);" class="navbar navbar-dark navbar-expand-md fixed-top inds">
 		<h1><img src="../../../img/apasi.png" style="width: 120px;"></h1>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu">
 			<span class="navbar-toggler-icon"></span>
