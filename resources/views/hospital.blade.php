@@ -22,9 +22,40 @@
 			padding-left: 10px;
 		}
 		.lpis{
-			padding-right: 250px;
-			padding-left: 250px;
+			width: 20%;
 			margin: 0px;
+			animation:slide 2s ease-in-out .5s infinite alternate;
+		}
+		.lpis:hover{
+			background-color: rgb(67,133,255);
+			color: white;
+			border:none;
+			animation: slide
+		}
+		@keyframes slide{
+			0% {
+
+			left: 0;
+
+			top: 0;
+
+			}
+
+			50% {
+
+			left: 244px;
+
+			top: 100px;
+
+			}
+
+			100% {
+
+			left: 488px;
+
+			top: 0px;
+
+			}
 		}
 	    @media(max-width: 1024px){
 	    	.is{
@@ -34,9 +65,12 @@
 	    		
 	    	}
 	    	.lpis{
-			padding-right: 80px;
-			padding-left: 80px;
+			padding-right: 0px;
+			padding-left: 0px;
+			width:80%;
 			margin: 0px;
+			text-align: center;
+			}
 		}
 	</style>
 </head>
@@ -59,18 +93,7 @@
 
 	<div>
 		<div class="container mt-5">
-			<div class="row">
-						<div style="font-size: 20px;color: black;" class="col-sm-6 col-6">
-							<center>	
-							<a href="" class="lpis btn btn-primary text-whitr border-primary">Hospital</a>
-							</center>
-						</div>
-						<div style="font-size: 20px;color: black;" class="col-sm-6 col-6">
-							<center>	
-							<a href="/doctorqueue" class="lpis btn border-dark">Doctor</a>
-							</center>
-						</div>
-			</div>
+			
 			<div class="row">
 				<div class="col-sm-10 col-8"></div>
 				<div class="col-sm-2 col-4 mt-5 reshis">
@@ -103,6 +126,28 @@
 						</center>	
 					</form>
 				</div>
+			</div>
+			<div class="row mt-5">
+				<div class="col-12 d-lg-block d-none">
+					<center>
+					<span style="font-size: 20px;color: black;" class="col-sm-6">						
+							<a href="" class="lpis btn btn-primary text-whitr border-primary">Hospital</a>
+						</span>
+						<span style="font-size: 20px;color: black;" class="col-sm-6">
+							<a href="/doctorqueue" class="lpis btn border-dark">Doctor</a>
+						</span>
+					</center>
+				</div>		
+				<div style="font-size: 20px;color: black;" class="col-sm-6 col-6 d-lg-none d-sm-block">
+						<center>	
+						<a href="" class="lpis btn btn-primary text-whitr border-primary">Hospital</a>
+						</center>
+					</div>
+					<div style="font-size: 20px;color: black;" class="col-sm-6 col-6 d-lg-none d-sm-block">
+						<center>	
+						<a href="/doctorqueue" class="lpis btlpis btn border-dark">Doctor</a>
+						</center>
+					</div>				
 			</div>
 
 

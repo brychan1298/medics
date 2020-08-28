@@ -94,6 +94,9 @@
 				width: 30px;
 				height: 30px;
 			}
+			.rot{
+				transform: rotate(180deg);
+			}
 		}
 	</style>
 </head>
@@ -104,7 +107,7 @@
 				<div class="row">
 					<div class="col-1 mt-2">
 						<a href="/chatdoctor/{{$iddokter}}">
-							<img src="../../gambar/left.PNG" class ="w2 gam mt-3 mb-3">
+							<img src="../../gambar/left.PNG" class ="w2 gam mt-3 mb-3 rot">
 						</a>
 					</div>
 					<div class="col-4 ml-4">

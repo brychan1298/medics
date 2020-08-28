@@ -81,13 +81,13 @@
 	  <div class="carousel-inner">
 	    <div class="carousel-item active">
 	      <div class="col-sm-4">
-				<img src="gambar/banks.jpg" class="w-100">
+				<img src="gambar/flume.jpg" class="w-100">
 				<center><div style="font-size: 20px;border: 1px solid;border-radius: 0px 0px 15px 15px;padding: 20px; color:#2E5EBE;font-weight: bold;">Brychan Artanto</div></center>
 			</div>
 	    </div>
 	    <div class="carousel-item">
 	      <div class="col-sm-4">
-				<img src="gambar/flume.jpg" class="w-100">
+				<img src="gambar/banks.jpg" class="w-100">
 				<center><div style="font-size: 20px;border: 1px solid;border-radius: 0px 0px 15px 15px;padding: 20px; color:#2E5EBE;font-weight: bold;">Indra Wijaya</div></center>
 			</div>
 	    </div>

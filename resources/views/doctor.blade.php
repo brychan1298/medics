@@ -17,9 +17,19 @@
 			width: 100%;
 		}
 		.lpis{
-			padding-right: 250px;
-			padding-left: 250px;
+			width: 20%;
 			margin: 0px;
+			
+		}
+		.lpis:hover{
+			background-color: rgb(67,133,255);
+			color: white;
+			border:none;
+			animation: slide
+		}
+		.koko:hover{
+			border-color: rgb(67,133,255);
+			background-color: rgb(67,133,255);
 		}
 		.is2{
 			border:1px solid grey;
@@ -31,13 +41,18 @@
 		}
 	    @media(max-width: 1024px){
 	    	.lpis{
-			padding-right: 80px;
-			padding-left: 80px;
-			margin: 0px;
+				padding-right: 0px;
+				padding-left: 0px;
+				width:80%;
+				margin: 0px;
+				text-align: center;
+			}
+			.is{
+				padding-right: 100px;
+			}
+			
 		}
-		.is{
-			padding-right: 100px;
-		}
+			
 	</style>
 </head>
 <body data-spy="scroll" data-target="menu">
@@ -59,18 +74,6 @@
 
 	<div>
 		<div class="container mt-5">
-			<div class="row">
-				<div style="font-size: 20px;color: black;" class="col-sm-6 col-6">
-					<center>	
-					<a href="/hospital" class="lpis btn border-dark">Hospital</a>
-					</center>
-				</div>
-				<div style="font-size: 20px;color: black;" class="col-sm-6 col-6">
-					<center>	
-					<a href="" class="lpis btn btn-primary text-whitr border-primary">Doctor</a>
-					</center>
-				</div>
-			</div>
 			<div class="row">
 				<div class="col-sm-10 col-8"></div>
 				<div class="col-sm-2 col-4 mt-5">	
@@ -98,6 +101,28 @@
 					</form>
 				</div>
 			</div>
+			<div class="row mt-5">
+				<div class="col-12 d-lg-block d-none">
+					<center>
+					<span style="font-size: 20px;color: black;" class="col-sm-6">						
+							<a href="/hospital" class="lpis btn border-dark" >Hospital</a>
+						</span>
+						<span style="font-size: 20px;color: black;" class="col-sm-6">
+							<a href="" class="lpis btn btn-primary text-whitr border-primary">Doctor</a>
+						</span>
+					</center>
+				</div>		
+				<div style="font-size: 20px;color: black;" class="col-sm-6 col-6 d-lg-none d-sm-block">
+						<center>	
+						<a href="/hospital" class="lpis btlpis btn border-dark">Hospital</a>
+						</center>
+					</div>
+					<div style="font-size: 20px;color: black;" class="col-sm-6 col-6 d-lg-none d-sm-block">
+						<center>	
+						<a href="" class="lpis btn btn-primary text-whitr border-primary">Doctor</a>
+						</center>
+					</div>				
+			</div>
 
 
 
@@ -105,8 +130,8 @@
 				@foreach($doctor2 as $d)
 					@guest
 					<div class="col-sm-4 col-6 mt-5">
-						<a href="/login">
-							<div style="border:1px solid #707070;border-radius: 15px;padding: 50px 10px;">
+						<a href="/login" class="koko">
+							<div style="border:2px solid #707070;border-radius: 15px;width: 100%;height: 120%;padding: 0px 10px;padding-top: 35px;">
 								<center>								
 									<img src="../../gambar/{{$d->gambar}}" class="w-50" style="border-radius: 50%;">
 									<div style="color: black; font-weight: bold;font-size: 18px;margin-top: 20px;">{{$d->nama}}</div>
@@ -117,8 +142,8 @@
 					</div>	
 					@else
 					<div class="col-sm-4 col-6 mt-5">
-						<a href="/detaildoctor/{{$d->id}}">
-							<div style="border:1px solid #707070;border-radius: 15px;padding: 50px 10px;">
+						<a href="/detaildoctor/{{$d->id}}" class="koko">
+							<div style="border:2px solid #707070;border-radius: 15px;width: 100%;height: 120%;padding: 0px 10px;padding-top: 35px;">
 								<center>								
 									<img src="../../gambar/{{$d->gambar}}" class="w-50" style="border-radius: 50%;">
 									<div style="color: black;font-weight: bold;font-size: 18px;margin-top: 20px;">{{$d->nama}}</div>

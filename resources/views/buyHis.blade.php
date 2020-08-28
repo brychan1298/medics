@@ -32,14 +32,14 @@
 			<div class="bots col-12">
 				@foreach($history as $h)		
 					<div class="row border mt-4 pt-4 pb-3 pl-3" style="border-radius: 15px;">
-						<div class="col-sm-9 col-8">
+						<div class="col-sm-9 col-6">
 							<div><b>{{$h->tanggal}}</b></div>
 							<div>{{$h->tbtransaksidetil->tbproduk->nama}} x{{$h->tbtransaksidetil->jumlah}}</div>
 							<div>Total : Rp{{$h->total}},00</div>
 							<p></p>
 							<p>Destination Account : {{$h->destinationAcc}}</p>
 						</div>
-						<div class="col-sm-3 col-4">
+						<div class="col-sm-3 col-6">
 							<div class="ml-5 mt-3">
 								@if($h->status=="BELUM PROSES" && $h->img=="")
 								<p class="text-primary"><b>Status : NOT PAID YET</b></p>

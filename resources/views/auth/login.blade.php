@@ -42,7 +42,7 @@
 <body class="page-top">
 {{ Auth::user() }}
 <div class="container">
-     <h1><img src="../../../img/apasi.png" style="width: 120px;"></h1>
+     <h1><a href="/"><img src="../../../img/apasi.png" style="width: 120px;"></a></h1>
     <div class="row justify-content-center">
         <div class="col-6 d-lg-block d-none">
             <img src="gambar/undraw_doctor_kw5l.png" class="" style="margin-left:0px;width: 600px;height: 450px;margin-top: 80px;margin-right: -50px;">

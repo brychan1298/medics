@@ -46,7 +46,7 @@
     border-radius: 3px;
     margin-left: 55px;
     font-size: 18px;
-    width: 400px;
+    width: 60%;
     height: 50px;
     padding-top: 10px;
 
@@ -91,9 +91,9 @@
   }
   @media(max-width: 1024px){
     .tengahin{
-      align-content: center;
+      text-align: center;
       margin-top: -20px;
-      margin-left: 130px;
+      
     }
     .reshr{
       color: lightgrey;
@@ -111,7 +111,7 @@
     .btn3{
       /*margin-left: 190px;*/
       
-      width: 475px;
+      width: 96%;
       margin-left: 5px;
       height: 50px;
       font-size: 16px;
@@ -120,10 +120,13 @@
     .text2{
       font-weight: bold;
       font-size: 24px;
-      margin-left: 5px;  
-      margin-left: 180px;
+      margin-left: 0px;  
       /*margin-left: 270px;*/
       margin-top: 20px;
+      text-align: center;
+    }
+    .btn2{
+      margin: 0px;
     }
     .text3{
       font-size: 18px;
@@ -133,13 +136,13 @@
     }
     .text4{
       font-size: 18px;
-      margin-left: 305px;
+      margin-left: 205px;
     }
     .line2{
       border-bottom: 0.5px solid black;
       margin-left: 5px;
       /*margin-left: 190px;*/
-      width: 475px;
+      width: 98%;
     }
   }
 
@@ -181,10 +184,10 @@
     </div>
   <div class="d-none d-lg-block">
     <div class="row ">
-      <div class="col-sm-6">
+      <div class="col-sm-6 col-12">
         <a href="/shop" class="btn btn-primary btn2">CONTINUE SHOPPING</a> 
       </div>
-      <div class="col-sm-6">
+      <div class="col-sm-6 col-12">
         <p class="text2">CART TOTAL</p>
         <p class="line2"></p>
         <p><span class="text3">Subtotal</span><span class="text4">Rp{{$d}},00</span></p>
@@ -229,8 +232,6 @@
       @endforeach
     </div>
     <div class="row d-lg-none d-block">
-<!--       <div class="col-sm-6">
-      </div> -->
       <div class="col-sm-12">
         <p class="text2">CART TOTAL</p>
         <p class="line2"></p>

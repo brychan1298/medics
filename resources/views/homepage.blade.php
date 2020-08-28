@@ -81,18 +81,20 @@
   </style>
 </head>
 <body data-spy="scroll" data-target="menu">
-  <div class="container-fluid">
+  <div class="container">
       <div class="row" style="width:100%;height:300px;background-color:white;margin-top: 150px;">
         <div class="col-sm-6 mt-4 col-12 text-sm-left text-center">
           <div style="color:black;font-size:50px;">
             Stay Healthy<br>
             Be Active.
-          </div>
+          </div><br>
           <div style="color: grey;" class="med">
             Medics is an application that we made for all of you.<br>
             this application can facilitate you in the health field.<br> use this application properly and responsibly.
           </div>
-          <button style="background-color:rgb(130,180,253);border-radius:25px;height:40px;width:130px;color:white;border: 0px" class="mt-3">GET STARTED</button>
+          <a href="{{ route('register') }}" class="btn mt-3" style="background-color:rgb(130,180,253);border-radius:25px;height:40px;width:130px;color:white;border: 0px">
+              GET STARTED
+            </a>
         </div>
         <div class="col-sm-6 col-12">
           <img class="w-100" src="img/home.png" class="col-sm-12">
@@ -136,6 +138,8 @@
           </div>
         </div>
       </div>
+    </div>
+    <div class="container-fluid">
       <div class="row row2">
         <div class="col-sm-1"></div>
         <div class="col-sm-6 col-12">
@@ -160,6 +164,7 @@
         <div class="mtop2">
     <center><div style="font-size: 50px;margin-top: 100px;">OUR SPECIALIST</div><img src="gambar/pembatas.png" style="width: 160px;margin-bottom: 20px;"></center>
   </div>
+</div>
 
   <div class="container" style="margin-bottom: 100px;">
     <div class="row">
