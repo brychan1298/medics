@@ -28,22 +28,21 @@
 
 	<div class="container" class="bot">
 		<div class="row">
-			<div class="col-1"></div>
-			<div class="bots col-12">
+			<div class="bots col-12 col-sm-12">
 				@foreach($history as $h)		
-					<div class="row border mt-4 pt-4 pb-3 pl-3" style="border-radius: 15px;">
+					<div class="row m-2 border mt-4 pt-4 pb-3 pl-2" style="border-radius: 15px;">
 						<div class="col-sm-9 col-6">
 							<div><b>{{$h->tanggal}}</b></div>
 							<div>{{$h->tbtransaksidetil->tbproduk->nama}} x{{$h->tbtransaksidetil->jumlah}}</div>
 							<div>Total : Rp{{$h->total}},00</div>
 							<p></p>
-							<p>Destination Account : {{$h->destinationAcc}}</p>
+							<p>Destination Account : <b>{{$h->destinationAcc}}</b></p>
 						</div>
 						<div class="col-sm-3 col-6">
 							<div class="ml-5 mt-3">
 								@if($h->status=="BELUM PROSES" && $h->img=="")
 								<p class="text-primary"><b>Status : NOT PAID YET</b></p>
-								<p><a href="/proof/{{$h->id_transaksi}}" class="btn btn-primary pl-4 pr-4 mr-5" style="float: right;">CHECK</a></p>
+								<p style=""><a href="/proof/{{$h->id_transaksi}}" class="btn btn-primary pl-4 pr-4 mr-1" style="float: right;">CHECK</a></p>
 								@else
 								@if($h->status=="BELUM PROSES" && $h->img!="")
 								<p class="text-warning"><b>Status : Not Confirm Yet</b></p>
@@ -56,7 +55,6 @@
 					</div>
 				@endforeach
 			</div>
-			<div class="col-1"></div>
 			
 		</div>
 	</div>
