@@ -210,7 +210,7 @@
 							<div class="flip-card">
 							  <div class="flip-card-inner">
 							    <div class="flip-card-front">
-							      	<div style="border:1px solid #707070;border-radius: 15px;padding: 40px;">
+							      	<div style="border:2px solid #707070;border-radius: 15px;padding: 40px;">
 										<center>								
 											<img src="../../gambar/{{$h->img}}" class="w-100 mb-3">
 											<div style="color: black;font-weight: bold;" class="mt-3">Rs. {{$h->nama}}</div>
@@ -235,7 +235,7 @@
 							<div class="flip-card">
 							  <div class="flip-card-inner">
 							    <div class="flip-card-front">
-							      	<div style="border:1px solid #707070;border-radius: 15px;padding: 40px;">
+							      	<div style="border:2px solid #707070;border-radius: 15px;padding: 40px;">
 										<center>								
 											<img src="../../gambar/{{$h->img}}" class="w-100 mb-3">
 											<div style="color: black;font-weight: bold;" class="mt-3">Rs. {{$h->nama}}</div>

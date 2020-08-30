@@ -12,47 +12,44 @@
 		.bar1{
 			padding-right: 15px;
 		}
-		.flip-card {
-		  background-color: transparent;
-		  width: 315px;
-		  height: 315px;
-		  perspective: 1000px;
-		}
 
-		.flip-card-inner {
+		.containers {
 		  position: relative;
 		  width: 100%;
-		  height: 100%;
-		  text-align: center;
-		  transition: transform 0.6s;
-		  transform-style: preserve-3d;
-		  
 		}
-
-		.flip-card:hover .flip-card-inner {
-		  transform: rotateY(180deg);
-		}
-
-		.flip-card-front, .flip-card-back {
-		  position: absolute;
+		.image {
+		  opacity: 1;
+		  display: block;
 		  width: 100%;
-		  height: 100%;
-		  -webkit-backface-visibility: hidden;
+		  height: auto;
+		  transition: .5s ease;
 		  backface-visibility: hidden;
 		}
 
-		.flip-card-front {
-		  
-		  color: black;
+		.middle {
+		  transition: .5s ease;
+		  opacity: 0;
+		  position: absolute;
+		  top: 50%;
+		  left: 50%;
+		  transform: translate(-50%, -50%);
+		  -ms-transform: translate(-50%, -50%);
+		  text-align: center;
 		}
 
-		.flip-card-back {
-		  background-color: white;
+		.containers:hover .image {
+		  opacity: 0.4;
+		}
+
+		.containers:hover .middle {
+		  opacity: 1;
+		}
+
+		.text {
+		  background-color: #4CAF50;
 		  color: white;
-		  transform: rotateY(180deg);
-		  border:1px solid #707070;
-		  border-radius: 15px;
-		  padding: 40px;
+		  font-size: 16px;
+		  padding: 16px 32px;
 		}
 	</style>
 </head>
@@ -102,15 +99,20 @@
 			<div class="row mb-5">
 				@foreach($chosedok as $c)
 				<div class="col-sm-4 mt-sm-0 col-6 mt-5 btn">
-					<a href="/booking/{{$c->tbdokter->id}}/{{$id}}" class="">
-						<div style="border:1px solid #707070;border-radius: 15px;padding: 40px 10px;" class="mt-3">
-							<center>								
-								<img src="../../gambar/{{$c->tbdokter->gambar}}" class="w-50 mb-2" style="border-radius: 50%;">
-								<div style="color: black;font-size: 18px;" class="mt-3">
-									<b>Dr. {{$c->tbdokter->nama}}</b></div>
-								<div style="color: #017bff;font-size: 18px;">{{$c->tbdokter->spesialisasi}}<br>Specialist</div>
-							</center>
-						</div>
+					<a href="/booking/{{$c->tbdokter->id}}/{{$id}}" class="dd">
+						<div style="border:2px solid #707070;border-radius: 15px;padding: 40px 10px;" class="mt-3 containers">
+							<div class="image">
+								<center>							
+									<img src="../../gambar/{{$c->tbdokter->gambar}}" class="w-50 mb-2" style="border-radius: 50%;">
+									<div style="color: black;font-size: 18px;" class="mt-3">
+										<b>Dr. {{$c->tbdokter->nama}}</b></div>
+									<div style="color: #017bff;font-size: 18px;">{{$c->tbdokter->spesialisasi}}<br>Specialist</div>
+								</center>
+							</div>							
+							<div class="middle">
+								<a href="/booking/{{$c->tbdokter->id}}/{{$id}}" class="btn btn-primary">Select Doctor</a>
+							</div>
+						</div>						
 					</a>
 				</div>
 				@endforeach
