@@ -39,6 +39,48 @@
 			padding-bottom: 9px;
 			padding-left: 10px;
 		}
+		.flip-card {
+		  background-color: transparent;
+		  width: 315px;
+		  height: 315px;
+		  perspective: 1000px;
+		}
+
+		.flip-card-inner {
+		  position: relative;
+		  width: 100%;
+		  height: 100%;
+		  text-align: center;
+		  transition: transform 0.6s;
+		  transform-style: preserve-3d;
+		  
+		}
+
+		.flip-card:hover .flip-card-inner {
+		  transform: rotateY(180deg);
+		}
+
+		.flip-card-front, .flip-card-back {
+		  position: absolute;
+		  width: 100%;
+		  height: 100%;
+		  -webkit-backface-visibility: hidden;
+		  backface-visibility: hidden;
+		}
+
+		.flip-card-front {
+		  
+		  color: black;
+		}
+
+		.flip-card-back {
+		  background-color: white;
+		  color: white;
+		  transform: rotateY(180deg);
+		  border:1px solid #707070;
+		  border-radius: 15px;
+		  padding: 40px;
+		}
 	    @media(max-width: 1024px){
 	    	.lpis{
 				padding-right: 0px;
@@ -131,100 +173,60 @@
 					@guest
 					<div class="col-sm-4 col-6 mt-5">
 						<a href="/login" class="koko">
-							<div style="border:2px solid #707070;border-radius: 15px;width: 100%;height: 120%;padding: 0px 10px;padding-top: 35px;">
-								<center>								
-									<img src="../../gambar/{{$d->gambar}}" class="w-50" style="border-radius: 50%;">
-									<div style="color: black; font-weight: bold;font-size: 18px;margin-top: 20px;">{{$d->nama}}</div>
-									<div style="color: black;">{{$d->spesialisasi}} Spesialist</div>
-								</center>
+							<div class="flip-card">
+							  <div class="flip-card-inner">
+							    <div class="flip-card-front">
+							      <div style="border:2px solid #707070;border-radius: 15px;width: 100%;height: 310px;padding: 0px 10px;padding-top: 35px;">
+									<center>								
+										<img src="../../gambar/{{$d->gambar}}" class="w-50" style="border-radius: 50%;">
+										<div style="color: black;font-weight: bold;font-size: 18px;margin-top: 20px;">{{$d->nama}}</div>
+										<div style="color: black;">{{$d->spesialisasi}} Spesialist</div>
+									</center>
+								</div>
+							    </div>
+							    <div class="flip-card-back">
+							      <h1><div style="color: black;font-weight: bold;font-size: 18px;margin-top: 20px;">{{$d->nama}}</div></h1> 
+							      <div style="color: black;margin-bottom: 20px;">{{$d->spesialisasi}} Spesialist</div> <img src="../../gambar/{{$d->gambar}}" class="w-25" style="border-radius: 50%;"><br>
+							      <a href="/login" class="btn btn-primary mt-5">Select Doctor</a>
+							    </div>
+							  </div>
 							</div>
 						</a>
 					</div>	
 					@else
 					<div class="col-sm-4 col-6 mt-5">
 						<a href="/detaildoctor/{{$d->id}}" class="koko">
-							<div style="border:2px solid #707070;border-radius: 15px;width: 100%;height: 120%;padding: 0px 10px;padding-top: 35px;">
+							<!-- <div style="border:2px solid #707070;border-radius: 15px;width: 100%;height: 340px;padding: 0px 10px;padding-top: 35px;">
 								<center>								
 									<img src="../../gambar/{{$d->gambar}}" class="w-50" style="border-radius: 50%;">
 									<div style="color: black;font-weight: bold;font-size: 18px;margin-top: 20px;">{{$d->nama}}</div>
 									<div style="color: black;">{{$d->spesialisasi}} Spesialist</div>
 								</center>
+							</div> -->
+
+							<div class="flip-card">
+							  <div class="flip-card-inner">
+							    <div class="flip-card-front">
+							      <div style="border:2px solid #707070;border-radius: 15px;width: 100%;height: 310px;padding: 0px 10px;padding-top: 35px;">
+									<center>								
+										<img src="../../gambar/{{$d->gambar}}" class="w-50" style="border-radius: 50%;">
+										<div style="color: black;font-weight: bold;font-size: 18px;margin-top: 20px;">{{$d->nama}}</div>
+										<div style="color: black;">{{$d->spesialisasi}} Spesialist</div>
+									</center>
+								</div>
+							    </div>
+							    <div class="flip-card-back">
+							      <h1><div style="color: black;font-weight: bold;font-size: 18px;margin-top: 20px;">{{$d->nama}}</div></h1> 
+							      <div style="color: black;margin-bottom: 20px;">{{$d->spesialisasi}} Spesialist</div> <img src="../../gambar/{{$d->gambar}}" class="w-25" style="border-radius: 50%;"><br>
+							      <a href="/detaildoctor/{{$d->id}}" class="btn btn-primary mt-5">Select Doctor</a>
+							    </div>
+							  </div>
 							</div>
 						</a>
 					</div>
+
 					@endguest
 				@endforeach
-				<!--<div class="col-sm-4 col-6 mt-5">
-					<a href="">
-						<div style="border:1px solid #707070;border-radius: 15px;padding: 50px 10px;">
-							<center>								
-								<img src="gambar/doctor1.jpg" class="w-50" style="border-radius: 50%;">
-								<div style="color: black;">Dr.Artanto</div>
-								<div style="color: black;">Surgery Specialist</div>
-							</center>
-						</div>
-					</a>
-				</div>
-
-				<div class="col-sm-4 col-6 mt-5">
-					<a href="">
-						<div style="border:1px solid #707070;border-radius: 15px;padding: 50px 10px;">
-							<center>								
-								<img src="gambar/doctor2.jpg" class="w-50" style="border-radius: 50%;">
-								<div style="color: black;">Dr.Susan</div>
-								<div style="color: black;">Surgery Specialist</div>
-							</center>
-						</div>
-					</a>
-				</div>
-
-				<div class="col-sm-4 col-6 mt-5 d-none d-lg-block">
-					<a href="">
-						<div style="border:1px solid #707070;border-radius: 15px;padding: 50px 10px;">
-							<center>								
-								<img src="gambar/doctor1.jpg" class="w-50" style="border-radius: 50%;">
-								<div style="color: black;">Dr.Artanto</div>
-								<div style="color: black;">Surgery Specialist</div>
-							</center>
-						</div>
-					</a>
-				</div>
-
-				<div class="col-sm-4 col-6 mt-5">
-					<a href="">
-						<div style="border:1px solid #707070;border-radius: 15px;padding: 50px 10px;">
-							<center>								
-								<img src="gambar/doctor1.jpg" class="w-50" style="border-radius: 50%;">
-								<div style="color: black;">Dr.Artanto</div>
-								<div style="color: black;">Surgery Specialist</div>
-							</center>
-						</div>
-					</a>
-				</div>
-
-				<div class="col-sm-4 col-6 mt-5">
-					<a href="">
-						<div style="border:1px solid #707070;border-radius: 15px;padding: 50px 10px;">
-							<center>								
-								<img src="gambar/doctor2.jpg" class="w-50" style="border-radius: 50%;">
-								<div style="color: black;">Dr.Susan</div>
-								<div style="color: black;">Surgery Specialist</div>
-							</center>
-						</div>
-					</a>
-				</div>
-
-				<div class="col-sm-4 col-6 mt-5  d-none d-lg-block">
-					<a href="">
-						<div style="border:1px solid #707070;border-radius: 15px;padding: 50px 10px;">
-							<center>								
-								<img src="gambar/doctor1.jpg" class="w-50" style="border-radius: 50%;">
-								<div style="color: black;">Dr.Artanto</div>
-								<div style="color: black;">Surgery Specialist</div>
-							</center>
-						</div>
-					</a>
-				</div>-->
 			</div>
 			<div class="mt-5 pagination justify-content-center">
 				{{$doctor2->links()}}

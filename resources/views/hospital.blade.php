@@ -57,6 +57,48 @@
 
 			}
 		}
+		.flip-card {
+		  background-color: transparent;
+		  width: 315px;
+		  height: 315px;
+		  perspective: 1000px;
+		}
+
+		.flip-card-inner {
+		  position: relative;
+		  width: 100%;
+		  height: 100%;
+		  text-align: center;
+		  transition: transform 0.6s;
+		  transform-style: preserve-3d;
+		  
+		}
+
+		.flip-card:hover .flip-card-inner {
+		  transform: rotateY(180deg);
+		}
+
+		.flip-card-front, .flip-card-back {
+		  position: absolute;
+		  width: 100%;
+		  height: 100%;
+		  -webkit-backface-visibility: hidden;
+		  backface-visibility: hidden;
+		}
+
+		.flip-card-front {
+		  
+		  color: black;
+		}
+
+		.flip-card-back {
+		  background-color: white;
+		  color: white;
+		  transform: rotateY(180deg);
+		  border:1px solid #707070;
+		  border-radius: 15px;
+		  padding: 40px;
+		}
 	    @media(max-width: 1024px){
 	    	.is{
 	    		padding-right: 100px;
@@ -155,110 +197,67 @@
 
 				@foreach( $hospitals as $h )
 					@guest
-					<div class="col-sm-4 col-12 mt-4">
-						<a href="/login" class="nav-link text-black">
-							<div style="border:1px solid #707070;border-radius: 15px;padding: 40px;">
+					<div class="col-sm-4 col-12 mt-4 nav-link text-black">
+						<a href="/login" class="">
+							<!-- <div style="border:1px solid #707070;border-radius: 15px;padding: 40px;">
 								<center>								
 									<img src="../../gambar/{{$h->img}}" class="w-100 mb-3">
 									<div style="color: black;font-weight: bold;" class="mt-3">Rs. {{$h->nama}}</div>
 									<div style="color: black;">{{$h->alamat}}</div>
 								</center>
+							</div> -->
+							<div class="flip-card">
+							  <div class="flip-card-inner">
+							    <div class="flip-card-front">
+							      	<div style="border:1px solid #707070;border-radius: 15px;padding: 40px;">
+										<center>								
+											<img src="../../gambar/{{$h->img}}" class="w-100 mb-3">
+											<div style="color: black;font-weight: bold;" class="mt-3">Rs. {{$h->nama}}</div>
+											<div style="color: black;">{{$h->alamat}}</div>
+										</center>
+									</div>
+							    </div>
+							    <div class="flip-card-back">
+							      <div style="color: black;font-weight: bold;" class="mt-3"><h2>Rs. {{$h->nama}}</h2></div>
+									<div style="color: black;">{{$h->alamat}}</div>
+									<a href="/login" class="btn btn-primary mt-5">Queue Up</a>
+							    </div>
+							  </div>
 							</div>
 						</a>
-					</div>
+					</div>					
 					@else
-					<div class="col-sm-4 col-12 mt-4">
-						<a href="/choosedoctor/{{$h->id}}" class="nav-link text-black">
-							<div style="border:1px solid #707070;border-radius: 15px;padding: 40px;">
-								<center>								
-									<img src="../../gambar/{{$h->img}}" class="w-100 mb-3">
-									<div style="color: black;font-weight: bold;font-size: 18px;" class="mt-3">Rs. {{$h->nama}}</div>
+					<div class="col-sm-4 col-12 mt-4 nav-link text-black">
+						<a href="/choosedoctor/{{$h->id}}" class="">
+							<div class="flip-card">
+							  <div class="flip-card-inner">
+							    <div class="flip-card-front">
+							      	<div style="border:1px solid #707070;border-radius: 15px;padding: 40px;">
+										<center>								
+											<img src="../../gambar/{{$h->img}}" class="w-100 mb-3">
+											<div style="color: black;font-weight: bold;" class="mt-3">Rs. {{$h->nama}}</div>
+											<div style="color: black;">{{$h->alamat}}</div>
+										</center>
+									</div>
+							    </div>
+							    <div class="flip-card-back">
+							      <div style="color: black;font-weight: bold;" class="mt-3"><h2>Rs. {{$h->nama}}</h2></div>
 									<div style="color: black;">{{$h->alamat}}</div>
-								</center>
+									<a href="/choosedoctor/{{$h->id}}" class="btn btn-primary mt-5">Queue Up</a>
+							    </div>
+							  </div>
 							</div>
 						</a>
 					</div>
 					@endguest
-				@endforeach
-				<!--
-				<div class="col-sm-4 col-6 mt-5">
-					<a href="">
-						<div style="border:1px solid #707070;border-radius: 15px;padding: 20px;">
-							<center>								
-								<img src="gambar/hospital2.png" class="w-100">
-								<div style="color: black;">RS.Mentari</div>
-								<div style="color: black;">Jl.Kemerdekaan No.561</div>
-							</center>
-						</div>
-					</a>
-				</div>
-
-				<div class="col-sm-4 col-6 mt-5">
-					<a href="">
-						<div style="border:1px solid #707070;border-radius: 15px;padding: 20px;">
-							<center>								
-								<img src="gambar/hospital3.png" style="width: 91.2%;">
-								<div style="color: black;">RS.Rembulan</div>
-								<div style="color: black;">Jl.Kebangsaan No.561</div>
-							</center>
-						</div>
-					</a>
-				</div>
-
-				<div class="col-sm-4 col-6 mt-5 d-none d-lg-block">
-					<a href="">
-						<div style="border:1px solid #707070;border-radius: 15px;padding: 20px;">
-							<center>								
-								<img src="gambar/hospital2.png" class="w-100">
-								<div style="color: black;">RS.Mentari</div>
-								<div style="color: black;">Jl.Kemerdekaan No.561</div>
-							</center>
-						</div>
-					</a>
-				</div>
-
-				<div class="col-sm-4 col-6 mt-5">
-					<a href="">
-						<div style="border:1px solid #707070;border-radius: 15px;padding: 20px;">
-							<center>								
-								<img src="gambar/hospital2.png" class="w-100">
-								<div style="color: black;">RS.Mentari</div>
-								<div style="color: black;">Jl.Kemerdekaan No.561</div>
-							</center>
-						</div>
-					</a>
-				</div>
-
-				<div class="col-sm-4 col-6 mt-5 ">
-					<a href="">
-						<div style="border:1px solid #707070;border-radius: 15px;padding: 20px;">
-							<center>								
-								<img src="gambar/hospital3.png" style="width: 91.2%;">
-								<div style="color: black;">RS.Rembulan</div>
-								<div style="color: black;">Jl.Kebangsaan No.561</div>
-							</center>
-						</div>
-					</a>
-				</div>
-
-				<div class="col-sm-4 col-6 mt-5  d-none d-lg-block">
-					<a href="">
-						<div style="border:1px solid #707070;border-radius: 15px;padding: 20px;">
-							<center>								
-								<img src="gambar/hospital2.png" class="w-100">
-								<div style="color: black;">RS.Mentari</div>
-								<div style="color: black;">Jl.Kemerdekaan No.561</div>
-							</center>
-						</div>
-					</a>
-				</div>-->
+				@endforeach				
 			</div>
 
 			<div class="mt-5 pagination justify-content-center">
 				{{$hospitals->links()}}
 			</div>	
 		</div>
-	</div>
+	</div>	
 </body>
 </html>
 <script type="text/javascript">

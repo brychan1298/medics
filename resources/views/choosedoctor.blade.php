@@ -12,6 +12,48 @@
 		.bar1{
 			padding-right: 15px;
 		}
+		.flip-card {
+		  background-color: transparent;
+		  width: 315px;
+		  height: 315px;
+		  perspective: 1000px;
+		}
+
+		.flip-card-inner {
+		  position: relative;
+		  width: 100%;
+		  height: 100%;
+		  text-align: center;
+		  transition: transform 0.6s;
+		  transform-style: preserve-3d;
+		  
+		}
+
+		.flip-card:hover .flip-card-inner {
+		  transform: rotateY(180deg);
+		}
+
+		.flip-card-front, .flip-card-back {
+		  position: absolute;
+		  width: 100%;
+		  height: 100%;
+		  -webkit-backface-visibility: hidden;
+		  backface-visibility: hidden;
+		}
+
+		.flip-card-front {
+		  
+		  color: black;
+		}
+
+		.flip-card-back {
+		  background-color: white;
+		  color: white;
+		  transform: rotateY(180deg);
+		  border:1px solid #707070;
+		  border-radius: 15px;
+		  padding: 40px;
+		}
 	</style>
 </head>
 <body data-spy="scroll" data-target="menu">
@@ -72,86 +114,7 @@
 					</a>
 				</div>
 				@endforeach
-			<!--	<div class="col-sm-4 mt-sm-0 col-6 mt-5">
-					<a href="">
-						<div style="border:1px solid #707070;border-radius: 15px;padding: 40px 10px;">
-							<center>								
-								<img src="gambar/doctor1.jpg" class="w-50" style="border-radius: 50%;">
-								<div style="color: black;" class="mt-3">Dr.Artanto</div>
-								<div style="color: black;">Surgery Specialist</div>
-							</center>
-						</div>
-					</a>
-				</div>
-
-				<div class="col-sm-4 mt-sm-0 col-6 mt-5">
-					<a href="">
-						<div style="border:1px solid #707070;border-radius: 15px;padding: 40px 10px;">
-							<center>								
-								<img src="gambar/doctor2.jpg" class="w-50" style="border-radius: 50%;">
-								<div style="color: black;" class="mt-3">Dr.Susan</div>
-								<div style="color: black;">Surgery Specialist</div>
-							</center>
-						</div>
-					</a>
-				</div>
-
-				<div class="col-sm-4 mt-sm-0 mt-5 d-none d-lg-block" >
-					<a href="">
-						<div style="border:1px solid #707070;border-radius: 15px;padding: 40px 10px;">
-							<center>								
-								<img src="gambar/doctor1.jpg" class="w-50" style="border-radius: 50%;">
-								<div style="color: black;" class="mt-3">Dr.Artanto</div>
-								<div style="color: black;">Surgery Specialist</div>
-							</center>
-						</div>
-					</a>
-				</div>-->
 			</div>
-
-			<!-- <div class="row mt-5">
-				<div class="col-sm-12">
-					<center>
-							<div>
-								<span>								
-									<button  style="border:none;border-radius: 50%;padding: 5px 7px;transform: rotate(180deg);">
-										<img src="gambar/hemhem.png" style="width: 20px;">
-									</button>
-								</span>								
-								<span>
-									<button  style="background-color:rgb(67,133,255);border:none;border-radius: 50%;padding: 5px 12px;">
-										1
-									</button>
-								</span>
-								<span>
-									<button  style="border:none;border-radius: 50%;padding: 5px 12px;">
-										2
-									</button>
-								</span>
-								<span>
-									<button  style="border:none;border-radius: 50%;padding: 5px 12px;">
-										3
-									</button>
-								</span>
-								<span>
-									<button  style="border:none;border-radius: 50%;padding: 5px 7px;">
-										<img src="gambar/hemhem.png" style="width: 20px;">
-									</button>
-								</span>
-								
-							</div>					
-					</center>					
-				</div> -->
-<!-- 
-				<div class="col-sm-12 mt-4 mb-4">
-					<center>
-						<div>
-							<button class="" style="border:none;background-color:rgb(67,133,255);padding: 10px 40px;color: white;border-radius: 200px;">
-								BOOKING
-							</button>
-						</div>
-					</center>
-				</div> -->
 			</div>
 		</div>
 	</div>
