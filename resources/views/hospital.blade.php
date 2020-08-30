@@ -197,7 +197,8 @@
 
 				@foreach( $hospitals as $h )
 					@guest
-					<div class="col-sm-4 col-12 mt-4 nav-link text-black">
+					<div class="col-sm-4 col-12 mt-4">
+						<center>
 						<a href="/login" class="">
 							<!-- <div style="border:1px solid #707070;border-radius: 15px;padding: 40px;">
 								<center>								
@@ -225,9 +226,11 @@
 							  </div>
 							</div>
 						</a>
-					</div>					
+					</div>
+					</center>			
 					@else
 					<div class="col-sm-4 col-12 mt-4 nav-link text-black">
+						<center>
 						<a href="/choosedoctor/{{$h->id}}" class="">
 							<div class="flip-card">
 							  <div class="flip-card-inner">
@@ -248,6 +251,7 @@
 							  </div>
 							</div>
 						</a>
+						</center>
 					</div>
 					@endguest
 				@endforeach				

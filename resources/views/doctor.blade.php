@@ -171,7 +171,8 @@
 			<div class="row">
 				@foreach($doctor2 as $d)
 					@guest
-					<div class="col-sm-4 col-6 mt-5">
+					<div class="col-sm-4 col-12 mt-5">
+						<center>
 						<a href="/login" class="koko">
 							<div class="flip-card">
 							  <div class="flip-card-inner">
@@ -192,18 +193,12 @@
 							  </div>
 							</div>
 						</a>
+						</center>
 					</div>	
 					@else
-					<div class="col-sm-4 col-6 mt-5">
+					<div class="col-sm-4 col-12 mt-5">
+						<center>
 						<a href="/detaildoctor/{{$d->id}}" class="koko">
-							<!-- <div style="border:2px solid #707070;border-radius: 15px;width: 100%;height: 340px;padding: 0px 10px;padding-top: 35px;">
-								<center>								
-									<img src="../../gambar/{{$d->gambar}}" class="w-50" style="border-radius: 50%;">
-									<div style="color: black;font-weight: bold;font-size: 18px;margin-top: 20px;">{{$d->nama}}</div>
-									<div style="color: black;">{{$d->spesialisasi}} Spesialist</div>
-								</center>
-							</div> -->
-
 							<div class="flip-card">
 							  <div class="flip-card-inner">
 							    <div class="flip-card-front">
@@ -223,6 +218,7 @@
 							  </div>
 							</div>
 						</a>
+						</center>
 					</div>
 
 					@endguest

@@ -42,19 +42,21 @@
 	    	.pat{
 	    		font-size: 32px;
 	    	}
-		}
-		.ist{
+	    	.ist{
 			margin-left: 80%;
 			margin-top: 15px;
 			font-size: 15px;
+			}
+			.mav{
+				border: none;
+			}
+			.queue{
+				margin-left: 280px;
+				margin-top: 70px;
+
+			}
 		}
-		.mav{
-			border: none;
-		}
-		.queue{
-			margin-left: 320px;
-			margin-top: 70px;
-		}
+		
 	</style>
 </head>
 <body data-spy="scroll" data-target="menu">
