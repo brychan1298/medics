@@ -37,6 +37,12 @@
                     <input type="Email" name="email" class="form-control mb-2" placeholder="Email"/>
                   <label>Address</label><br>
                     <input type="text" name="address" class="form-control mb-2" placeholder="Address"/>
+                  <label>Delivery</label><br>                    
+                    <select name="kirim" class="form-control mb-2">
+                      <option>JNE</option>
+                      <option>J&T</option>
+                      <option>TiKi</option>
+                    </select>
                   <label>Notes</label><br>
                     <input type="text" name="notes" class="form-control mb-2" placeholder="Write Your Notes Here..." />
                 </div>
@@ -49,13 +55,16 @@
                   <p style="font-size: 16px;font-weight:;">Your Product</p>
                   <hr>
                   @foreach($cart as $c)
-                  <p class="g1"></p>
+                  <p class="g1">
                       <label class="">{{$c->tbproduk->nama}} x {{$c->jlh}}</label>
-                      <label class="" style="float: right;">Rp{{($c->tbproduk->harga)*($c->jlh)}},00</label>                  
+                      <label class="" style="float: right;">@currency(($c->tbproduk->harga)*($c->jlh)),00</label> </p>                 
                   @endforeach
                   <hr>
+                  <label class="">Delivery Fee</label>
+                  <label class="" style="float: right;">Rp 20.000,00</label> 
+                  <hr>
                   <label style="font-weight: bold;">Total</label>
-                  <label style="float: right;font-weight: bold;">Rp{{$d}},00</label>
+                  <label style="float: right;font-weight: bold;">Rp {{$d}},00</label>
                   <p>
                     <button type="submit" class="btn btn-primary form-control mt-4">PLACE ORDER</button>
                   </p>

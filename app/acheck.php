@@ -8,7 +8,7 @@ class acheck extends Model
 {
     protected $table = 'tbtransaksi';
     protected $primaryKey='id_transaksi';
-    protected $fillable = ['id_user','tanggal','total','img','status'];
+    protected $fillable = ['id_user','tanggal','total','img','status','kirim'];
     public $timestamps = false;
 
     public function tbprofile()

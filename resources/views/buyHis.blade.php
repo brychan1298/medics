@@ -35,6 +35,7 @@
 							<div><b>{{$h->tanggal}}</b></div>
 							<div>{{$h->tbtransaksidetil->tbproduk->nama}} x{{$h->tbtransaksidetil->jumlah}}</div>
 							<div>Total : Rp{{$h->total}},00</div>
+							<div>Delivery : <b>{{$h->kirim}}</b></div>
 							<p></p>
 							<p>Destination Account : <b>{{$h->destinationAcc}}</b></p>
 						</div>

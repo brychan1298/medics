@@ -41,7 +41,7 @@ class CartController extends Controller
         $d=0;
         foreach ($cart as $c) {
             $dd = ($c->tbproduk->harga) * ($c->jlh);            
-            $d += $dd;
+            $d += $dd + 20000;
         }
         //return $d;
         return view('checkout',compact('cart','d'));
@@ -75,7 +75,7 @@ class CartController extends Controller
         $d=0;
         foreach ($cart as $c) {
             $dd = ($c->tbproduk->harga) * ($c->jlh);            
-            $d += $dd;
+            $d += $dd+20000;
         }
 
         $pin = mt_rand(000000000000,999999999999);
@@ -88,6 +88,7 @@ class CartController extends Controller
         $transaksi->img = "";
         $transaksi->status = "BELUM PROSES";
         $transaksi->destinationAcc = $random;
+        $transaksi->kirim=$request->kirim;
         $transaksi->save();
 
         $transaksiRow = Acheck::where('id_user',$iduser)->get();
